@@ -119,6 +119,8 @@ http {
 ## Ипсользование условий `If` - зло!!!
 There is a little page about using if statements. It's called **[IfIsEvil](http://wiki.nginx.org/IfIsEvil)** and you really should check it out. Let's take a look at a few uses of if that are bad.
 
+[к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
+
 
 ## Server Name
 **ПЛОХО:**
