@@ -1,5 +1,18 @@
 Конфигурация Nginx и подводные камни
 ====================================
+* **[`Root` внутри блока `Location`](#root-%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B8-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0-location)**
+* **[Повторяющиеся директивы `Index`]()**
+* **[Ипсользование условия `If`]()**
+* **[Проверка что файл cуществует]()**
+* **[Шаблон *Front Controller* и фреймворки которые его используют]()**
+* **[Перенаправление неконтролируемых запросов в PHP]()**
+* **[FastCGI путь в `SCRIPT_FILENAME`]()**
+* **[Проверяем рерайты]()**
+* **[Перепрописываем пропущенные `http://`]()**
+* **[Изменения в конфиге не работают]()**
+* **[Пропущенные (пропавшие) *HTTP* заголовки]()**
+
+
 If you're new or old to Nginx you will likely wind up in a pitfall situation. Below we outline these pitfalls and how to best avoid them. These are issues seen time and time again in the #nginx channel on Freenode. Please, just don't do this.
 
 
