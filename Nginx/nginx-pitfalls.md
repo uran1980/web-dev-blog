@@ -300,7 +300,7 @@ rewrite ^/(.*)$ http://domain.com/$1 permanent;
 rewrite ^http://domain.com$request_uri? permanent;
 ```
 
-**УЖЕ ЛУЧШЕ:**
+**ЕЩЕ ЛУЧШЕ:**
 ```nginx
 return 301 http://domain.com$request_uri;
 ```
