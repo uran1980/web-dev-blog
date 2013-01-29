@@ -6,7 +6,7 @@
 Объектно-ориентированный JavaScript код по виду немного отличается от других языков программирования. Объекты являются основными единицами JavaScript. Виртуально все в JavaScript является объектами.
 
 
-JavaScript это объктно скриптовый язык **(object scripting language)** разработанный программистом Бренданом Айхом (Brendan Eich) из бывшей компании Netscape, а сейчас являющимся одним из основателей проекта Mozilla.
+JavaScript это объктно скриптовый язык **(object scripting language)** разработанный программистом **[Бренданом Айхом (Brendan Eich)](http://ru.wikipedia.org/wiki/%D0%90%D0%B9%D0%BA,_%D0%91%D1%80%D0%B5%D0%BD%D0%B4%D0%B0%D0%BD)** из бывшей компании **[Netscape](http://ru.wikipedia.org/wiki/Netscape_Communications)**, а сейчас являющимся одним из основателей проекта **[Mozilla](http://ru.wikipedia.org/wiki/Mozilla_Foundation)**.
 
 JavaScript также известен как **ECMAScript** (описывается стандартом **[ECMA-262 revision 3](http://www.ecma-international.org/publications/standards/Ecma-262.htm)**).
 Многие до сих пор считают, что JavaScrip это интерпретируемый язык Java, это не так. JavaScript это
