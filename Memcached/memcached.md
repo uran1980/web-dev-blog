@@ -1,3 +1,5 @@
+![alt Memcached](https://raw.github.com/uran1980/my-blog/master/Memcached/images/memcached_banner75.jpg)
+
 Memcached
 =========
 **[Memcached](http://memcached.org/)** — это высоко-производительная распределенная система кеширования данных в оперативной памяти, предназначенная для повышения производительности динамических web-приложений и снижения нагрузки на базу данных.
