@@ -14,5 +14,5 @@ Memcached
 * **[http://ru.wikipedia.org/wiki/Memcached](http://ru.wikipedia.org/wiki/Memcached)** - описание на Википедии
 
 ## См. также
-* **[Обзор Memcached](#TODO)**
+* **[Обзор Memcached](https://github.com/uran1980/my-blog/blob/master/Memcached/memcached-overview.md)**
 * **[Nginx](https://github.com/uran1980/my-blog/blob/master/Nginx/nginx.md)**
