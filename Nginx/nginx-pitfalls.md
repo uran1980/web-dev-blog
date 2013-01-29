@@ -14,7 +14,7 @@
 * **[Пропущенные (пропавшие) *HTTP* заголовки](#%D0%9F%D1%80%D0%BE%D0%BF%D1%83%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BF%D1%80%D0%BE%D0%BF%D0%B0%D0%B2%D1%88%D0%B8%D0%B5-http-%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B8)**
 
 
-If you're new or old to Nginx you will likely wind up in a pitfall situation. Below we outline these pitfalls and how to best avoid them. These are issues seen time and time again in the #nginx channel on Freenode. Please, just don't do this.
+If you're new or old to Nginx you will likely wind up in a pitfall situation. Below we outline these pitfalls and how to best avoid them. These are issues seen time and time again in the #nginx channel on **[Freenode](http://ru.wikipedia.org/wiki/Freenode)**. Please, just don't do this.
 
 
 ## В этой инструкции сказано
