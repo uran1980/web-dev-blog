@@ -192,6 +192,43 @@ location ~* \.php$ {
 }
 ```
 
+Here, every request ending in `.php` will be passed to the **[FastCGI](http://ru.wikipedia.org/wiki/FastCGI)** backend. The issue with this is that the default PHP configuration tries to guess which file you want to execute if the full path does not lead to an actual file on the filesystem.
+
+For instance, if a request is made for `/forum/avatar/1232.jpg/file.php` which does not exist but if `/forum/avatar/1232.jpg` does, the PHP interpreter will process `/forum/avatar/1232.jpg` instead. If this contains embedded PHP code, this code will be executed accordingly.
+
+Options for avoiding this are:
+* Set `cgi.fix_pathinfo=0` in **php.ini**. This causes the PHP interpreter to only try the literal path given and to stop processing if the file is not found. 
+* Ensure that Nginx only passes specific PHP files for execution.
+```nginx
+location ~* (file_a|file_b|file_c)\.php$ {
+  fastcgi_pass backend;
+  ...
+}
+```
+* Specifically disable the execution of PHP files in any directory containing user uploads.
+```nginx
+location /uploaddir {
+  location ~ \.php$ {return 403;}
+  ...
+}
+```
+* Use the `try_files` directive to filter out the problem condition
+```nginx
+location ~* \.php$ {
+  try_files $uri =404;
+  fastcgi_pass backend;
+  ...
+}
+```
+* Use a nested location to filter out the problem condition
+```nginx
+location ~* \.php$ {
+  location ~ \..*/.*\.php$ {return 404;}
+  fastcgi_pass backend;
+  ...
+}
+```
+
 
 
 
