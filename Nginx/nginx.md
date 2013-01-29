@@ -26,7 +26,10 @@ Nginx это не замена web-серверу **[Apache](http://ru.wikipedia
 * **[http://nginx.org](http://nginx.org/ru/)** - официальный сайт
 * **[http://ru.wikipedia.org/wiki/Nginx](http://ru.wikipedia.org/wiki/Nginx)** - описание на Википедии
 * **[http://wiki.nginx.org/Main](http://wiki.nginx.org/Main)** - англоязычная wiki по nginx
+* **[htaccess-конвертер для nginx](http://winginx.ru/htaccess)** - (русс.)
+* **[Еще один htaccess-конвертер для nginx](http://www.anilcetin.com/convert-apache-htaccess-to-nginx/)** - (англ.)
 
 
 ## См. также
 * **[Memcached](https://github.com/uran1980/my-blog/blob/master/Memcached/memcached.md)**
+* **[Nginx Pitfalls - Хорошая практика написания конфигов для nginx](http://wiki.nginx.org/Pitfalls)**
