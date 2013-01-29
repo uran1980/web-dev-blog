@@ -24,6 +24,7 @@ Nginx это не замена web-серверу **[Apache](http://ru.wikipedia
 
 ## Ссылки
 * **[http://nginx.org](http://nginx.org/ru/)** - официальный сайт
+* **[http://nginx.org/ru/docs/](http://nginx.org/ru/docs/)** - официальная документация по nginx на русском
 * **[http://ru.wikipedia.org/wiki/Nginx](http://ru.wikipedia.org/wiki/Nginx)** - описание на Википедии
 * **[http://wiki.nginx.org/Main](http://wiki.nginx.org/Main)** - англоязычная wiki по nginx
 * **[htaccess-конвертер для nginx](http://winginx.ru/htaccess)** - (русс.)
