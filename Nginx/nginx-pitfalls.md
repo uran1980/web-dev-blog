@@ -237,20 +237,122 @@ location ~* \.php$ {
 ```
 
 
+## FastCGI Path in Script Filename
+So many guides out there like to rely on absolute paths to get to your information. This is commonly seen in PHP blocks. When you install Nginx from a repository you'll usually wind up being able to toss **include fastcgi_params;** in your config. This is a file located in your Nginx root directory which is usually around `/etc/nginx/`.
+
+**GOOD:**
+```nginx
+fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+```
+
+**BAD:**
+```nginx
+fastcgi_param  SCRIPT_FILENAME    /var/www/yoursite.com/$fastcgi_script_name;
+```
+Where is `$document_root` set? It's set by the root directive that should be in your server block. Is your root directive not there? See the **[first pitfall](http://wiki.nginx.org/Pitfalls#Root_inside_Location_Block)**.
 
 
+## Taxing Rewrites
+Don't feel bad here, it's easy to get confused with regular expressions. In fact, it's so easy to do that we should make an effort to keep them neat and clean. Quite simply, don't add cruft.
+
+**BAD:**
+```nginx
+rewrite ^/(.*)$ http://domain.com/$1 permanent;
+```
+
+**GOOD:**
+```nginx
+rewrite ^ http://domain.com$request_uri? permanent;
+```
+
+**BETTER:**
+```nginx
+return 301 http://domain.com$request_uri;
+```
+Look at the above. Then back here. Then up, and back here. OK. The first rewrite captures the full URI minus the first slash. By using the built-in variable `$request_uri` we can effectively avoid doing any capturing or matching at all. 
 
 
+## Rewrite Missing http://
+Very simply, rewrites are relative unless you tell nginx that they're not. Making a rewrite absolute is simple. Add a scheme.
+
+**BAD:**
+```nginx
+rewrite ^ domain.com permanent;
+```
+
+**OOD:**
+```nginx
+rewrite ^ http://domain.com permanent;
+```
+In the above you will see that all we did was add **http://** to the rewrite. It's simple, easy, and effective.
+Proxy Everything
+
+**BAD:**
+```nginx
+server {
+    server_name _;
+    root /var/www/site;
+    location / {
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_pass unix:/tmp/phpcgi.socket;
+    }
+}
+```
+Yucky. In this instance, you pass **EVERYTHING** to PHP. Why? Apache might do this, you don't need to. Let me put it this way... The `try_files` directive exists for an amazing reason. It tries files in a specific order. This means that Nginx can first try to server the static content. If it can't, then it moves on. This means PHP doesn't get involved at all. **MUCH** faster. Especially if you're serving a 1MB image over PHP a few thousand times versus serving it directly. Let's take a look at how to do that.
+
+**GOOD:**
+```nginx
+server {
+    server_name _;
+    root /var/www/site;
+    location / {
+        try_files $uri $uri/ @proxy;
+    }
+    location @proxy {
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_pass unix:/tmp/phpcgi.socket;
+    }
+}
+```
+
+**Also GOOD:**
+```nginx
+server {
+    server_name _;
+    root /var/www/site;
+    location / {
+        try_files $uri $uri/ /index.php;
+    }
+    location ~ \.php$ {
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_pass unix:/tmp/phpcgi.socket;
+    }
+}
+```
+It's easy, right? You see if the requested URI exists and can be served by Nginx. If not, is it a directory that can be served. If not, then you pass it to your proxy. Only when Nginx can't serve that requested URI directly does your proxy overhead get involved.
+
+Now.. consider how much of your requests are static content, such as images, css, javascript, etc. That's probably a lot of overhead you just saved.
 
 
+## Config Changes Not Reflected
+Browser cache. Your configuration may be perfect but you'll sit there and beat your head against a cement wall for a month. What's wrong is your browser cache. When you download something, your browser stores it. It also stores how that file was served. If you are playing with a types `{}` block you'll encounter this.
+
+**The fix:**
+**[Option 1]** In Firefox press **Ctrl+Shift+Delete**, check Cache, click Clear Now. In any other browser just ask your favorite search engine. Do this after every change (unless you know it's not needed) and you'll save yourself a lot of headaches.
+**[Option 2]** Use **[curl](http://ru.wikipedia.org/wiki/CURL)**.
+
+**VirtualBox**
+If this does not work, and you're running nginx on a virtual machine in VirtualBox, it may be `sendfile()` that is causing the trouble. Simply comment out the sendfile directive or set it to "off". The directive is most likely found in your nginx.conf file.
+```
+sendfile off;
+```
 
 
-
-
-
-
-
-
+## Missing (disappearing) HTTP headers
+If you do not explicitly set `underscores_in_headers on;`, nginx will silently drop HTTP headers with underscores (which are perfectly valid according to the HTTP standard). This is done in order to prevent ambiguities when mapping headers to CGI variables, as both dashes and underscores are mapped to underscores during that process. 
 
 
 ## Оригинал статьи
