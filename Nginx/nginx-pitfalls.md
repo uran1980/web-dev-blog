@@ -267,7 +267,7 @@ rewrite ^/(.*)$ http://domain.com/$1 permanent;
 
 **ХОРОШО:**
 ```nginx
-rewrite ^ http://domain.com$request_uri? permanent;
+rewrite ^http://domain.com$request_uri? permanent;
 ```
 
 **УЖЕ ЛУЧШЕ:**
@@ -282,12 +282,12 @@ Very simply, rewrites are relative unless you tell nginx that they're not. Makin
 
 **BAD:**
 ```nginx
-rewrite ^ domain.com permanent;
+rewrite ^domain.com permanent;
 ```
 
 **ХОРОШО:**
 ```nginx
-rewrite ^ http://domain.com permanent;
+rewrite ^http://domain.com permanent;
 ```
 In the above you will see that all we did was add **http://** to the rewrite. It's simple, easy, and effective.
 Proxy Everything
