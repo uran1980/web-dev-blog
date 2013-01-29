@@ -1,5 +1,5 @@
-Nginx ![alt Nginx][https://raw.github.com/uran1980/my-blog/master/Nginx/images/nginx-logo.png]
-=====
+![alt Nginx](https://raw.github.com/uran1980/my-blog/master/Nginx/images/nginx-logo.png)
+
 **[Nginx (engine x)](http://nginx.org/ru/)** — свободный Веб-сервер и почтовый прокси-сервер, работающий на Unix-подобных операционных системах (тестировалась сборка и работа на FreeBSD, GNU/Linux, Solaris, Mac OS X). С версии 0.7.52 появилась бинарная сборка под Microsoft Windows.
 
 Разрабатывается **[Игорем Сысоевым](http://ru.wikipedia.org/wiki/%D0%A1%D1%8B%D1%81%D0%BE%D0%B5%D0%B2,_%D0%98%D0%B3%D0%BE%D1%80%D1%8C_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87)** с 2002-го года для компании Rambler и постоянно модернизируется. Осенью 2004 года вышел первый публично доступный релиз.
