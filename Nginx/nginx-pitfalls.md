@@ -340,7 +340,7 @@ server {
     }
 }
 ```
-Yucky. In this instance, you pass **EVERYTHING** to PHP. Why? Apache might do this, you don't need to. Let me put it this way... The `try_files` directive exists for an amazing reason. It tries files in a specific order. This means that Nginx can first try to server the static content. If it can't, then it moves on. This means PHP doesn't get involved at all. **MUCH** faster. Especially if you're serving a 1MB image over PHP a few thousand times versus serving it directly. Let's take a look at how to do that.
+Yucky. In this instance, you pass **EVERYTHING** to PHP. Why? Apache might do this, you don't need to. Let me put it this way... The **[try_files](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files)** directive exists for an amazing reason. It tries files in a specific order. This means that Nginx can first try to server the static content. If it can't, then it moves on. This means PHP doesn't get involved at all. **MUCH** faster. Especially if you're serving a 1MB image over PHP a few thousand times versus serving it directly. Let's take a look at how to do that.
 
 **ХОРОШО:**
 ```nginx
