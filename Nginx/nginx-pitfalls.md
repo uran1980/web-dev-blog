@@ -9,7 +9,7 @@ Don't follow the guides out there unless you can understand what they're trying 
 
 ## Root inside Location Block
 **BAD:**
-```php
+```nginx
 server {
   server_name www.domain.com;
   location / {
@@ -30,7 +30,7 @@ server {
 This works. Putting root inside of a location block will work and it's perfectly valid. What's wrong is when you start adding location blocks. If you add a root to every location block then a location block that isn't matched will have no root. Let's look at a good configuration.
 
 **GOOD:**
-```php
+```nginx
 server {
   server_name www.domain.com;
   root /var/www/nginx-default/;
@@ -49,7 +49,7 @@ server {
 
 ## Multiple Index Directives
 **BAD:**
-```php
+```nginx
 http {
   index index.php index.htm index.html;
   server {
@@ -76,7 +76,7 @@ http {
 Why repeat so many lines when not needed. Simply use the **index** directive one time. It only needs to occur in your http `{ }` block and it will be inherited below.
 
 **GOOD:**
-```php
+```nginx
 http {
   index index.php index.htm index.html;
   server {
@@ -104,7 +104,7 @@ There is a little page about using if statements. It's called **[IfIsEvil](http:
 
 ## Server Name
 **BAD:**
-```php
+```nginx
 server {
   server_name domain.com *.domain.com;
   if ($host ~* ^www\.(.+)) {
@@ -118,7 +118,7 @@ server {
 There are actually three problems here. The first being the if. That's what we care about now. Why is this bad? Did you read **[If is Evil?](http://wiki.nginx.org/IfIsEvil)** When nginx receives a request no matter what is the subdomain being requested, be it `www.domain.com` or just the plain `domain.com` this if directive is **always** evaluated. Since you're requesting nginx to check for the Host header for **every request**. It's extremely inefficient. You should avoid it. Instead use two server directives like the example below.
 
 **GOOD:**
-```php
+```nginx
 server {
   server_name www.domain.com;
   return 301 $scheme://domain.com$request_uri;
