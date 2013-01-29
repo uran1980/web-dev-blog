@@ -135,7 +135,7 @@ server {
 }
 ```
 
-There are actually three problems here. The first being the if. That's what we care about now. Why is this bad? Did you read **[If is Evil?](http://wiki.nginx.org/IfIsEvil)** When nginx receives a request no matter what is the subdomain being requested, be it `www.domain.com` or just the plain `domain.com` this if directive is **always** evaluated. Since you're requesting nginx to check for the Host header for **every request**. It's extremely inefficient. You should avoid it. Instead use two server directives like the example below.
+There are actually three problems here. The first being the `if`. That's what we care about now. Why is this bad? Did you read **[If is Evil?](http://wiki.nginx.org/IfIsEvil)** When nginx receives a request no matter what is the subdomain being requested, be it `www.domain.com` or just the plain `domain.com` this `if` directive is **always** evaluated. Since you're requesting nginx to check for the Host header for **every request**. It's extremely inefficient. You should avoid it. Instead use two server directives like the example below.
 
 **ХОРОШО:**
 ```nginx
@@ -149,7 +149,7 @@ server {
 }
 ```
 
-Besides making the configuration file easier to read. This approach decreases nginx processing requirements. We got rid of the spurious if. We're also using $scheme which doesn't hardcodes the URI scheme you're using, be it http or https.
+Besides making the configuration file easier to read. This approach decreases nginx processing requirements. We got rid of the spurious `if`. We're also using `$scheme` which doesn't hardcodes the URI scheme you're using, be it *http* or *https*.
 
 [к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
