@@ -31,5 +31,5 @@ Nginx это не замена web-серверу **[Apache](http://ru.wikipedia
 
 
 ## См. также
-* **[Memcached](https://github.com/uran1980/my-blog/blob/master/Memcached/memcached.md)**
 * **[Nginx Pitfalls - Хорошая практика написания конфигов для nginx](http://wiki.nginx.org/Pitfalls)**
+* **[Memcached](https://github.com/uran1980/my-blog/blob/master/Memcached/memcached.md)**
