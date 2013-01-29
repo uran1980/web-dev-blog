@@ -346,8 +346,8 @@ Now.. consider how much of your requests are static content, such as images, css
 Browser cache. Your configuration may be perfect but you'll sit there and beat your head against a cement wall for a month. What's wrong is your browser cache. When you download something, your browser stores it. It also stores how that file was served. If you are playing with a types `{}` block you'll encounter this.
 
 **The fix:**
-**[Option 1]** In Firefox press **Ctrl+Shift+Delete**, check Cache, click Clear Now. In any other browser just ask your favorite search engine. Do this after every change (unless you know it's not needed) and you'll save yourself a lot of headaches.
-**[Option 2]** Use **[curl](http://ru.wikipedia.org/wiki/CURL)**.
+* **[Option 1]** In Firefox press **Ctrl+Shift+Delete**, check Cache, click Clear Now. In any other browser just ask your favorite search engine. Do this after every change (unless you know it's not needed) and you'll save yourself a lot of headaches.
+* **[Option 2]** Use **[curl](http://ru.wikipedia.org/wiki/CURL)**.
 
 **VirtualBox**
 If this does not work, and you're running nginx on a virtual machine in VirtualBox, it may be `sendfile()` that is causing the trouble. Simply comment out the sendfile directive or set it to "off". The directive is most likely found in your nginx.conf file.
