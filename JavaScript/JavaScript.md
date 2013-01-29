@@ -18,7 +18,7 @@ JavaScript также известен как **ECMAScript** (описывает
 
 
 ## Ссылки
-* **[перевод на русский стандарта ECMA-262](http://www.ecmascript.org/docs.php)**
+* **[Описание стандарта ECMA-262 (англ.)](http://www.ecmascript.org/docs.php)**
 * **[http://javascript.ru/ecmascript](http://javascript.ru/ecmascript)** - перевод на русский стандарта ECMA-262
 * **[http://ru.wikipedia.org/wiki/JavaScript](http://ru.wikipedia.org/wiki/JavaScript)** - описание на Википедии
 * **[Core JavaScript 1.5 Reference](https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference)** - Полный мануал по языку от Mozilla
