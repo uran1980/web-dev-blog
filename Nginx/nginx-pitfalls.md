@@ -155,7 +155,7 @@ Besides making the configuration file easier to read. This approach decreases ng
 
 
 ## Проверка что файл cуществует
-Using if to ensure a file exists is horrible. It's mean. If you have any recent version of Nginx you should look at **[try_files](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files)** which just made life much easier.
+Using `if` to ensure a file exists is horrible. It's mean. If you have any recent version of Nginx you should look at **[try_files](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files)** which just made life much easier.
 
 **ПЛОХО:**
 ```nginx
@@ -179,9 +179,9 @@ server {
 }
 ```
 
-What we changed is that we try to see if $uri exists without requiring an if. Using `try_files` mean that you can test a sequence. If $uri doesn't exist, try `$uri/`, if that doesn't exist try a fallback location.
+What we changed is that we try to see if `$uri` exists without requiring an `if`. Using `try_files` mean that you can test a sequence. If `$uri` doesn't exist, try `$uri/`, if that doesn't exist try a fallback location.
 
-In this case it will see if the $uri file exists. If it does then serve it. If it doesn't then tests if that directory exists. If not, then it will proceed to serve index.html which you make sure exists. It's loaded but oh so simple. This is another instance you can completely eliminate If.
+In this case it will see if the `$uri` file exists. If it does then serve it. If it doesn't then tests if that directory exists. If not, then it will proceed to serve `index.html` which you make sure exists. It's loaded but oh so simple. This is another instance you can completely eliminate `If`.
 
 [к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
