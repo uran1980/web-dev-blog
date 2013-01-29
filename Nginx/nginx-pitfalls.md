@@ -46,6 +46,8 @@ server {
 }
 ```
 
+[к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
+
 
 ## Повторяющиеся директивы `Index`
 **ПЛОХО:**
@@ -97,6 +99,8 @@ http {
 }
 ```
 
+[к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
+
 
 ## Ипсользование условия `If`
 There is a little page about using if statements. It's called **[IfIsEvil](http://wiki.nginx.org/IfIsEvil)** and you really should check it out. Let's take a look at a few uses of if that are bad.
@@ -131,6 +135,8 @@ server {
 
 Besides making the configuration file easier to read. This approach decreases nginx processing requirements. We got rid of the spurious if. We're also using $scheme which doesn't hardcodes the URI scheme you're using, be it http or https.
 
+[к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
+
 
 ## Проверка что файл cуществует
 Using if to ensure a file exists is horrible. It's mean. If you have any recent version of Nginx you should look at **[try_files](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files)** which just made life much easier.
@@ -161,6 +167,8 @@ What we changed is that we try to see if $uri exists without requiring an if. Us
 
 In this case it will see if the $uri file exists. If it does then serve it. If it doesn't then tests if that directory exists. If not, then it will proceed to serve index.html which you make sure exists. It's loaded but oh so simple. This is another instance you can completely eliminate If.
 
+[к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
+
 
 ## Шаблон *[Front Controller](http://www.martinfowler.com/eaaCatalog/frontController.html)* и фреймворки которые его используют
 **Front Controller Pattern** designs are popular and used on the many of the most popular PHP software packages. A lot of examples are more complex than they need to be. To get Drupal, Joomla, etc. to work, just use this:
@@ -184,6 +192,8 @@ try_files $uri $uri/ /index.php;
 Of course, your mileage may vary and you may need more complex things based on your needs, but for a basic sites, these will work perfectly. You should always start simple and build from there.
 
 You can also decide to skip the directory check and remove `$uri/` from it as well, if you don't care about checking for the existence of directories.
+
+[к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
 
 ## Перенаправление неконтролируемых запросов в PHP
@@ -241,6 +251,8 @@ location ~* \.php$ {
 }
 ```
 
+[к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
+
 
 ## FastCGI путь в `SCRIPT_FILENAME`
 So many guides out there like to rely on absolute paths to get to your information. This is commonly seen in PHP blocks. When you install Nginx from a repository you'll usually wind up being able to toss **include fastcgi_params;** in your config. This is a file located in your Nginx root directory which is usually around `/etc/nginx/`.
@@ -255,6 +267,8 @@ fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
 fastcgi_param  SCRIPT_FILENAME    /var/www/yoursite.com/$fastcgi_script_name;
 ```
 Where is `$document_root` set? It's set by the root directive that should be in your server block. Is your root directive not there? See the **[first pitfall](http://wiki.nginx.org/Pitfalls#Root_inside_Location_Block)**.
+
+[к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
 
 ## Проверяем рерайты
@@ -275,6 +289,8 @@ rewrite ^http://domain.com$request_uri? permanent;
 return 301 http://domain.com$request_uri;
 ```
 Look at the above. Then back here. Then up, and back here. OK. The first rewrite captures the full URI minus the first slash. By using the built-in variable `$request_uri` we can effectively avoid doing any capturing or matching at all. 
+
+[к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
 
 ## Перепрописываем пропущенные `http://`
@@ -341,6 +357,8 @@ It's easy, right? You see if the requested URI exists and can be served by Nginx
 
 Now.. consider how much of your requests are static content, such as images, css, javascript, etc. That's probably a lot of overhead you just saved.
 
+[к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
+
 
 ## Изменения в конфиге не работают
 Browser cache. Your configuration may be perfect but you'll sit there and beat your head against a cement wall for a month. What's wrong is your browser cache. When you download something, your browser stores it. It also stores how that file was served. If you are playing with a types `{}` block you'll encounter this.
@@ -354,6 +372,8 @@ If this does not work, and you're running nginx on a virtual machine in VirtualB
 ```
 sendfile off;
 ```
+
+[к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
 
 ## Пропущенные (пропавшие) *HTTP* заголовки
