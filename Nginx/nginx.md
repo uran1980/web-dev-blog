@@ -1,4 +1,4 @@
-Nginx
+Nginx ![alt Nginx][https://raw.github.com/uran1980/my-blog/master/Nginx/images/nginx-logo.png]
 =====
 **[Nginx (engine x)](http://nginx.org/ru/)** — свободный Веб-сервер и почтовый прокси-сервер, работающий на Unix-подобных операционных системах (тестировалась сборка и работа на FreeBSD, GNU/Linux, Solaris, Mac OS X). С версии 0.7.52 появилась бинарная сборка под Microsoft Windows.
 
