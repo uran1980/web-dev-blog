@@ -129,6 +129,76 @@ server {
 }
 ```
 
+Besides making the configuration file easier to read. This approach decreases nginx processing requirements. We got rid of the spurious if. We're also using $scheme which doesn't hardcodes the URI scheme you're using, be it http or https.
+
+
+## Check IF File Exists
+Using if to ensure a file exists is horrible. It's mean. If you have any recent version of Nginx you should look at **[try_files](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files)** which just made life much easier.
+
+**BAD:**
+```nginx
+server {
+  root /var/www/domain.com;
+  location / {
+    if (!-f $request_filename) {
+      break;
+    }
+  }
+}
+```
+
+**GOOD:**
+```nginx
+server {
+  root /var/www/domain.com;
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+}
+```
+
+What we changed is that we try to see if $uri exists without requiring an if. Using `try_files` mean that you can test a sequence. If $uri doesn't exist, try `$uri/`, if that doesn't exist try a fallback location.
+
+In this case it will see if the $uri file exists. If it does then serve it. If it doesn't then tests if that directory exists. If not, then it will proceed to serve index.html which you make sure exists. It's loaded but oh so simple. This is another instance you can completely eliminate If.
+
+
+##Front Controller Pattern based packages
+**Front Controller Pattern** designs are popular and used on the many of the most popular PHP software packages. A lot of examples are more complex than they need to be. To get Drupal, Joomla, etc. to work, just use this:
+```nginx
+try_files $uri $uri/ /index.php?q=$uri&$args;
+```
+Note - the parameter names are different based on the package you're using. For example:
+* `q` is the parameter used by **[Drupal](http://ru.wikipedia.org/wiki/Drupal)**, **[Joomla](http://ru.wikipedia.org/wiki/Joomla)**, **[WordPress](http://ru.wikipedia.org/wiki/WordPress)** 
+* `page` is used by **[CMS Made Simple](http://ru.wikipedia.org/wiki/CMS_Made_Simple)**
+
+Some software doesn't even need the query string, and can read from REQUEST_URI (WordPress supports this, for example):
+```nginx
+try_files $uri $uri/ /index.php;
+```
+
+Of course, your mileage may vary and you may need more complex things based on your needs, but for a basic sites, these will work perfectly. You should always start simple and build from there.
+
+You can also decide to skip the directory check and remove `$uri/` from it as well, if you don't care about checking for the existence of directories.
+
+
+## Passing Uncontrolled Requests to PHP
+Many example Nginx configurations for PHP on the web advocate passing every URI ending in `.php` to the PHP interpreter. Note that this presents a serious security issue on most PHP setups as it may allow arbitrary code execution by third parties.
+
+The problem section usually looks like this:
+```nginx
+location ~* \.php$ {
+  fastcgi_pass backend;
+  ...
+}
+```
+
+
+
+
+
+
+
+
 
 
 
