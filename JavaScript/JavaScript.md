@@ -29,6 +29,6 @@ JavaScript также известен как **ECMAScript** (описывает
 
 ## См. Также
 * **[Повторное введение в JavaScript на MozillaDevCenter](https://developer.mozilla.org/ru/%D0%9F%D0%BE%D0%B2%D1%82%D0%BE%D1%80%D0%BD%D0%BE%D0%B5_%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_JavaScript)**
-* jQuery
-* JSLint
+* **[jQuery](https://github.com/uran1980/my-blog/blob/master/jQuery/jQuery.md)**
+* **[JSLint - валидатор JavaScript](https://github.com/uran1980/my-blog/blob/master/JavaScript/JSLint.md)**
 
