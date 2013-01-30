@@ -11,8 +11,8 @@
 Директива **[`if`](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#if)** имеет массу проблем при использовании внутри блока **[`location`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#location)**. Иногда, и это происходит очень часто, она не выполняет то, что от нее ожидают. В некоторых ситуация она может привести к сегментации памяти и связанным с этим сбоям. Поэтому в большинстве случаем, если это возможно, лучше не использовать директиву `if` вообще.
 
 Единственное 100% безопасное применение этой директивы в контексте блока `location` это:
-* `[return](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#return) ...;`
-* `[rewrite](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#rewrite) ... last;`
+* `return ...;`
+* `rewrite ... last;`
 
 Все остальные применения могут приводить к непредсказуемому поведению и последствиям, включая **[SIGSEGV](http://ru.wikipedia.org/wiki/SIGSEGV)** ().
 
