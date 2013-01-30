@@ -314,7 +314,7 @@ return 301 http://domain.com$request_uri;
 
 
 ## Перепрописываем пропущенные `http://`
-Very simply, rewrites are relative unless you tell nginx that they're not. Making a rewrite absolute is simple. Add a scheme.
+Все очень просто. Реврайты - относительны, даже если вы указываете nginx обратное. Чтобы сделать реврайты абсолютными, просто добавьте тип http протокола в начало адреса. Смотрим пример:
 
 **BAD:**
 ```nginx
@@ -325,7 +325,7 @@ rewrite ^domain.com permanent;
 ```nginx
 rewrite ^http://domain.com permanent;
 ```
-In the above you will see that all we did was add **http://** to the rewrite. It's simple, easy, and effective.
+В примере выше мы просто добавили в реврайт **http://**. Это очень просто и эффективно.
 
 [к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
@@ -344,6 +344,10 @@ server {
 }
 ```
 Yucky. In this instance, you pass **EVERYTHING** to PHP. Why? Apache might do this, you don't need to. Let me put it this way... The **[try_files](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files)** directive exists for an amazing reason. It tries files in a specific order. This means that Nginx can first try to server the static content. If it can't, then it moves on. This means PHP doesn't get involved at all. **MUCH** faster. Especially if you're serving a 1MB image over PHP a few thousand times versus serving it directly. Let's take a look at how to do that.
+
+FFFUUU. В этом примере мы перенаправляем **ВСЕ ПОДРЯД!!!** в PHP. Зачем? Для Apache это простительно, но вам нет. Директива **[try_files](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files)** придумана не просто так, она проверяет наличие запрашиваемого ресурса (файла) в определнной последовательности. Это значит, что nginx может проверить первое условие, потом второе и т.д. пока по цепочке не дойдет до конца. И если ничего не сработало, то по-умолчанию выполнится последннее условие в цепочке проверок. А это значит что интерепретатор PHP будет вызываться не каждый раз а только тогда кода это действительно необходимо. Обработка запросов при этом ускорится многократно! 
+
+Представьте, что идет несколько однотипных запросов на получение файла картинки размеров 1Мб и в примере выше каждый такой запрос будет перенаправлен в PHP. В примере ниже показано как избавиться от этого безобразия:
 
 **ХОРОШО:**
 ```nginx
@@ -376,9 +380,9 @@ server {
     }
 }
 ```
-It's easy, right? You see if the requested URI exists and can be served by Nginx. If not, is it a directory that can be served. If not, then you pass it to your proxy. Only when Nginx can't serve that requested URI directly does your proxy overhead get involved.
+Просто, не правда-ли? Мы видим что, если запрашиваемый URI существует, то он будет отработан nginx. Если нет, то проверяется существует ли вообще такая директория `$uri/`. Если нет, то уже тогда по-умолчанию запрос будет направлен в `/index.php` и обработан PHP.
 
-Now.. consider how much of your requests are static content, such as images, css, javascript, etc. That's probably a lot of overhead you just saved.
+Теперь представьте сколько на вашем сайте статического контента (картинок, css-стилей, js-скриптов и т.д.), сколько лишних запросов вы отсекли от обработки через PHP?
 
 [к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
