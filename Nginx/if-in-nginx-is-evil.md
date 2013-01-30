@@ -14,11 +14,12 @@ The only 100% safe things which may be done inside `if` in `location` context ar
 * [return](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#return) ...;
 * [rewrite](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#rewrite) ... last; 
 
-Anything else may possibly cause unpredictable behaviour, including potential SIGSEGV.
+Anything else may possibly cause unpredictable behaviour, including potential **[SIGSEGV](http://ru.wikipedia.org/wiki/SIGSEGV)**.
 
-It is important to note that the behaviour of if is not inconsistent, given two identical requests it will not randomly fail on one and work on the other, with proper testing and understanding ifs can be used. The advice to use other directives where available still very much apply, though.
+It is important to note that the behaviour of if is not inconsistent, given two identical requests it will not randomly fail on one and work on the other, with proper testing and understanding ifs **can** be used. The advice to use other directives where available still very much apply, though.
 
 There are cases where you simply cannot avoid using an if, for example if you need to test a variable which has no equivalent directive.
+
 ```nginx
 if ($request_method = POST ) {
   return 405;
