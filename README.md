@@ -5,6 +5,7 @@ my-blog
 
 ## Доступные статьи
 ### Web-разработка
+* **[Стандарты написания кода](https://github.com/uran1980/my-blog/blob/master/coding-styleguides)**
 * **[Ообъектно-Ориентированное программирование (ООП)](https://github.com/uran1980/my-blog/blob/master/OOP%20-%20ObjectOrientedProgramming/README.md)**
 * **[JavaScript](https://github.com/uran1980/my-blog/blob/master/JavaScript/README.md)**
 * **[Memcached](https://github.com/uran1980/my-blog/blob/master/Memcached/README.md)**
