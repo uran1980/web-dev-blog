@@ -44,7 +44,7 @@ server {
 }
 ```
 
-This works. Putting root inside of a location block will work and it's perfectly valid. What's wrong is when you start adding location blocks. If you add a root to every location block then a location block that isn't matched will have no root. Let's look at a good configuration.
+Это работает. Помещать директиву [`root`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#root) внутри блока [`location`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#location) это нормально и правильно. Что не правильно в данном случае, дак это то, что директива `root` повторяется в каждом блоке `location`, следовательно если ниодин из *локейшенов* не сработает, то у нас директива `root` вообще не будет задана. Правильным решение является вынос директивы `root` из блоков `location` в начало блока [`server`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#server). Ниже приведен пример как надо делать правильно.
 
 **ХОРОШО:**
 ```nginx
