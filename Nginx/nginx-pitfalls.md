@@ -92,7 +92,7 @@ http {
 }
 ```
 
-Why repeat so many lines when not needed. Simply use the **index** directive one time. It only needs to occur in your http `{ }` block and it will be inherited below.
+Зачем повторять столько строчек кода. Просто используйте директиву [`index`](http://nginx.org/ru/docs/http/ngx_http_index_module.html#index) один раз. Ее необходимо задать всего один раз внутри блока [`http`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#http) и она будет наследоваться всеми вложенными блоками.
 
 **ХОРОШО:**
 ```nginx
@@ -120,7 +120,7 @@ http {
 
 
 ## Ипсользование условий `If` - зло!!!
-There is a little page about using if statements. It's called **[Использование оператора if в блоке location - это Зло!!!](https://github.com/uran1980/my-blog/blob/master/Nginx/if-in-location-is-evil.md)** and you really should check it out. Let's take a look at a few uses of if that are bad.
+Есть небольшая статья по применению условного оператора [`if`](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#if) внутри блоков [`location`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#location), описывающая почему так делать нельзя и это зло. Статья так и называется **[Использование оператора if в блоке location - это Зло!!!](https://github.com/uran1980/my-blog/blob/master/Nginx/if-in-location-is-evil.md)**. Очень рекомендуем прочитать вам эту статью, и посмотреть на примерах почему оператор `if` внутри блока `location` это плохо.
 
 [к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
@@ -138,7 +138,8 @@ server {
 }
 ```
 
-There are actually three problems here. The first being the `if`. That's what we care about now. Why is this bad? Did you read **[`If` - Зло?](https://github.com/uran1980/my-blog/blob/master/Nginx/if-in-location-is-evil.md)** When nginx receives a request no matter what is the subdomain being requested, be it `www.domain.com` or just the plain `domain.com` this `if` directive is **always** evaluated. Since you're requesting nginx to check for the Host header for **every request**. It's extremely inefficient. You should avoid it. Instead use two server directives like the example below.
+На самом деле здесь три проблемы... Первая это `if` (смотрим статью **[Использование оператора if в блоке location - это Зло!!!](https://github.com/uran1980/my-blog/blob/master/Nginx/if-in-location-is-evil.md)**). Когда nginx получает запрос, не важно в какой поддомен он направлен, будь это `www.domain.com` или `domain.com`, условие `if` **всегда** сработает!!! В примере получается, что мы указываем, чтобы nginx проверял заголовок хоста ([встроенную переменную](http://nginx.org/ru/docs/http/ngx_http_core_module.html#variables) `$host`) **при каждом запросе**. Это крайне не эффективно. Вы должны избегать этого. Вместо неудачного условия `if` лучше использовать два блока с директивой [`server`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#server), как в примере ниже.
+
 
 **ХОРОШО:**
 ```nginx
