@@ -1,6 +1,6 @@
 Mercurial
 =========
-![alt Mercurial](https://raw.github.com/uran1980/web-deb-blog/master/Mercurial/images/mercurial.png)
+![alt Mercurial](https://raw.github.com/uran1980/web-dev-blog/master/Mercurial/images/mercurial.png)
 
 **[Mercurial](http://ru.wikipedia.org/wiki/Mercurial)** — кроссплатформенная распределённая система управления версиями, разработанная для эффективной работы с очень большими репозиториями кода.
 

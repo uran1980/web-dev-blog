@@ -1,4 +1,4 @@
-web-deb-blog
+web-dev-blog
 =======
 
 Мой блог на русском
