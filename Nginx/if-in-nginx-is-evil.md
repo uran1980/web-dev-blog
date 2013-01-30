@@ -54,14 +54,93 @@ E.g. the following may be used to safely change location which will be used to p
     }
 ```
 
-In some cases it may be good idea to use embedded scripting modules (embedded perl, or various 3rd party modules) to do the scripting. 
+In some cases it may be good idea to use embedded scripting modules (**[embedded perl](http://nginx.org/ru/docs/http/ngx_http_perl_module.html)**, or various 3rd party modules) to do the scripting.
 
 [к началу](#%D0%A3%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F-if-%D0%B2-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D0%B0%D1%85-nginx---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
 
 
 ## Примеры
-TODO
-
+Here are some examples which explain why if is evil. Don't try this at home. You were warned.
+```nginx
+        # Здесь собрана подборка примеров конфигураций nginx с проявлением непонятных багов
+        # связанных с использованием условного оператора if.
+        # Эти примеры показывают что использование оператора if внутри блока location - это Зло!!!
+ 
+        #
+        # Только второй заголовок будет в ответе сервера.
+        # Вообще-то это не баг, просто так nginx это отрабатывает =)
+        #
+        location /only-one-if {
+            set $true 1;
+ 
+            if ($true) {
+                add_header X-First 1;
+            }
+ 
+            if ($true) {
+                add_header X-Second 2;
+            }
+ 
+            return 204;
+        }
+ 
+        #
+        # запрос будет отправлен в бекэнд без изменения uri на '/'
+        # (это результат работы оператора if)
+        #
+        location /proxy-pass-uri {
+            proxy_pass http://127.0.0.1:8080/;
+ 
+            set $true 1;
+ 
+            if ($true) {
+                # ничего
+            }
+        }
+ 
+        #
+        # директива try_files не сработает из-за наличия условного оператора if
+        #
+        location /if-try-files {
+             try_files  /file  @fallback;
+ 
+             set $true 1;
+ 
+             if ($true) {
+                 # ничего
+             }
+        }
+ 
+        #
+        # nginx will SIGSEGV
+        #
+        location /crash {
+            set $true 1;
+ 
+            if ($true) {
+                # fastcgi_pass здесь...
+                fastcgi_pass  127.0.0.1:9000;
+            }
+ 
+            if ($true) {
+                # ничего
+            }
+        }
+ 
+        #
+        # alias не сработает корректно из-за наличия if
+        #
+        #
+        location ~* ^/if-and-alias/(?<file>.*) {
+            alias /tmp/$file;
+ 
+            set $true 1;
+ 
+            if ($true) {
+                # ничего
+            }
+        }
+```
 [к началу](#%D0%A3%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F-if-%D0%B2-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D0%B0%D1%85-nginx---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
 
 
