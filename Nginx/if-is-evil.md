@@ -16,26 +16,25 @@
 
 Все остальные применения могут приводить к непредсказуемым результатам, включая **[SIGSEGV  (переполнение буфера)](http://ru.wikipedia.org/wiki/SIGSEGV)**.
 
-
-It is important to note that the behaviour of if is not inconsistent, given two identical requests it will not randomly fail on one and work on the other, with proper testing and understanding ifs **can** be used. The advice to use other directives where available still very much apply, though.
-
-There are cases where you simply cannot avoid using an if, for example if you need to test a variable which has no equivalent directive.
-
+Есть случаи когда без директивы `if` обойтись нельзя, например:
 ```nginx
 if ( $request_method = POST ) {
   return 405;
 }
+
 if ( $args ~ post=140 ) {
   rewrite ^http://example.com/ permanent;
 }
 ```
+
 [к началу](#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0-if-%D0%B2-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B5-location---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
 
 
 ## Что на замену?
-Use [`try_files`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files) if it suits your needs. Use the `return ...` or `rewrite ... last` in other cases. In some cases it's also possible to move ifs to server level (where it's safe as only other rewrite module directives are allowed within it).
+Во многих случая заменой директивы `if`, при проверки наличия запрашиваемого ресурса, может служить [`try_files`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files). В других случаях возможно заменить `if` на несколько блоков `server`.
 
 E.g. the following may be used to safely change location which will be used to process request:
+В примере ниже показано корректное использование `if`, для безопасной смены *локейшена* т.к. здесь `if` используется для проверки чтобы только вернуть резлтат запроса через директиву [`return`](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#return):
 ```nginx
     location / {
         error_page 418 = @other;
@@ -55,13 +54,13 @@ E.g. the following may be used to safely change location which will be used to p
     }
 ```
 
-In some cases it may be good idea to use embedded scripting modules ([embedded perl](http://nginx.org/ru/docs/http/ngx_http_perl_module.html), or various 3rd party modules) to do the scripting.
+В некоторых случаях, хорошей идеей может быть использование встраиваемых скриптовых модулей (например, [embedded perl](http://nginx.org/ru/docs/http/ngx_http_perl_module.html) или других дополнительных модулей nginx).
 
 [к началу](#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0-if-%D0%B2-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B5-location---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
 
 
 ## Примеры
-Here are some examples which explain why if is evil. Don't try this at home. You were warned.
+Вот немного примеров, поясняющих, почему использование `if` это зло. Не пытайтесь повторить это дома =). Мы вас предупредили.
 ```nginx
         #########################################################################################
         #
@@ -150,7 +149,7 @@ Here are some examples which explain why if is evil. Don't try this at home. You
 
 
 ## Почему это до сих пор не исправлено?
-Directive `if` is part of rewrite module which evaluates instructions imperatively. On the other hand, nginx configuration in general is declarative. At some point due to users demand an attempt was made to enable some non-rewrite directives inside `if`, and this lead to situation we have now. It mostly works, but... see above.
+Директива `if` является частью модуля [`nginx_http_rewraite_module`](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html) - основного модуля nginx, который выполняет инструкции заданные в конфигурационном файле **[императивно](http://ru.wikipedia.org/wiki/%D0%98%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)**. C другой стороны, инструкции в конфигурационном файле для nginx пишутся в основном в **[декларативном стиле](http://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%BA%D0%BB%D0%B0%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)**. Это обясняется тем, что в какой-то момент в этапе разработки nginx, появилась необходимость добавить некоторые директивы не относящиеся непосредственно к модулю `rewraite` (так называемые **non-rewrite** директивы), которые моглибы выполнятся внутри блока `if`. В результате мы пришли к тому, что имеем сейчас... Т.е. впринципе директива `if` работает, но... Смотрите примеры выше. :(
 
 Looks like the only correct fix would be to disable non-rewrite directives inside if completely. It would break many configuration out there though, so wasn't done yet. 
 
