@@ -42,7 +42,7 @@ server {
 }
 ```
 
-Это работает. Помещать директиву [`root`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#root) внутри блока [`location`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#location) это нормально и правильно. Что не правильно в данном случае, дак это то, что директива `root` повторяется в каждом блоке `location`, следовательно если ниодин из *локейшенов* не сработает, то у нас директива `root` вообще не будет задана. Правильным решение является вынос директивы `root` из блоков `location` в начало блока [`server`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#server). Ниже приведен пример как надо делать правильно.
+Это работает. Помещать директиву [`root`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#root) внутри блока [`location`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#location) это нормально и правильно. Что не правильно в данном случае, дак это то, что директива `root` повторяется в каждом блоке `location`, следовательно если ни один из *локейшенов* не сработает, то у нас директива `root` вообще не будет задана. Правильным решение является вынос директивы `root` из блоков `location` в начало блока [`server`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#server). Ниже приведен пример как надо делать правильно.
 
 **ХОРОШО:**
 ```nginx
