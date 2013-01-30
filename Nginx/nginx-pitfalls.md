@@ -118,7 +118,7 @@ http {
 
 
 ## Ипсользование условий `If` - зло!!!
-Есть небольшая статья по применению условного оператора [`if`](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#if) внутри блоков [`location`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#location), описывающая почему так делать нельзя и это зло. Статья так и называется **[Использование оператора if в блоке location - это Зло!!!](https://github.com/uran1980/my-blog/blob/master/Nginx/if-in-location-is-evil.md)**. Очень рекомендуем прочитать вам эту статью, и посмотреть на примерах почему оператор `if` внутри блока `location` это плохо.
+Есть небольшая статья по применению условного оператора [`if`](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#if) внутри блоков [`location`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#location), описывающая почему так делать нельзя и это плохо. Статья так и называется **[Использование оператора if в блоке location - это Зло!!!](https://github.com/uran1980/my-blog/blob/master/Nginx/if-in-location-is-evil.md)**. Очень рекомендуем прочитать вам эту статью, и посмотреть на примерах почему оператор `if` это зло.
 
 [к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
