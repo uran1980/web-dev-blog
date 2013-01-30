@@ -5,7 +5,7 @@ my-blog
 
 ## Доступные статьи
 ### Web-разработка
-* **[ООП - объектно-ориентированное программирование](https://github.com/uran1980/my-blog/blob/master/OOP%20-%20ObjectOrientedProgramming/README.md)**
+* **[Ообъектно-ориентированное программирование (ООП)](https://github.com/uran1980/my-blog/blob/master/OOP%20-%20ObjectOrientedProgramming/README.md)**
 
 
 ### Администрирование
