@@ -89,7 +89,7 @@ Here are some examples which explain why if is evil. Don't try this at home. You
         }
  
         #
-        # запрос будет отправлен в бекэнд без изменения uri на '/'
+        # запрос будет отправлен в бекэнд без добавления '/' в uri
         # (это результат работы оператора if)
         #
         location /proxy-pass-uri {
