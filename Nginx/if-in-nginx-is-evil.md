@@ -24,7 +24,7 @@ There are cases where you simply cannot avoid using an if, for example if you ne
 if ( $request_method = POST ) {
   return 405;
 }
-if ( $args ~ post=140 ){
+if ( $args ~ post=140 ) {
   rewrite ^http://example.com/ permanent;
 }
 ```
