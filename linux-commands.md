@@ -30,3 +30,240 @@
 ### Остановка системы
 | Команда                 | Описание      |
 |:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+### Файлы и директории
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+#TODO
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+TODO
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
