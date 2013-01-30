@@ -118,7 +118,7 @@ http {
 
 
 ## Ипсользование условий `If` - зло!!!
-There is a little page about using if statements. It's called **[IfIsEvil](https://github.com/uran1980/my-blog/blob/master/Nginx/if-in-nginx-is-evil.md)** and you really should check it out. Let's take a look at a few uses of if that are bad.
+There is a little page about using if statements. It's called **[IfIsEvil](https://github.com/uran1980/my-blog/blob/master/Nginx/if-in-location-is-evil.md)** and you really should check it out. Let's take a look at a few uses of if that are bad.
 
 [к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
@@ -136,7 +136,7 @@ server {
 }
 ```
 
-There are actually three problems here. The first being the `if`. That's what we care about now. Why is this bad? Did you read **[If is Evil?](https://github.com/uran1980/my-blog/blob/master/Nginx/if-in-nginx-is-evil.md)** When nginx receives a request no matter what is the subdomain being requested, be it `www.domain.com` or just the plain `domain.com` this `if` directive is **always** evaluated. Since you're requesting nginx to check for the Host header for **every request**. It's extremely inefficient. You should avoid it. Instead use two server directives like the example below.
+There are actually three problems here. The first being the `if`. That's what we care about now. Why is this bad? Did you read **[If is Evil?](https://github.com/uran1980/my-blog/blob/master/Nginx/if-in-location-is-evil.md)** When nginx receives a request no matter what is the subdomain being requested, be it `www.domain.com` or just the plain `domain.com` this `if` directive is **always** evaluated. Since you're requesting nginx to check for the Host header for **every request**. It's extremely inefficient. You should avoid it. Instead use two server directives like the example below.
 
 **ХОРОШО:**
 ```nginx
