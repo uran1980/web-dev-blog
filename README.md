@@ -1,7 +1,7 @@
 my-blog
 =======
 
-Мой блог на русском...
+Мой блог...
 
 ## Web-разработка
 * **[Стандарты кодирования](https://github.com/uran1980/my-blog/blob/master/Coding-standarts/README.md)**
