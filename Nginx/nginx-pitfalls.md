@@ -190,8 +190,6 @@ server {
 
 
 ## Шаблон *[Front Controller](http://www.martinfowler.com/eaaCatalog/frontController.html)* и CMS движки, которые его используют
-**Front Controller Pattern** designs are popular and used on the many of the most popular PHP software packages. A lot of examples are more complex than they need to be. To get Drupal, Joomla, etc. to work, just use this:
-
 Шаблон **Front Controller** сейчас очень популярен и используется во многих CMS движках и современных фреймворках на PHP. Далее показан простой пример, применимый для CMS Drupal, Joomla и др.:
 ```nginx
 try_files $uri $uri/ /index.php?q=$uri&$args;
@@ -209,8 +207,6 @@ try_files $uri $uri/ /index.php?q=$uri&$args;
 ```nginx
 try_files $uri $uri/ /index.php;
 ```
-
-Of course, your mileage may vary and you may need more complex things based on your needs, but for a basic sites, these will work perfectly. You should always start simple and build from there.
 
 Кончно, эти параметры для других CMS и фреймворков, здесь приведен общий пример. В некоторых систуациях вам понадится более комплексное решение, пробуйте и экспериментируйте...
 
@@ -278,7 +274,7 @@ location ~* \.php$ {
 
 
 ## FastCGI путь в `SCRIPT_FILENAME`
-So many guides out there like to rely on absolute paths to get to your information. This is commonly seen in PHP blocks. When you install Nginx from a repository you'll usually wind up being able to toss **include fastcgi_params;** in your config. This is a file located in your Nginx root directory which is usually around `/etc/nginx/`.
+Во многих руководствах по настройке nginx используются абсолютные пути для указания корневой директории сайта. Это частая практика в PHP блоках конфигурации nginx. Но в подключаемых конфигах для настройки парметров FastCGI **include fastcgi_params;** этого делать нельзя, для этого есть встроенная переменная `$document_root`.
 
 **ХОРОШО:**
 ```nginx
@@ -289,7 +285,8 @@ fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
 ```nginx
 fastcgi_param  SCRIPT_FILENAME    /var/www/yoursite.com/$fastcgi_script_name;
 ```
-Where is `$document_root` set? It's set by the root directive that should be in your server block. Is your `root` directive not there? See the **[first pitfall](#root-%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B8-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0-location)**.
+
+Вы спросите, где задается переменная `$document_root`? Она задается директивой [`root`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#root), которая должна присутствовать в блоке [`server`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#server). А, в вашем конфиге ее там нет? Тогда вы наткнулись на первый подводный камень описанные нами в этой статье - **[`Root` внутри блока `Location`]((#root-%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B8-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0-location)** =)
 
 [к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
