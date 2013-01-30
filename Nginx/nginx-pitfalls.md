@@ -159,12 +159,13 @@ server {
 
 
 ## Проверка что файл cуществует
-Using `if` to ensure a file exists is horrible. It's mean. If you have any recent version of Nginx you should look at **[try_files](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files)** which just made life much easier.
+Использовать `if` для проверкиналичия файла это просто ужасно. В nginx для этого есть специальная директива **[`try_files`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files)**, которая делает жизнь на много проще.
 
 **ПЛОХО:**
 ```nginx
 server {
   root /var/www/domain.com;
+  
   location / {
     if (!-f $request_filename) {
       break;
@@ -177,15 +178,15 @@ server {
 ```nginx
 server {
   root /var/www/domain.com;
+  
   location / {
     try_files $uri $uri/ /index.html;
   }
 }
 ```
 
-What we changed is that we try to see if `$uri` exists without requiring an `if`. Using `try_files` mean that you can test a sequence. If `$uri` doesn't exist, try `$uri/`, if that doesn't exist try a fallback location.
-
-In this case it will see if the `$uri` file exists. If it does then serve it. If it doesn't then tests if that directory exists. If not, then it will proceed to serve `index.html` which you make sure exists. It's loaded but oh so simple. This is another instance you can completely eliminate `If`.
+Использование директивы `try_files` подразумевает что вы можете тестировать не одно у словие а последовательность. Например, в данном примере проверяется существует ли файл по указанному `$uri`, если файл не найден, то проверяется существование директории `$uri/`, если и ее нет, то проверка идет далее пока не сработает условие, конечное условие сработает по умолчанию (в данном примере это `/index.html`), если совпадение так и не найдтеся.
+Вот еще один попвод чтобы избавится от `if`.
 
 [к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
