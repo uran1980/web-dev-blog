@@ -31,10 +31,9 @@ if ( $args ~ post=140 ) {
 
 
 ## Что на замену?
-Во многих случая заменой директивы `if`, при проверки наличия запрашиваемого ресурса, может служить [`try_files`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files). В других случаях возможно заменить `if` на несколько блоков `server`.
+Во многих случаях заменой директивы `if`, может служить [`try_files`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files). В других случаях возможно заменить `if` на несколько блоков `server`.
 
-E.g. the following may be used to safely change location which will be used to process request:
-В примере ниже показано корректное использование `if`, для безопасной смены *локейшена* т.к. здесь `if` используется для проверки чтобы только вернуть резлтат запроса через директиву [`return`](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#return):
+В примере ниже показано корректное использование `if`, для безопасной смены *локейшена*. Т.к. здесь `if` используется для проверки только для того, чтобы вернуть резлтат запроса посредством директивы [`return`](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#return), что как описывалось в самом начале стать яляется стопроцентным рабочим вариантом без сюрпризов:
 ```nginx
     location / {
         error_page 418 = @other;
