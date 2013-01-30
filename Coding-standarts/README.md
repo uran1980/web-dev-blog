@@ -1,6 +1,6 @@
 Стандарты кодирования
 =====================
-## **[Стандарты кодирования принятые в PHP](https://github.com/uran1980/my-blog/blob/master/Coding-standarts/PHP/README.md)**
+## **[Стандарты кодирования принятые в PHP](https://github.com/uran1980/web-deb-blog/blob/master/Coding-standarts/PHP/README.md)**
   * **[Стандарт кодирования на PHP в Zend Framework'е](https://github.com/zendframework/zf2-documentation/blob/master/docs/languages/ru/ref/coding.standard.rst)**
   * **[Стандарт кодирования на PHP в Symfony2](http://symfony.com/doc/current/contributing/code/standards.html)**
 

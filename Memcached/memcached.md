@@ -1,4 +1,4 @@
-![alt Memcached](https://raw.github.com/uran1980/my-blog/master/Memcached/images/memcached_banner75.jpg)
+![alt Memcached](https://raw.github.com/uran1980/web-deb-blog/master/Memcached/images/memcached_banner75.jpg)
 
 Memcached
 =========
@@ -16,5 +16,5 @@ Memcached
 * **[http://ru.wikipedia.org/wiki/Memcached](http://ru.wikipedia.org/wiki/Memcached)** - описание на Википедии
 
 ## См. также
-* **[Обзор Memcached](https://github.com/uran1980/my-blog/blob/master/Memcached/memcached-overview.md)**
-* **[Nginx](https://github.com/uran1980/my-blog/blob/master/Nginx/nginx.md)**
+* **[Обзор Memcached](https://github.com/uran1980/web-deb-blog/blob/master/Memcached/memcached-overview.md)**
+* **[Nginx](https://github.com/uran1980/web-deb-blog/blob/master/Nginx/nginx.md)**

@@ -1,4 +1,4 @@
-![alt Nginx](https://raw.github.com/uran1980/my-blog/master/Nginx/images/nginx-logo.png)
+![alt Nginx](https://raw.github.com/uran1980/web-deb-blog/master/Nginx/images/nginx-logo.png)
 
 **[Nginx (engine x)](http://nginx.org/ru/)** — свободный Веб-сервер и почтовый прокси-сервер, работающий на Unix-подобных операционных системах (тестировалась сборка и работа на FreeBSD, GNU/Linux, Solaris, Mac OS X). С версии 0.7.52 появилась бинарная сборка под Microsoft Windows.
 
@@ -34,4 +34,4 @@ Nginx это не замена web-серверу **[Apache](http://ru.wikipedia
 ## См. также
 * **[Nginx Pitfalls - Хорошая практика написания конфигов для nginx](http://wiki.nginx.org/Pitfalls)**
 * **[Nginx+php-fpm+perl под Debian Squeeze](http://habrahabr.ru/post/164401/)** - очень хорошая статья на хабре по правильной настройке nginx
-* **[Memcached](https://github.com/uran1980/my-blog/blob/master/Memcached/memcached.md)**
+* **[Memcached](https://github.com/uran1980/web-deb-blog/blob/master/Memcached/memcached.md)**
