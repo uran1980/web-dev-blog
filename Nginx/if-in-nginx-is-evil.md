@@ -32,7 +32,29 @@ if ( $args ~ post=140 ) {
 
 
 ## Что на замену?
-TODO
+Use **[try_files](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files)** if it suits your needs. Use the `return ...` or `rewrite ... last` in other cases. In some cases it's also possible to move ifs to server level (where it's safe as only other rewrite module directives are allowed within it).
+
+E.g. the following may be used to safely change location which will be used to process request:
+```nginx
+    location / {
+        error_page 418 = @other;
+        recursive_error_pages on;
+ 
+        if ($something) {
+            return 418;
+        }
+ 
+        # некоторые настройки
+        ...
+    }
+ 
+    location @other {
+        # некоторые другие настройки
+        ...
+    }
+```
+
+In some cases it may be good idea to use embedded scripting modules (embedded perl, or various 3rd party modules) to do the scripting. 
 
 [к началу](#%D0%A3%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F-if-%D0%B2-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D0%B0%D1%85-nginx---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
 
