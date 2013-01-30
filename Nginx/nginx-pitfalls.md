@@ -402,8 +402,6 @@ sendfile off;
 
 
 ## Пропущенные или пропавшие *HTTP* заголовки
-If you do not explicitly set `underscores_in_headers on;`, nginx will silently drop HTTP headers with underscores (which are perfectly valid according to the HTTP standard). This is done in order to prevent ambiguities when mapping headers to CGI variables, as both dashes and underscores are mapped to underscores during that process.
-
 Если вы явно не задавли директиву в значение `underscores_in_headers on;`, то nginx по-умолчанию будет тихо и незаметно пропускать HTTP заголовки, содержащие симолы нижнего подчеркиваеия (которые на самом деле с точки зрения описания протокола HTTP вполне допустимы). Nginx делает это только для исключения неоднознаности при маппинге заголовков в переменные при передаче в CGI скрипты, и преобразует символы `-` и `_` в символы нижнего подчеркивания `_`.
 
 Более подробно на эту тему смотрите в **[официальной документации по nginx](http://nginx.org/ru/docs/http/ngx_http_core_module.html#underscores_in_headers)**
