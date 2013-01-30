@@ -138,7 +138,7 @@ server {
 }
 ```
 
-На самом деле здесь три проблемы... Первая это `if` (смотрим статью **[Использование оператора if в блоке location - это Зло!!!](https://github.com/uran1980/my-blog/blob/master/Nginx/if-in-location-is-evil.md)**). Когда nginx получает запрос, не важно в какой поддомен он направлен, будь это `www.domain.com` или `domain.com`, условие `if` **всегда** сработает!!! В примере получается, что мы указываем, чтобы nginx проверял заголовок хоста ([встроенную переменную](http://nginx.org/ru/docs/http/ngx_http_core_module.html#variables) `$host`) **при каждом запросе**. Это крайне не эффективно. Вы должны избегать этого. Вместо неудачного условия `if` лучше использовать два блока с директивой [`server`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#server), как в примере ниже.
+На самом деле здесь несколько проблемных моментов... Первое это `if` (смотрим статью **[Использование оператора if в блоке location - это Зло!!!](https://github.com/uran1980/my-blog/blob/master/Nginx/if-in-location-is-evil.md)**). Когда nginx получает запрос, не важно в какой поддомен он направлен, будь это `www.domain.com` или `domain.com`, условие `if` **всегда** сработает!!! В примере получается, что мы указываем, чтобы nginx проверял заголовок хоста ([встроенную переменную](http://nginx.org/ru/docs/http/ngx_http_core_module.html#variables) `$host`) **при каждом запросе**. Это крайне не эффективно. Вы должны избегать этого. Вместо неудачного условия `if` лучше использовать два блока с директивой [`server`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#server), как в примере ниже.
 
 
 **ХОРОШО:**
@@ -153,7 +153,7 @@ server {
 }
 ```
 
-Besides making the configuration file easier to read. This approach decreases nginx processing requirements. We got rid of the spurious `if`. We're also using `$scheme` which doesn't hardcodes the URI scheme you're using, be it *http* or *https*.
+Как вы видите мы получили читабильный конфиг. Такой подход, так же, уменьшает затраты ресурсов nginx на обработку запросов. A еще мы избавились от условия `if` и использовали свтроенную переменную `$scheme`, которая позволяет не привязывать *[URI](http://ru.wikipedia.org/wiki/URI)** к определенному протоколу, будь то `http` или `https`.
 
 [к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
