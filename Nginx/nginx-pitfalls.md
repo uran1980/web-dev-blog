@@ -153,7 +153,7 @@ server {
 }
 ```
 
-Как вы видите мы получили читабильный конфиг. Такой подход, так же, уменьшает затраты ресурсов nginx на обработку запросов. A еще мы избавились от условия `if` и использовали свтроенную переменную `$scheme`, которая позволяет не привязывать **[URI](http://ru.wikipedia.org/wiki/URI)** к определенному протоколу, будь то `http` или `https`.
+В итоге мы получили читабильный конфиг. Так же, мы уменьшили затраты ресурсов nginx на обработку запросов. A еще мы избавились от условия `if` и использовали свтроенную переменную `$scheme`, которая позволяет не привязывать **[URI](http://ru.wikipedia.org/wiki/URI)** к определенному протоколу, будь то `http` или `https`.
 
 [к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
@@ -193,34 +193,38 @@ server {
 
 ## Шаблон *[Front Controller](http://www.martinfowler.com/eaaCatalog/frontController.html)* и CMS движки, которые его используют
 **Front Controller Pattern** designs are popular and used on the many of the most popular PHP software packages. A lot of examples are more complex than they need to be. To get Drupal, Joomla, etc. to work, just use this:
+
+Шаблон **Front Controller** сейчас очень популярен и используется во многих CMS движках и современных фреймворках на PHP. Далее показан простой пример, применимый для CMS Drupal, Joomla и др.:
 ```nginx
 try_files $uri $uri/ /index.php?q=$uri&$args;
 ```
 
 ***
 
-**ВНИМАНИЕ:** The parameter names are different based on the package you're using. For example:
-* `q` is the parameter used by **[Drupal](http://ru.wikipedia.org/wiki/Drupal)**, **[Joomla](http://ru.wikipedia.org/wiki/Joomla)**, **[WordPress](http://ru.wikipedia.org/wiki/WordPress)** 
-* `page` is used by **[CMS Made Simple](http://ru.wikipedia.org/wiki/CMS_Made_Simple)**
+**ВНИМАНИЕ** Названия параметров могут отличаться для разных CMS. Например:
+* `q` - используется в **[Drupal](http://ru.wikipedia.org/wiki/Drupal)**, **[Joomla](http://ru.wikipedia.org/wiki/Joomla)**, **[WordPress](http://ru.wikipedia.org/wiki/WordPress)**
+* `page` - используется в **[CMS Made Simple](http://ru.wikipedia.org/wiki/CMS_Made_Simple)**
 
 ***
 
-Some software doesn't even need the query string, and can read from REQUEST_URI (WordPress supports this, for example):
+Некоторым движкам вообще не нужны параметры и они вытаскивают всю необходимую информацию из строки запроса `REQUEST_URI` (например WordPress):
 ```nginx
 try_files $uri $uri/ /index.php;
 ```
 
 Of course, your mileage may vary and you may need more complex things based on your needs, but for a basic sites, these will work perfectly. You should always start simple and build from there.
 
-You can also decide to skip the directory check and remove `$uri/` from it as well, if you don't care about checking for the existence of directories.
+Кончно, эти параметры для других CMS и фреймворков, здесь приведен общий пример. В некоторых систуациях вам понадится более комплексное решение, пробуйте и экспериментируйте...
+
+Тажк вы можете вообще убрать проверку на наличие директории `$uri/`, если вам эта проверка не нужна.
 
 [к началу](#%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-nginx-%D0%B8-%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B8)
 
 
 ## Перенаправление неконтролируемых запросов в PHP
-Many example Nginx configurations for PHP on the web advocate passing every URI ending in `.php` to the PHP interpreter. Note that this presents a serious security issue on most PHP setups as it may allow arbitrary code execution by third parties.
+Многие примеры конфигурации nginx для PHP рекомендуют все запросы оканчивающиеся на `.php` перенаправлять (проксировать) в интерпретатор PHP. Но это, вообще-то, потенциальная угроза безопасности на множестве конфигураций PHP, которая может привести к выполнению вредоносного кода на сервере.
 
-The problem section usually looks like this:
+Проблемная секция обычно выглядит так:
 ```nginx
 location ~* \.php$ {
   fastcgi_pass backend;
@@ -228,13 +232,13 @@ location ~* \.php$ {
 }
 ```
 
-Here, every request ending in `.php` will be passed to the **[FastCGI](http://ru.wikipedia.org/wiki/FastCGI)** backend. The issue with this is that the default PHP configuration tries to guess which file you want to execute if the full path does not lead to an actual file on the filesystem.
+Здесь каждый запрос оканчивающийся на `.php` перенаправляется в бекэнд на **[FastCGI](http://ru.wikipedia.org/wiki/FastCGI)**. Угроза безопасности здесь в том, что конфигурация PHP по-умолчанию всегда пытается выяснить какой файл вы хотите выполнить, даже если запрос идет на не существующий файл.
 
-For instance, if a request is made for `/forum/avatar/1232.jpg/file.php` which does not exist but if `/forum/avatar/1232.jpg` does, the PHP interpreter will process `/forum/avatar/1232.jpg` instead. If this contains embedded PHP code, this code will be executed accordingly.
+Например, вот запрос к файлу `/forum/avatar/1232.jpg/file.php` которого на самом деле нет на сервере, но зато на сервере есть файл `/forum/avatar/1232.jpg`. В данном случае по-умолчанию PHP обработает файл `/forum/avatar/1232.jpg`. А теперь представьте, что в этом файле содержится вредоносный код для PHP? Соответсвенно он будет выполнен!
 
-Options for avoiding this are:
-* Set `cgi.fix_pathinfo=0` in **php.ini**. This causes the PHP interpreter to only try the literal path given and to stop processing if the file is not found. 
-* Ensure that Nginx only passes specific PHP files for execution.
+Чтобы это исключить, необходимо:
+* Установить директиву `cgi.fix_pathinfo=0` в **php.ini**. Это заставит интерпретатор PHP оставиться на выполнении первого запроса и при отсутсвии файл не идти далее по цепочке.
+* Убедится что nginx отправляет в PHP на обработку только определенные файлы, расчитанные на такую обработку. А не все подряд:
 
 ```nginx
 location ~* (file_a|file_b|file_c)\.php$ {
@@ -243,7 +247,7 @@ location ~* (file_a|file_b|file_c)\.php$ {
 }
 ```
 
-* Specifically disable the execution of PHP files in any directory containing user uploads.
+* запретить обработку интерпретатором PHP всех файлов из директории куда пользователи загружают свои файлы:
 
 ```nginx
 location /uploaddir {
@@ -252,7 +256,7 @@ location /uploaddir {
 }
 ```
 
-* Use the `try_files` directive to filter out the problem condition
+* Использовать директиву `try_files` чтобы отбросить запросы на не существующие файлы:
 
 ```nginx
 location ~* \.php$ {
@@ -262,7 +266,7 @@ location ~* \.php$ {
 }
 ```
 
-* Use a nested location to filter out the problem condition
+* Использовать вложенные секции `location`, чтобы исключитьпроблемные условия:
 
 ```nginx
 location ~* \.php$ {
