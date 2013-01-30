@@ -33,7 +33,7 @@ if ( $args ~ post=140 ) {
 
 
 ## Что на замену?
-Use **[try_files](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files)** if it suits your needs. Use the `return ...` or `rewrite ... last` in other cases. In some cases it's also possible to move ifs to server level (where it's safe as only other rewrite module directives are allowed within it).
+Use [`try_files`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files) if it suits your needs. Use the `return ...` or `rewrite ... last` in other cases. In some cases it's also possible to move ifs to server level (where it's safe as only other rewrite module directives are allowed within it).
 
 E.g. the following may be used to safely change location which will be used to process request:
 ```nginx
@@ -55,7 +55,7 @@ E.g. the following may be used to safely change location which will be used to p
     }
 ```
 
-In some cases it may be good idea to use embedded scripting modules (**[embedded perl](http://nginx.org/ru/docs/http/ngx_http_perl_module.html)**, or various 3rd party modules) to do the scripting.
+In some cases it may be good idea to use embedded scripting modules ([embedded perl](http://nginx.org/ru/docs/http/ngx_http_perl_module.html), or various 3rd party modules) to do the scripting.
 
 [к началу](#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0-if-%D0%B2-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B5-location---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
 
@@ -159,7 +159,7 @@ Looks like the only correct fix would be to disable non-rewrite directives insid
 
 ## Если вы по-прежнему хотите использовать `if`
 If you read all of the above and still want to use `if`:
-* Please make sure you actually do understand how it works. Some basic idea may be found e.g. *[here](http://agentzh.blogspot.ru/2011/03/how-nginx-location-if-works.html)**.
+* Please make sure you actually do understand how it works. Some basic idea may be found e.g. **[here](http://agentzh.blogspot.ru/2011/03/how-nginx-location-if-works.html)**.
 * Do proper testing. 
 
 You were warned.
