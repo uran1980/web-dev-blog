@@ -343,7 +343,7 @@ server {
     }
 }
 ```
-**[FFFUUU](http://lurkmore.to/Ffruustration)**. В этом примере мы перенаправляем **ВСЕ ПОДРЯД!!!** в PHP. Зачем? Для Apache это простительно, но вам нет. Директива **[try_files](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files)** придумана не просто так, она проверяет наличие запрашиваемого ресурса (файла) в определнной последовательности. Это значит, что nginx может проверить первое условие, потом второе и т.д. пока по цепочке не дойдет до конца. И если ничего не сработало, то по-умолчанию выполнится последннее условие в цепочке проверок. А это значит что интерепретатор PHP будет вызываться не каждый раз а только тогда кода это действительно необходимо. Обработка запросов при этом ускорится многократно! 
+**[FFFUUU](http://lurkmore.to/Ffruustration)**. В этом примере мы перенаправляем **ВСЕ ПОДРЯД!!!** в PHP. Зачем? Для Apache это простительно, но вам нет. Директива **[try_files](http://nginx.org/ru/docs/http/ngx_http_core_module.html#try_files)** придумана не просто так, она проверяет наличие запрашиваемого ресурса (файла) в определнной последовательности. Это значит, что nginx может проверить первое условие, потом второе и т.д. пока по цепочке не дойдет до конца. И если ничего не сработало, то по-умолчанию выполнится последннее условие в цепочке проверок. А это значит, что интерепретатор PHP будет вызываться не каждый раз а только тогда кода это действительно необходимо. Обработка запросов при этом ускорится многократно! 
 
 Представьте, что идет несколько однотипных запросов на получение файла картинки размеров 1Мб и в примере выше каждый такой запрос будет перенаправлен в PHP. В примере ниже показано как избавиться от этого безобразия:
 
@@ -378,7 +378,7 @@ server {
     }
 }
 ```
-Просто, не правда-ли? Мы видим что, если запрашиваемый URI существует, то он будет отработан nginx. Если нет, то проверяется существует ли вообще такая директория `$uri/`. Если нет, то уже тогда по-умолчанию запрос будет направлен в `/index.php` и обработан PHP.
+Просто, не правда-ли? Мы видим что, если запрашиваемый URI существует, то он будет отработан nginx. Если нет, то проверяется существует ли вообще такая директория `$uri/`. Если нет, то уже тогда, по-умолчанию, запрос будет направлен в `/index.php` и обработан PHP.
 
 Теперь представьте сколько на вашем сайте статического контента (картинок, css-стилей, js-скриптов и т.д.), сколько лишних запросов вы отсекли от обработки через PHP?
 
@@ -386,14 +386,14 @@ server {
 
 
 ## Изменения в конфиге не работают
-Browser cache. Your configuration may be perfect but you'll sit there and beat your head against a cement wall for a month. What's wrong is your browser cache. When you download something, your browser stores it. It also stores how that file was served. If you are playing with a types `{}` block you'll encounter this.
+Браузер кеширует запросы! Ваша конфигурация может быть идельной и без единой ошибки, но вы по-прежнему бъетесь головой об стену и пытаетесь понять почему у вас ничего не работает? Что не так? Ответ на этот вопрос: кешь браузера. Когда вы загружаете что-либо, браузер сохраняет это в своем кеше. Он также сохраняет то как был обработан скаченный файл. Если вы в конфигурации nginx играетесь с блоками `{}`, скорее всего вы столкнетесь с проблемами кеширования запросов браузером.
 
-**The fix:**
-* **[Option 1]** In Firefox press **Ctrl+Shift+Delete**, check Cache, click Clear Now. In any other browser just ask your favorite search engine. Do this after every change (unless you know it's not needed) and you'll save yourself a lot of headaches.
-* **[Option 2]** Use **[curl](http://ru.wikipedia.org/wiki/CURL)**.
+**Решение:**
+* **[Вариант 1]** в Firefox нажмите **Ctrl+Shift+Delete**, проерьте кешь, нажмите кнопку **Очистить**. Если у вас другой браузе, то погуглите как очищается кешь в нем...
+* **[Варинт 2]** Используйте для тестирования **[curl](http://ru.wikipedia.org/wiki/CURL)**.
 
 **VirtualBox**
-If this does not work, and you're running nginx on a virtual machine in VirtualBox, it may be `sendfile()` that is causing the trouble. Simply comment out the sendfile directive or set it to "off". The directive is most likely found in your nginx.conf file.
+Если действия выше не помогают, и вы запускаете nginx на виртуальной машине, причина может быть в `sendfile()`. Просто закомментируйте директиву или установите ее в значение `off`. Эта директива может располагаться где-то в вашем конфиге nginx в файле `nginx.conf`:
 ```
 sendfile off;
 ```
@@ -402,7 +402,11 @@ sendfile off;
 
 
 ## Пропущенные (пропавшие) *HTTP* заголовки
-If you do not explicitly set `underscores_in_headers on;`, nginx will silently drop HTTP headers with underscores (which are perfectly valid according to the HTTP standard). This is done in order to prevent ambiguities when mapping headers to CGI variables, as both dashes and underscores are mapped to underscores during that process. 
+If you do not explicitly set `underscores_in_headers on;`, nginx will silently drop HTTP headers with underscores (which are perfectly valid according to the HTTP standard). This is done in order to prevent ambiguities when mapping headers to CGI variables, as both dashes and underscores are mapped to underscores during that process.
+
+Если вы явно не задавли директиву в значение `underscores_in_headers on;`, то nginx по-умолчанию будет тихо и незаметно пропускать HTTP заголовки, содержащие симолы нижнего подчеркиваеия (которые на самом деле с точки зрения описания протокола HTTP вполне допустимы). Nginx делает это только для исключения неоднознаности при маппинге заголовков в переменные при передаче в CGI скрипты, и преобразует символы `-` и `_` в символы нижнего подчеркивания `_`.
+
+Более подробно на эту тему смотрите в **[официальной документации по nginx](http://nginx.org/ru/docs/http/ngx_http_core_module.html#underscores_in_headers)**
 
 
 ## Оригинал статьи
