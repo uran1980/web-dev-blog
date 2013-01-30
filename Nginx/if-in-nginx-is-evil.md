@@ -12,7 +12,7 @@ Directive **[`if`](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#if
 
 The only 100% safe things which may be done inside `if` in `location` context are:
 * [return](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#return) ...;
-* [`rewrite`](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#rewrite) ... last; 
+* [rewrite](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#rewrite) ... last; 
 
 Anything else may possibly cause unpredictable behaviour, including potential SIGSEGV.
 
