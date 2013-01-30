@@ -158,13 +158,9 @@ if ( $args ~ post=140 ) {
 
 
 ## Если вы по-прежнему хотите использовать `if`
-If you read all of the above and still want to use `if`:
-* Please make sure you actually do understand how it works. Some basic idea may be found e.g. **[here](http://agentzh.blogspot.ru/2011/03/how-nginx-location-if-works.html)**.
-* Do proper testing.
-
 Если вы прочитали эту стотью и до сих пор хотите использовать `if`, то:
-* Пожалуйста, прежде чем их использовать, убедитесь, что вы знаете как они работаеют. Некоторые базовые идеи изложены в этой **[статье](http://agentzh.blogspot.ru/2011/03/how-nginx-location-if-works.html)**.
-* приготовтесь к тестированию своих конфигурайий.
+* Прежде чем их использовать, убедитесь, что вы знаете как они работаеют. Некоторые базовые принципы изложены в этой **[статье](http://agentzh.blogspot.ru/2011/03/how-nginx-location-if-works.html)**.
+* приготовтесь к тестированию своих конфигураций и возможно к **[танцам с бубном](http://lurkmore.to/%D0%A8%D0%B0%D0%BC%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B1%D1%83%D0%B1%D0%B5%D0%BD)**.
 
 **Теперь вы предупреждены!!!**
 
