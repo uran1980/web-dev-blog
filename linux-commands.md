@@ -134,7 +134,7 @@ TODO
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
-### RPM пакеты (Fedora, Red Hat и тому подобное)
+### RPM пакеты ([Fedora](http://ru.wikipedia.org/wiki/Fedora), [Red Hat](http://ru.wikipedia.org/wiki/Red_Hat) и тому подобное)
 | Команда                 | Описание      |
 |:------------------------|:--------------|
 TODO
@@ -142,7 +142,7 @@ TODO
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
-### YUM - средство обновления пакетов (Fedora, RedHat и тому подобное)
+### YUM - средство обновления пакетов ([Fedora](http://ru.wikipedia.org/wiki/Fedora), [RedHat](http://ru.wikipedia.org/wiki/Red_Hat) и тому подобное)
 | Команда                 | Описание      |
 |:------------------------|:--------------|
 TODO
@@ -150,7 +150,7 @@ TODO
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
-### DEB пакеты (Debian, Ubuntu и тому подобное)
+### DEB пакеты ([Debian](http://ru.wikipedia.org/wiki/Debian), [Ubuntu](http://ru.wikipedia.org/wiki/Ubuntu) и тому подобное)
 | Команда                 | Описание      |
 |:------------------------|:--------------|
 TODO
@@ -158,7 +158,7 @@ TODO
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
-### APT - средство управление пакетами (Debian, Ubuntu и тому подобное)
+### APT - средство управление пакетами ([Debian](http://ru.wikipedia.org/wiki/Debian), [Ubuntu](http://ru.wikipedia.org/wiki/Ubuntu) и тому подобное)
 | Команда                 | Описание      |
 |:------------------------|:--------------|
 TODO
@@ -246,7 +246,7 @@ TODO
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
-### IPTABLES (firewall)
+### IPTABLES ([firewall](http://ru.wikipedia.org/wiki/Firewall))
 | Команда                 | Описание      |
 |:------------------------|:--------------|
 TODO
