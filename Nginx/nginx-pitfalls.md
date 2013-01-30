@@ -15,11 +15,13 @@
 * **[Пропущенные (пропавшие) *HTTP* заголовки](#%D0%9F%D1%80%D0%BE%D0%BF%D1%83%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BF%D1%80%D0%BE%D0%BF%D0%B0%D0%B2%D1%88%D0%B8%D0%B5-http-%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B8)**
 
 
-If you're new or old to Nginx you will likely wind up in a pitfall situation. Below we outline these pitfalls and how to best avoid them. These are issues seen time and time again in the #nginx channel on **[Freenode](http://ru.wikipedia.org/wiki/Freenode)**. Please, just don't do this.
+Не важно новичек вы или опытный профессионал в настройке nginx, рано или позно вы можете столкнутся с непонятными проблемами при написании конфигов. Это подводные камни конфигурирования nginx и от них никуда не уйти. Далее в этой статье мы рассмотрим эти ситуации и способы их обхода.
 
 
 ## В этой инструкции сказано
-Don't follow the guides out there unless you can understand what they're trying to do and can clean it up. So many of the configs out there are horribly written. The Pitfalls page was written entirely from poor configs found on the Internet. They weren't found by searching but were instead found by support requests asking why something doesn't work. The common response is to disagree with what we say because some random guide says to do it the wrong way. That's what this page is designed to address. If you're having issues, this is the place to look.
+В интернете полно некорректных, зачастую неправильных, инструкций по настройке nginx. Нельзя им слепо следовать не понимая, что выполняет и зачем служит та или иная настройка nginx. Множество инструкций и примеры конфигураций приведенные в них просто ужасны и не читабельны. Эта статья и появилась как ответ на такие инструкции, которые направляют новичков по ложному пути, запутывая их окончательно и заставля задавать одни и теже вопросы на форумах и **[IRC](http://ru.wikipedia.org/wiki/IRC)** каналах почему у них что-то не работает.
+
+Итак, поехали.
 
 
 ## `Root` внутри блока `Location`
