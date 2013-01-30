@@ -149,13 +149,19 @@ Here are some examples which explain why if is evil. Don't try this at home. You
 
 
 ## Почему это до сих пор не исправлено?
-TODO
+Directive `if` is part of rewrite module which evaluates instructions imperatively. On the other hand, nginx configuration in general is declarative. At some point due to users demand an attempt was made to enable some non-rewrite directives inside `if`, and this lead to situation we have now. It mostly works, but... see above.
+
+Looks like the only correct fix would be to disable non-rewrite directives inside if completely. It would break many configuration out there though, so wasn't done yet. 
 
 [к началу](#%D0%A3%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F-if-%D0%B2-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D0%B0%D1%85-nginx---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
 
 
 ## Если вы по-прежнему хотите использовать `if`
-TODO
+If you read all of the above and still want to use `if`:
+* Please make sure you actually do understand how it works. Some basic idea may be found e.g. here.
+* Do proper testing. 
+
+You were warned.
 
 [к началу](#%D0%A3%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F-if-%D0%B2-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D0%B0%D1%85-nginx---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
 
