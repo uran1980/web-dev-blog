@@ -28,7 +28,7 @@ if ( $args ~ post=140 ) {
   rewrite ^http://example.com/ permanent;
 }
 ```
-[к началу](#%D0%A3%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F-if-%D0%B2-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D0%B0%D1%85-nginx---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
+[к началу](#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0-if-%D0%B2-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B5-location---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
 
 
 ## Что на замену?
@@ -56,7 +56,7 @@ E.g. the following may be used to safely change location which will be used to p
 
 In some cases it may be good idea to use embedded scripting modules (**[embedded perl](http://nginx.org/ru/docs/http/ngx_http_perl_module.html)**, or various 3rd party modules) to do the scripting.
 
-[к началу](#%D0%A3%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F-if-%D0%B2-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D0%B0%D1%85-nginx---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
+[к началу](#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0-if-%D0%B2-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B5-location---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
 
 
 ## Примеры
@@ -145,7 +145,7 @@ Here are some examples which explain why if is evil. Don't try this at home. You
             }
         }
 ```
-[к началу](#%D0%A3%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F-if-%D0%B2-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D0%B0%D1%85-nginx---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
+[к началу](#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0-if-%D0%B2-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B5-location---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
 
 
 ## Почему это до сих пор не исправлено?
@@ -153,7 +153,7 @@ Directive `if` is part of rewrite module which evaluates instructions imperative
 
 Looks like the only correct fix would be to disable non-rewrite directives inside if completely. It would break many configuration out there though, so wasn't done yet. 
 
-[к началу](#%D0%A3%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F-if-%D0%B2-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D0%B0%D1%85-nginx---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
+[к началу](#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0-if-%D0%B2-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B5-location---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
 
 
 ## Если вы по-прежнему хотите использовать `if`
@@ -163,7 +163,7 @@ If you read all of the above and still want to use `if`:
 
 You were warned.
 
-[к началу](#%D0%A3%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F-if-%D0%B2-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D0%B0%D1%85-nginx---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
+[к началу](#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0-if-%D0%B2-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B5-location---%D1%8D%D1%82%D0%BE-%D0%97%D0%BB%D0%BE)
 
 
 ## Оригинал статьи
