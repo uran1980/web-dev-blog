@@ -14,7 +14,7 @@
 * `return ...;`
 * `rewrite ... last;`
 
-Все остальные применения могут приводить к непредсказуемым результатам, включая **[SIGSEGV](http://ru.wikipedia.org/wiki/SIGSEGV)** (переполнению буфера).
+Все остальные применения могут приводить к непредсказуемым результатам, включая **[SIGSEGV  (переполнение буфера)](http://ru.wikipedia.org/wiki/SIGSEGV)**.
 
 
 It is important to note that the behaviour of if is not inconsistent, given two identical requests it will not randomly fail on one and work on the other, with proper testing and understanding ifs **can** be used. The advice to use other directives where available still very much apply, though.
