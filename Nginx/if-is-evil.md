@@ -8,13 +8,14 @@
 
 
 ## Введение
-Directive **[`if`](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#if)** has problems when used in **[`location`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#location)** context, in some cases it doesn't do what you expect but something completely different instead. In some cases it even segfaults. It's generally a good idea to avoid it if possible.
+Директива **[`if`](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#if)** имеет массу проблем при использовании внутри блока **[`location`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#location)**. Иногда она не выполняет то, что от нее ожидают, а иногда она делает что-то совсем не понятное. В некоторых ситуация она может привести к сегментации памяти и связанным с этим падением сервера nginx. Поэтому в большинстве случаем, если это возможно, лучше не использовать директиву `if` вообще.
 
-The only 100% safe things which may be done inside `if` in `location` context are:
+Единственное 100% безопасное применение этой директивы в контексте блока `location` это:
 * [return](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#return) ...;
-* [rewrite](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#rewrite) ... last; 
+* [rewrite](http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html#rewrite) ... last;
 
-Anything else may possibly cause unpredictable behaviour, including potential **[SIGSEGV](http://ru.wikipedia.org/wiki/SIGSEGV)**.
+Все остальные применения могут приводить к непредсказуемому поведению и последствиям, включая **[SIGSEGV](http://ru.wikipedia.org/wiki/SIGSEGV)** ().
+
 
 It is important to note that the behaviour of if is not inconsistent, given two identical requests it will not randomly fail on one and work on the other, with proper testing and understanding ifs **can** be used. The advice to use other directives where available still very much apply, though.
 
