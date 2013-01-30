@@ -158,7 +158,7 @@ Looks like the only correct fix would be to disable non-rewrite directives insid
 
 ## Если вы по-прежнему хотите использовать `if`
 If you read all of the above and still want to use `if`:
-* Please make sure you actually do understand how it works. Some basic idea may be found e.g. here.
+* Please make sure you actually do understand how it works. Some basic idea may be found e.g. *[here](http://agentzh.blogspot.ru/2011/03/how-nginx-location-if-works.html)**.
 * Do proper testing. 
 
 You were warned.
