@@ -1,5 +1,9 @@
-Web-Dev blog
-============
+<h1 align="center">
+    <a  href="#web-dev-blog"
+        class="anchor"
+        name="web-dev-blog"><span class="mini-icon mini-icon-link"></span></a>
+    Web-Dev blog
+</h1>
 
 <p align="center">
     <img  style="max-width:100%;"
