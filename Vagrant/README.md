@@ -1,6 +1,25 @@
-web-dev-blog
+Vagrant
 =======
-
-Мой блог на русском
-
 TODO
+
+
+<iframe src="http://player.vimeo.com/video/42489579"
+        width="500"
+        height="275"
+        frameborder="0"
+        webkitAllowFullScreen
+        mozallowfullscreen
+        allowFullScreen></iframe>
+<p>
+  <a href="http://vimeo.com/42489579">Virtualized Development Environments in Vagrant</a> from <a href="http://vimeo.com/phpne">PHPNE</a> on <a href="http://vimeo.com">Vimeo</a>.
+</p>
+
+
+## Полезные ресурсы
+* **[www.vagrantup.com](http://www.vagrantup.com/)** - офоицальный сайт проекта
+* **[Available Vagrant Boxes](https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Boxes)** - доступные образы **Vagrant**
+* **[www.vagrantbox.es](http://www.vagrantbox.es/)** - еще образы **Vagrant**
+* **[Vagrant in Zend Framework 1](http://akrabat.com/zend-framework/vagrant-in-zf1-trunk/)**
+* **[Virtual Machines with Vagrant, Veewee and Puppet](https://github.com/beberlei/whitewashing.de/blob/master/2012/05/31/virtual_machines_with_vagrant__veewee_and_puppet.rst)**
+* **[]()**
+* **[]()**
