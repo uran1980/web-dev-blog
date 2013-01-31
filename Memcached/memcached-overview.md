@@ -1,3 +1,9 @@
+<p align="center">
+  <img  style="max-width:100%;"
+        alt="alt Memcached"
+        src="https://raw.github.com/uran1980/web-dev-blog/master/Memcached/images/memcached_banner75.jpg">
+</p>
+
 Обзор Memcached
 ===============
 **[Memcached](http://memcached.org/)** представляет собой высокопроизводительную распределенную систему кэширования объектов в оперативной памяти.
