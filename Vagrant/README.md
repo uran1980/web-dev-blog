@@ -1,3 +1,9 @@
+<p align="center">
+    <img  style="max-width:100%;"
+          alt="alt Vagrant"
+          src="https://raw.github.com/uran1980/web-dev-blog/master/Vagrant/images/vagrant_chilling.png">
+</p>
+
 Vagrant
 =======
 TODO
