@@ -36,6 +36,6 @@ Nginx это не замена web-серверу **[Apache](http://ru.wikipedia
 
 
 ## См. также
-* **[Nginx Pitfalls - Хорошая практика написания конфигов для nginx](http://wiki.nginx.org/Pitfalls)**
+* **[Конфигурация Nginx и подводные камни](https://github.com/uran1980/web-dev-blog/blob/master/Nginx/nginx-pitfalls.md)**
 * **[Nginx+php-fpm+perl под Debian Squeeze](http://habrahabr.ru/post/164401/)** - очень хорошая статья на хабре по правильной настройке nginx
 * **[Memcached](https://github.com/uran1980/web-dev-blog/blob/master/Memcached/memcached.md)**
