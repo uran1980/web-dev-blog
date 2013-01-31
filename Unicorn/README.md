@@ -7,3 +7,6 @@
 Unicorn
 =======
 TODO
+
+## Полезные ресурсы
+* **[Unicorn! on GitHub blog](https://github.com/blog/517-unicorn)**
