@@ -4,12 +4,14 @@
 * **[Мониторинг и отладка](#%D0%9C%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B3-%D0%B8-%D0%BE%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0)**
 * **[Остановка системы](#%D0%9E%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B)**
 * **[Запуск и остановка сервисов (демонов)]()**
+* **[Сеть (LAN и WiFi)](#%D0%A1%D0%B5%D1%82%D1%8C-lan-%D0%B8-wifi)**
+* **[IPTABLES (firewall)](#iptables-firewall)**
+* **[Пользователи и группы](#%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D0%B8-%D0%B8-%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D1%8B)**
+* **[Выставление/изменение полномочий на файлы](#%D0%92%D1%8B%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%BC%D0%BE%D1%87%D0%B8%D0%B9-%D0%BD%D0%B0-%D1%84%D0%B0%D0%B9%D0%BB%D1%8B)**
 * **[Файлы и директории](#%D0%A4%D0%B0%D0%B9%D0%BB%D1%8B-%D0%B8-%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B8)**
 * **[Поиск файлов](#%D0%9F%D0%BE%D0%B8%D1%81%D0%BA-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2)**
 * **[Монтирование файловых систем](#%D0%9C%D0%BE%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%8B%D1%85-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC)**
 * **[Дисковое пространство](#%D0%94%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D0%BE%D0%B5-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE)**
-* **[Пользователи и группы](#%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D0%B8-%D0%B8-%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D1%8B)**
-* **[Выставление/изменение полномочий на файлы](#%D0%92%D1%8B%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%BC%D0%BE%D1%87%D0%B8%D0%B9-%D0%BD%D0%B0-%D1%84%D0%B0%D0%B9%D0%BB%D1%8B)**
 * **[Специальные атрибуты файлов](#%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D1%8B-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2)**
 * **[Архивирование и сжатие файлов](#%D0%90%D1%80%D1%85%D0%B8%D0%B2%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B8-%D1%81%D0%B6%D0%B0%D1%82%D0%B8%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2)**
 * **[RPM пакеты (Fedora, Red Hat и тому подобное)](#rpm-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D1%8B-fedora-red-hat-%D0%B8-%D1%82%D0%BE%D0%BC%D1%83-%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D0%BD%D0%BE%D0%B5)**
@@ -23,9 +25,7 @@
 * **[swap-пространство](#swap-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE)**
 * **[Создание резервных копий (backup)](#%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D1%80%D0%B5%D0%B7%D0%B5%D1%80%D0%B2%D0%BD%D1%8B%D1%85-%D0%BA%D0%BE%D0%BF%D0%B8%D0%B9-backup)**
 * **[DROM](#cdrom)**
-* **[Сеть (LAN и WiFi)](#%D0%A1%D0%B5%D1%82%D1%8C-lan-%D0%B8-wifi)**
 * **[Microsoft Windows networks(SAMBA)](#microsoft-windows-networkssamba)**
-* **[IPTABLES (firewall)](#iptables-firewall)**
 * **[Другие полезные команды](#%D0%94%D1%80%D1%83%D0%B3%D0%B8%D0%B5-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B)**
 
 
@@ -109,6 +109,99 @@
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
+### Сеть (LAN и WiFi)
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+| `ifconfig eth0` |   показать конфигурацию сетевого интерфейса eth0
+| `ifup eth0` |   активировать (поднять) интерфейс eth0
+| `ifdown eth0` | 	деактивировать (опустить) интерфейс eth0
+| `ifconfig eth0 192.168.1.1 netmask 255.255.255.0` | 	выставить интерфейсу eth0 ip-адрес и маску подсети
+| `ifconfig eth0 promisc` | 	перевести интерфейс eth0 в promiscuous-режим для "отлова" пакетов (sniffing)
+| `ifconfig eth0 -promisc` | 	отключить promiscuous-режим на интерфейсе eth0
+| `dhclient eth0` | 	активировать интерфейс eth0 в dhcp-режиме.
+| `route -n` | 	вывести локальную таблицу маршрутизации
+| `netstat -rn` | вывести локальную таблицу маршрутизации
+| `route add -net 0/0 gw IP_Gateway` | 	задать ip-адрес шлюза по умолчанию (default gateway)
+| `route add -net 192.168.0.0 ` `netmask 255.255.0.0 gw 192.168.1.1` | 	добавить статический маршрут в сеть 192.168.0.0/16 через шлюз с ip-адресом 192.168.1.1
+| `route del 0/0 gw IP_gateway` | 	удалить ip-адрес шлюза по умолчанию (default gateway)
+| `echo "1" > /proc/sys/net/ipv4/ip_forward` | 	разрешить пересылку пакетов (forwarding)
+| `hostname` | 	отобразить имя компьютера
+| `host www.yandex.ru` | 	разрешить имя www.yandex.ru хоста в ip-адрес и наоборот
+| `host 93.158.134.3` |
+| `ip link show` | 	отобразить состояние всех интерфейсов
+| `mii-tool eth0` | 	отобразить статус и тип соединения для интерфейса eth0
+| `ethtool eth0` | 	отображает статистику интерфеса eth0 с выводом такой информации, как поддерживаемые и текущие режимы соединения
+| `netstat -tupn` | 	отображает все установленные сетевые соединения по протоколам TCP и UDP без разрешения имён в ip-адреса и PID'ы и имена процессов, обеспечивающих эти соединения
+| `netstat -tupln` | 	отображает все сетевые соединения по протоколам TCP и UDP без разрешения имён в ip-адреса и PID'ы и имена процессов, слушающих порты
+| `netstat -tap` | TODO description...
+| `tcpdump tcp port 80` | 	отобразить весь трафик на TCP-порт 80 (обычно - HTTP)
+| `iwlist scan` | 	просканировать эфир на предмет, доступности беспроводных точек доступа
+| `iwconfig eth1` | 	показать конфигурацию беспроводного сетевого интерфейса eth1
+| `traceroute www.ya.ru` |	Трассировка маршрута до указанного хоста (www.ya.ru), аналог tracert в Windows. В некоторых дистрибутивах установлен по-умолчанию только traceroute6 и придётся доустанавливать вручную. 
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+### IPTABLES ([firewall](http://ru.wikipedia.org/wiki/Firewall))
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+| `iptables -t filter -nL` |   отобразить все цепочки правил
+| `iptables -nL` |  отобразить все цепочки правил
+| `iptables -t nat -L` |   отобразить все цепочки правил в NAT-таблице
+| `iptables -t filter -F` | 	очистить все цепочки правил в filter-таблице
+| `iptables -F` |   очистить все цепочки правил в filter-таблице
+| `iptables -t nat -F` | 	очистить все цепочки правил в NAT-таблице
+| `iptables -t filter -X` | 	удалить все пользовательские цепочки правил в filter-таблице
+| `iptables -t filter -A INPUT -p tcp --dport telnet -j ACCEPT` | 	позволить входящее подключение telnet'ом
+| `iptables -t filter -A OUTPUT -p tcp --dport http -j DROP` | 	блокировать исходящие HTTP-соединения
+| `iptables -t filter -A FORWARD -p tcp --dport pop3 -j ACCEPT` | 	позволить "прокидывать" (forward) POP3-соединения
+| `iptables -t filter -A INPUT -j LOG --log-prefix "DROP INPUT"` | 	включить журналирование ядром пакетов, проходящих через цепочку INPUT, и добавлением к сообщению префикса "DROP INPUT"
+| `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE` | 	включить NAT (Network Address Translate) исходящих пакетов на интерфейс eth0. Допустимо при использовании с динамически выделяемыми ip-адресами.
+| `iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m` `tcp --dport 22 \ -j DNAT --to-destination 10.0.0.2:22` | 	перенаправление пакетов, адресованных одному хосту, на другой хост 
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+### Пользователи и группы
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+| `groupadd group_name` | создать новую группу с именем group_name
+| `groupdel group_name` |  удалить группу `group_name`
+| `groupmod -n new_group_name old_group_name` |	переименовать группу `old_group_name` в `new_group_name`
+| `useradd user1` |	создать пользователя `user1`
+| `userdel -r user1` |	удалить пользователя user1 и его домашний каталог
+| `passwd` |	сменить пароль
+| `passwd user1` |	сменить пароль пользователя user1 (только root)
+| `chage -E 2005-12-31 user1` |	установить дату окончания действия учётной записи пользователя user1
+| `pwck` |	проверить корректность системных файлов учётных записей. Проверяются файлы `/etc/passwd` и `/etc/shadow`
+| `grpck` |	проверяет корректность системных файлов учётных записей. Проверяется файл `/etc/group`
+| `newgrp [-] group_name` |	изменяет первичную группу текущего пользователя. Если указать "`-`", ситуация будет идентичной той, в которой пользователь вышил из системы и снова вошёл. Если не указывать группу, первичная группа будет назначена из `/etc/passwd` 
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+### Выставление/изменение полномочий на файлы
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+| `ls -lh` |   просмотр полномочий на файлы и директории в текущей директории
+| `chmod ugo+rwx directory1` | 	добавить полномочия на директорию `directory1` ugo(User Group Other)+rwx(Read Write eXecute) - всем полные права. Аналогичное можно сделать таким образом `chmod 777 directory1`
+| `chmod go-rwx directory1` | 	отобрать у группы и всех остальных все полномочия на директорию `directory1`.
+| `chown user1 file1` | 	назначить владельцем файла `file1` пользователя user1
+| `chown -R user1 directory1` | 	назначить рекурсивно владельцем директории directory1 пользователя `user1`
+| `chgrp group1 file1` | 	сменить группу-владельца файла `file1` на group1
+| `chown user1:group1 file1` | 	сменить владельца и группу владельца файла `file1`
+| `find / -perm -u+s` | 	найти, начиная от корня, все файлы с выставленным SUID
+| `chmod u+s /bin/binary_file` | 	назначить SUID-бит файлу `/bin/binary_file`. Это даёт возможность любому пользователю запускать на выполнение файл с полномочиями владельца файла.
+| `chmod u-s /bin/binary_file` | 	снять SUID-бит с файла `/bin/binary_file`.
+| `chmod g+s /home/public` | 	назначить SGID-бит директории `/home/public`.
+| `chmod g-s /home/public` | 	снять SGID-бит с директории `/home/public`.
+| `chmod o+t /home/public` | 	назначить STIKY-бит директории `/home/public`. Позволяет удалять файлы только владельцам
+| `chmod o-t /home/public` | 	снять STIKY-бит с директории `/home/public` 
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+
 ### Файлы и директории
 | Команда                 | Описание      |
 |:------------------------|:--------------|
@@ -186,45 +279,6 @@
 * `du -sk *|sort -rn` - отображает размер и имена файлов и директорий, с соритровкой по размеру
 * `rpm -q -a --qf '%10{SIZE}\t%{NAME}\n' | sort -k1,1n` - показывает размер используемого дискового пространства, занимаемое файлами rpm-пакета, с сортировкой по размеру (fedora, redhat и т.п.)
 * `dpkg-query -W -f='${Installed-Size;10}\t${Package}\n' | sort -k1,1n` - показывает размер используемого дискового пространства, занимаемое файлами deb-пакета, с сортировкой по размеру (ubuntu, debian т.п.) 
-
-[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
-
-
-### Пользователи и группы
-| Команда                 | Описание      |
-|:------------------------|:--------------|
-| `groupadd group_name` | создать новую группу с именем group_name
-| `groupdel group_name` |	удалить группу `group_name`
-| `groupmod -n new_group_name old_group_name` |	переименовать группу `old_group_name` в `new_group_name`
-| `useradd user1` |	создать пользователя `user1`
-| `userdel -r user1` |	удалить пользователя user1 и его домашний каталог
-| `passwd` |	сменить пароль
-| `passwd user1` |	сменить пароль пользователя user1 (только root)
-| `chage -E 2005-12-31 user1` |	установить дату окончания действия учётной записи пользователя user1
-| `pwck` |	проверить корректность системных файлов учётных записей. Проверяются файлы `/etc/passwd` и `/etc/shadow`
-| `grpck` |	проверяет корректность системных файлов учётных записей. Проверяется файл `/etc/group`
-| `newgrp [-] group_name` |	изменяет первичную группу текущего пользователя. Если указать "`-`", ситуация будет идентичной той, в которой пользователь вышил из системы и снова вошёл. Если не указывать группу, первичная группа будет назначена из `/etc/passwd` 
-
-[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
-
-
-### Выставление/изменение полномочий на файлы
-| Команда                 | Описание      |
-|:------------------------|:--------------|
-| `ls -lh` |   просмотр полномочий на файлы и директории в текущей директории
-| `chmod ugo+rwx directory1` | 	добавить полномочия на директорию `directory1` ugo(User Group Other)+rwx(Read Write eXecute) - всем полные права. Аналогичное можно сделать таким образом `chmod 777 directory1`
-| `chmod go-rwx directory1` | 	отобрать у группы и всех остальных все полномочия на директорию `directory1`.
-| `chown user1 file1` | 	назначить владельцем файла `file1` пользователя user1
-| `chown -R user1 directory1` | 	назначить рекурсивно владельцем директории directory1 пользователя `user1`
-| `chgrp group1 file1` | 	сменить группу-владельца файла `file1` на group1
-| `chown user1:group1 file1` | 	сменить владельца и группу владельца файла `file1`
-| `find / -perm -u+s` | 	найти, начиная от корня, все файлы с выставленным SUID
-| `chmod u+s /bin/binary_file` | 	назначить SUID-бит файлу `/bin/binary_file`. Это даёт возможность любому пользователю запускать на выполнение файл с полномочиями владельца файла.
-| `chmod u-s /bin/binary_file` | 	снять SUID-бит с файла `/bin/binary_file`.
-| `chmod g+s /home/public` | 	назначить SGID-бит директории `/home/public`.
-| `chmod g-s /home/public` | 	снять SGID-бит с директории `/home/public`.
-| `chmod o+t /home/public` | 	назначить STIKY-бит директории `/home/public`. Позволяет удалять файлы только владельцам
-| `chmod o-t /home/public` | 	снять STIKY-бит с директории `/home/public` 
 
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
@@ -492,38 +546,6 @@
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
-### Сеть (LAN и WiFi)
-| Команда                 | Описание      |
-|:------------------------|:--------------|
-| `ifconfig eth0` |   показать конфигурацию сетевого интерфейса eth0
-| `ifup eth0` | 	активировать (поднять) интерфейс eth0
-| `ifdown eth0` | 	деактивировать (опустить) интерфейс eth0
-| `ifconfig eth0 192.168.1.1 netmask 255.255.255.0` | 	выставить интерфейсу eth0 ip-адрес и маску подсети
-| `ifconfig eth0 promisc` | 	перевести интерфейс eth0 в promiscuous-режим для "отлова" пакетов (sniffing)
-| `ifconfig eth0 -promisc` | 	отключить promiscuous-режим на интерфейсе eth0
-| `dhclient eth0` | 	активировать интерфейс eth0 в dhcp-режиме.
-| `route -n` | 	вывести локальную таблицу маршрутизации
-| `netstat -rn` | вывести локальную таблицу маршрутизации
-| `route add -net 0/0 gw IP_Gateway` | 	задать ip-адрес шлюза по умолчанию (default gateway)
-| `route add -net 192.168.0.0 ` `netmask 255.255.0.0 gw 192.168.1.1` | 	добавить статический маршрут в сеть 192.168.0.0/16 через шлюз с ip-адресом 192.168.1.1
-| `route del 0/0 gw IP_gateway` | 	удалить ip-адрес шлюза по умолчанию (default gateway)
-| `echo "1" > /proc/sys/net/ipv4/ip_forward` | 	разрешить пересылку пакетов (forwarding)
-| `hostname` | 	отобразить имя компьютера
-| `host www.yandex.ru` | 	разрешить имя www.yandex.ru хоста в ip-адрес и наоборот
-| `host 93.158.134.3` |
-| `ip link show` | 	отобразить состояние всех интерфейсов
-| `mii-tool eth0` | 	отобразить статус и тип соединения для интерфейса eth0
-| `ethtool eth0` | 	отображает статистику интерфеса eth0 с выводом такой информации, как поддерживаемые и текущие режимы соединения
-| `netstat -tupn` | 	отображает все установленные сетевые соединения по протоколам TCP и UDP без разрешения имён в ip-адреса и PID'ы и имена процессов, обеспечивающих эти соединения
-| `netstat -tupln` | 	отображает все сетевые соединения по протоколам TCP и UDP без разрешения имён в ip-адреса и PID'ы и имена процессов, слушающих порты
-| `tcpdump tcp port 80` | 	отобразить весь трафик на TCP-порт 80 (обычно - HTTP)
-| `iwlist scan` | 	просканировать эфир на предмет, доступности беспроводных точек доступа
-| `iwconfig eth1` | 	показать конфигурацию беспроводного сетевого интерфейса eth1
-| `traceroute www.ya.ru` |	Трассировка маршрута до указанного хоста (www.ya.ru), аналог tracert в Windows. В некоторых дистрибутивах установлен по-умолчанию только traceroute6 и придётся доустанавливать вручную. 
-
-[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
-
-
 ### Microsoft Windows networks([SAMBA](http://ru.wikipedia.org/wiki/Samba)) 
 | Команда                 | Описание      |
 |:------------------------|:--------------|
@@ -532,26 +554,6 @@
 | `smbclient -L ip_addr/hostname` | 	отобразить ресурсы, предоставленные в общий доступ на windows-машине
 | `smbget -Rr smb://ip_addr/share` | 	подобно wget может получить файлы с windows-машин через smb-протокол
 | `mount -t smbfs -o username=user,password=pass` ` //winclient/share /mnt/share` | 	смонтировать smb-ресурс, предоставленный на windows-машине, в локальную файловую систему 
-
-[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
-
-
-### IPTABLES ([firewall](http://ru.wikipedia.org/wiki/Firewall))
-| Команда                 | Описание      |
-|:------------------------|:--------------|
-| `iptables -t filter -nL` |   отобразить все цепочки правил
-| `iptables -nL` |  отобразить все цепочки правил
-| `iptables -t nat -L` | 	отобразить все цепочки правил в NAT-таблице
-| `iptables -t filter -F` | 	очистить все цепочки правил в filter-таблице
-| `iptables -F` |   очистить все цепочки правил в filter-таблице
-| `iptables -t nat -F` | 	очистить все цепочки правил в NAT-таблице
-| `iptables -t filter -X` | 	удалить все пользовательские цепочки правил в filter-таблице
-| `iptables -t filter -A INPUT -p tcp --dport telnet -j ACCEPT` | 	позволить входящее подключение telnet'ом
-| `iptables -t filter -A OUTPUT -p tcp --dport http -j DROP` | 	блокировать исходящие HTTP-соединения
-| `iptables -t filter -A FORWARD -p tcp --dport pop3 -j ACCEPT` | 	позволить "прокидывать" (forward) POP3-соединения
-| `iptables -t filter -A INPUT -j LOG --log-prefix "DROP INPUT"` | 	включить журналирование ядром пакетов, проходящих через цепочку INPUT, и добавлением к сообщению префикса "DROP INPUT"
-| `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE` | 	включить NAT (Network Address Translate) исходящих пакетов на интерфейс eth0. Допустимо при использовании с динамически выделяемыми ip-адресами.
-| `iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m` `tcp --dport 22 \ -j DNAT --to-destination 10.0.0.2:22` | 	перенаправление пакетов, адресованных одному хосту, на другой хост 
 
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
