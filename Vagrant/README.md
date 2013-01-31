@@ -21,5 +21,3 @@ TODO
 * **[www.vagrantbox.es](http://www.vagrantbox.es/)** - еще образы **Vagrant**
 * **[Vagrant in Zend Framework 1](http://akrabat.com/zend-framework/vagrant-in-zf1-trunk/)**
 * **[Virtual Machines with Vagrant, Veewee and Puppet](https://github.com/beberlei/whitewashing.de/blob/master/2012/05/31/virtual_machines_with_vagrant__veewee_and_puppet.rst)**
-* **[]()**
-* **[]()**
