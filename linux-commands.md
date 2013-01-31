@@ -1,6 +1,7 @@
 Очень полезные команды Linux на одном листе
 ===========================================
 * **[Системная информация](#%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D0%B0%D1%8F-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F)**
+* **[Мониторинг и отладка](#%D0%9C%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B3-%D0%B8-%D0%BE%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0)**
 * **[Остановка системы](#%D0%9E%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B)**
 * **[Файлы и директории](#%D0%A4%D0%B0%D0%B9%D0%BB%D1%8B-%D0%B8-%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B8)**
 * **[Поиск файлов](#%D0%9F%D0%BE%D0%B8%D1%81%D0%BA-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2)**
@@ -24,7 +25,6 @@
 * **[Сеть (LAN и WiFi)](#%D0%A1%D0%B5%D1%82%D1%8C-lan-%D0%B8-wifi)**
 * **[Microsoft Windows networks(SAMBA)](#microsoft-windows-networkssamba)**
 * **[IPTABLES (firewall)](#iptables-firewall)**
-* **[Мониторинг и отладка](#%D0%9C%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B3-%D0%B8-%D0%BE%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0)**
 * **[Другие полезные команды](#%D0%94%D1%80%D1%83%D0%B3%D0%B8%D0%B5-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B)**
 
 
@@ -52,6 +52,36 @@
 | `clock -w`              | сохранить системное время в [BIOS](http://ru.wikipedia.org/wiki/BIOS) |
 
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
+
+### Мониторинг и отладка
+| Команда                 | Описание      |
+|:------------------------|:--------------|
+| `top` |   отобразить запущенные процессы, используемые ими ресурсы и другую полезную информацию (с автоматическим обновлением данных)
+| `ps -eafw` |   отобразить запущенные процессы, используемые ими ресурсы и другую полезную информацию (единожды)
+| `ps -e -o pid,args --forest` | 	вывести PID'ы и процессы в виде дерева
+| `pstree` | 	отобразить дерево процессов
+| `kill -9 98989` | 	"убить" процесс с `PID 98989` "на смерть" (без соблюдения целостности данных)
+| `kill -KILL 98989` | "убить" процесс с `PID 98989` "на смерть" (без соблюдения целостности данных)
+| `kill -TERM 98989` | 	Корректно завершить процесс с `PID 98989`
+| `kill -1 98989` | 	заставить процесс с PID 98989 перепрочитать файл конфигурации
+| `kill -HUP 98989` |
+| `lsof -p 98989` | 	отобразить список файлов, открытых процессом с `PID 98989`
+| `lsof /home/user1` | 	отобразить список открытых файлов из директории `/home/user1`
+| `strace -c ls > /dev/null` | 	вывести список системных вызовов, созданных и полученных процессом ls
+| `strace -f -e open ls > /dev/null` | 	вывести вызовы бибилотек
+| `watch -n1 'cat /proc/interrupts'` | 	отображать прерывания в режиме реального времени
+| `last reboot` | 	отобразить историю перезагрузок системы
+| `last user1` | 	отобразить историю регистрации пользователя user1 в системе и время его нахождения в ней
+| `lsmod` | 	вывести загруженные модули ядра
+| `free -m` | 	показать состояние оперативной памяти в мегабайтах
+| `smartctl -A /dev/hda` | 	контроль состояния жёсткого диска `/dev/hda` через SMART
+| `smartctl -i /dev/hda` | 	проверить доступность SMART на жёстком диске `/dev/hda`
+| `tail /var/log/dmesg` | 	вывести десять последних записей из журнала загрузки ядра
+| `tail /var/log/messages` | 	вывести десять последних записей из системного журнала 
+
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
+
 
 
 ### Остановка системы
@@ -438,7 +468,16 @@
 ### CDROM
 | Команда                 | Описание      |
 |:------------------------|:--------------|
-TODO
+| `cdrecord -v gracetime=2 dev=/dev/cdrom -eject blank=fast -force` |  clean a rewritable cdrom
+| `mkisofs /dev/cdrom > cd.iso` |	create an iso image of cdrom on disk
+| `mkisofs /dev/cdrom | gzip > cd_iso.gz` |	create a compressed iso image of cdrom on disk
+| `mkisofs -J -allow-leading-dots -R -V` `"Label CD" -iso-level 4 -o ./cd.iso data_cd` |	create an iso image of a directory
+| `cdrecord -v dev=/dev/cdrom cd.iso` |	burn an ISO image
+| `gzip -dc cd_iso.gz | cdrecord dev=/dev/cdrom -` |	burn a compressed ISO image
+| `mount -o loop cd.iso /mnt/iso` |	mount an ISO image
+| `cd-paranoia -B` |	rip audio tracks from a CD to wav files
+| `cd-paranoia -- "-3"` |	rip first three audio tracks from a CD to wav files
+| `cdrecord --scanbus` |	scan bus to identify the channel scsi 
 
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
@@ -446,7 +485,31 @@ TODO
 ### Сеть (LAN и WiFi)
 | Команда                 | Описание      |
 |:------------------------|:--------------|
-TODO
+| `ifconfig eth0` |   показать конфигурацию сетевого интерфейса eth0
+| `ifup eth0` | 	активировать (поднять) интерфейс eth0
+| `ifdown eth0` | 	деактивировать (опустить) интерфейс eth0
+| `ifconfig eth0 192.168.1.1 netmask 255.255.255.0` | 	выставить интерфейсу eth0 ip-адрес и маску подсети
+| `ifconfig eth0 promisc` | 	перевести интерфейс eth0 в promiscuous-режим для "отлова" пакетов (sniffing)
+| `ifconfig eth0 -promisc` | 	отключить promiscuous-режим на интерфейсе eth0
+| `dhclient eth0` | 	активировать интерфейс eth0 в dhcp-режиме.
+| `route -n` | 	вывести локальную таблицу маршрутизации
+| `netstat -rn` |
+| `route add -net 0/0 gw IP_Gateway` | 	задать ip-адрес шлюза по умолчанию (default gateway)
+| `route add -net 192.168.0.0 ` `netmask 255.255.0.0 gw 192.168.1.1` | 	добавить статический маршрут в сеть 192.168.0.0/16 через шлюз с ip-адресом 192.168.1.1
+| `route del 0/0 gw IP_gateway` | 	удалить ip-адрес шлюза по умолчанию (default gateway)
+| `echo "1" > /proc/sys/net/ipv4/ip_forward` | 	разрешить пересылку пакетов (forwarding)
+| `hostname` | 	отобразить имя компьютера
+| `host www.yandex.ru` | 	разрешить имя www.yandex.ru хоста в ip-адрес и наоборот
+| `host 93.158.134.3` |
+| `ip link show` | 	отобразить состояние всех интерфейсов
+| `mii-tool eth0` | 	отобразить статус и тип соединения для интерфейса eth0
+| `ethtool eth0` | 	отображает статистику интерфеса eth0 с выводом такой информации, как поддерживаемые и текущие режимы соединения
+| `netstat -tupn` | 	отображает все установленные сетевые соединения по протоколам TCP и UDP без разрешения имён в ip-адреса и PID'ы и имена процессов, обеспечивающих эти соединения
+| `netstat -tupln` | 	отображает все сетевые соединения по протоколам TCP и UDP без разрешения имён в ip-адреса и PID'ы и имена процессов, слушающих порты
+| `tcpdump tcp port 80` | 	отобразить весь трафик на TCP-порт 80 (обычно - HTTP)
+| `iwlist scan` | 	просканировать эфир на предмет, доступности беспроводных точек доступа
+| `iwconfig eth1` | 	показать конфигурацию беспроводного сетевого интерфейса eth1
+| `traceroute www.ya.ru` |	Трассировка маршрута до указанного хоста (www.ya.ru), аналог tracert в Windows. В некоторых дистрибутивах установлен по-умолчанию только traceroute6 и придётся доустанавливать вручную. 
 
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
@@ -454,7 +517,11 @@ TODO
 ### Microsoft Windows networks([SAMBA](http://ru.wikipedia.org/wiki/Samba)) 
 | Команда                 | Описание      |
 |:------------------------|:--------------|
-TODO
+| `nbtscan ip_addr` |   разрешить netbios-имя nbtscan не во всех системах ставится по-умолчанию, возможно, придётся доустанавливать вручную. nmblookup включен в пакет samba.
+| `nmblookup -A ip_addr` | аналогично первому
+| `smbclient -L ip_addr/hostname` | 	отобразить ресурсы, предоставленные в общий доступ на windows-машине
+| `smbget -Rr smb://ip_addr/share` | 	подобно wget может получить файлы с windows-машин через smb-протокол
+| `mount -t smbfs -o username=user,password=pass` ` //winclient/share /mnt/share` | 	смонтировать smb-ресурс, предоставленный на windows-машине, в локальную файловую систему 
 
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
@@ -462,15 +529,19 @@ TODO
 ### IPTABLES ([firewall](http://ru.wikipedia.org/wiki/Firewall))
 | Команда                 | Описание      |
 |:------------------------|:--------------|
-TODO
-
-[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
-
-
-### Мониторинг и отладка
-| Команда                 | Описание      |
-|:------------------------|:--------------|
-TODO
+/ `iptables -t filter -nL` |   отобразить все цепочки правил
+/ `iptables -nL` |  отобразить все цепочки правил
+/ `iptables -t nat -L` | 	отобразить все цепочки правил в NAT-таблице
+/ `iptables -t filter -F` | 	очистить все цепочки правил в filter-таблице
+/ `iptables -F` |   очистить все цепочки правил в filter-таблице
+/ `iptables -t nat -F` | 	очистить все цепочки правил в NAT-таблице
+/ `iptables -t filter -X` | 	удалить все пользовательские цепочки правил в filter-таблице
+/ `iptables -t filter -A INPUT -p tcp --dport telnet -j ACCEPT` | 	позволить входящее подключение telnet'ом
+/ `iptables -t filter -A OUTPUT -p tcp --dport http -j DROP` | 	блокировать исходящие HTTP-соединения
+/ `iptables -t filter -A FORWARD -p tcp --dport pop3 -j ACCEPT` | 	позволить "прокидывать" (forward) POP3-соединения
+/ `iptables -t filter -A INPUT -j LOG --log-prefix "DROP INPUT"` | 	включить журналирование ядром пакетов, проходящих через цепочку INPUT, и добавлением к сообщению префикса "DROP INPUT"
+/ `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE` | 	включить NAT (Network Address Translate) исходящих пакетов на интерфейс eth0. Допустимо при использовании с динамически выделяемыми ip-адресами.
+/ `iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m` `tcp --dport 22 \ -j DNAT --to-destination 10.0.0.2:22` | 	перенаправление пакетов, адресованных одному хосту, на другой хост 
 
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
@@ -478,7 +549,17 @@ TODO
 ### Другие полезные команды
 | Команда                 | Описание      |
 |:------------------------|:--------------|
-TODO
+| `apropos …keyword` | выводит список комманд, которые так или иначе относятся к ключевым словам. Полезно, когда вы знаете что делает программа, но не помните команду
+| `man ping` |	вызов руководства по работе с программой, в данном случае, - ping
+| `whatis …keyword` |	отображает описание действий указанной программы
+| `mkbootdisk --device /dev/fd0 'uname -r'` |	создаёт загрузочный флоппи-диск
+| `gpg -c file1` |	шифрует файл file1 с помощью GNU Privacy Guard
+| `gpg file1.gpg` |	дешифрует файл file1 с помощью GNU Privacy Guard
+| `wget -r www.example.com` |	загружает рекурсивно содержимое сайта www.example.com
+| `wget -c www.example.com/file.iso` |	загрузить файл www.example.com/file.iso с возможностью останова и продолжения в последствии
+| `echo 'wget -c www.example.com/files.iso' | at 09:00` |	начать закачку в указанное время
+| `ldd /usr/bin/ssh` |	вывести список библиотек, необходимых для работы ssh
+| `alias hh='history'` |	назначить алиас hh команде history 
 
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
