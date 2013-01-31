@@ -1,3 +1,9 @@
+<p align="center">
+  <img  style="max-width:100%;"
+        alt="alt Nginx"
+        src="https://raw.github.com/uran1980/web-dev-blog/master/Nginx/images/nginx-logo.png">
+</p>
+
 `if` - это Зло!!!
 ==========
 * **[Введение](#%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5)**

@@ -1,7 +1,15 @@
-Web-Dev blog
-============
+<h1 align="center">
+    <a  href="#web-dev-blog"
+        class="anchor"
+        name="web-dev-blog"><span class="mini-icon mini-icon-link"></span></a>
+    Web-Dev blog
+</h1>
 
-![alt Мой Web-Dev блог...](https://raw.github.com/uran1980/web-dev-blog/master/images/webdev_0.png)
+<p align="center">
+    <img  style="max-width:100%;"
+          alt="alt Мой Web-Dev блог..."
+          src="https://raw.github.com/uran1980/web-dev-blog/master/images/webdev_0.png">
+</p>
 
 ## Web-разработка
 * **[Стандарты кодирования](https://github.com/uran1980/web-dev-blog/blob/master/Coding-standarts/README.md)**
