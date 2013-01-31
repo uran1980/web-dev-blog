@@ -10,3 +10,4 @@ TODO
 
 ## Полезные ресурсы
 * **[Unicorn! on GitHub blog](https://github.com/blog/517-unicorn)**
+* **[https://github.com/defunkt/unicorn](https://github.com/defunkt/unicorn)** - исходны код на **GitHub'е**
