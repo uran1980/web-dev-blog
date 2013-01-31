@@ -368,7 +368,7 @@
 | `dos2unix filedos.txt fileunix.txt` |  конвертировать файл текстового формата из MSDOS в UNIX (разница в символах возврата коретки)
 | `unix2dos fileunix.txt filedos.txt` |	конвертировать файл текстового формата из UNIX в MSDOS (разница в символах возврата коретки)
 | `recode ..HTML < page.txt > page.html` |	конвертировать содержимое тестового файла page.txt в html-файл `page.html`
-| `recode -l | more` |	вывести список доступных форматов 
+| `recode -l l more` |	вывести список доступных форматов 
 
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
