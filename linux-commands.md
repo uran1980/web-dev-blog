@@ -470,10 +470,10 @@
 |:------------------------|:--------------|
 | `cdrecord -v gracetime=2 dev=/dev/cdrom -eject blank=fast -force` |  clean a rewritable cdrom
 | `mkisofs /dev/cdrom > cd.iso` |	create an iso image of cdrom on disk
-| `mkisofs /dev/cdrom | gzip > cd_iso.gz` |	create a compressed iso image of cdrom on disk
+| `mkisofs /dev/cdrom l gzip > cd_iso.gz` |	create a compressed iso image of cdrom on disk
 | `mkisofs -J -allow-leading-dots -R -V` `"Label CD" -iso-level 4 -o ./cd.iso data_cd` |	create an iso image of a directory
 | `cdrecord -v dev=/dev/cdrom cd.iso` |	burn an ISO image
-| `gzip -dc cd_iso.gz | cdrecord dev=/dev/cdrom -` |	burn a compressed ISO image
+| `gzip -dc cd_iso.gz l cdrecord dev=/dev/cdrom -` |	burn a compressed ISO image
 | `mount -o loop cd.iso /mnt/iso` |	mount an ISO image
 | `cd-paranoia -B` |	rip audio tracks from a CD to wav files
 | `cd-paranoia -- "-3"` |	rip first three audio tracks from a CD to wav files
@@ -493,7 +493,7 @@
 | `ifconfig eth0 -promisc` | 	отключить promiscuous-режим на интерфейсе eth0
 | `dhclient eth0` | 	активировать интерфейс eth0 в dhcp-режиме.
 | `route -n` | 	вывести локальную таблицу маршрутизации
-| `netstat -rn` |
+| `netstat -rn` | вывести локальную таблицу маршрутизации
 | `route add -net 0/0 gw IP_Gateway` | 	задать ip-адрес шлюза по умолчанию (default gateway)
 | `route add -net 192.168.0.0 ` `netmask 255.255.0.0 gw 192.168.1.1` | 	добавить статический маршрут в сеть 192.168.0.0/16 через шлюз с ip-адресом 192.168.1.1
 | `route del 0/0 gw IP_gateway` | 	удалить ip-адрес шлюза по умолчанию (default gateway)
@@ -529,19 +529,19 @@
 ### IPTABLES ([firewall](http://ru.wikipedia.org/wiki/Firewall))
 | Команда                 | Описание      |
 |:------------------------|:--------------|
-/ `iptables -t filter -nL` |   отобразить все цепочки правил
-/ `iptables -nL` |  отобразить все цепочки правил
-/ `iptables -t nat -L` | 	отобразить все цепочки правил в NAT-таблице
-/ `iptables -t filter -F` | 	очистить все цепочки правил в filter-таблице
-/ `iptables -F` |   очистить все цепочки правил в filter-таблице
-/ `iptables -t nat -F` | 	очистить все цепочки правил в NAT-таблице
-/ `iptables -t filter -X` | 	удалить все пользовательские цепочки правил в filter-таблице
-/ `iptables -t filter -A INPUT -p tcp --dport telnet -j ACCEPT` | 	позволить входящее подключение telnet'ом
-/ `iptables -t filter -A OUTPUT -p tcp --dport http -j DROP` | 	блокировать исходящие HTTP-соединения
-/ `iptables -t filter -A FORWARD -p tcp --dport pop3 -j ACCEPT` | 	позволить "прокидывать" (forward) POP3-соединения
-/ `iptables -t filter -A INPUT -j LOG --log-prefix "DROP INPUT"` | 	включить журналирование ядром пакетов, проходящих через цепочку INPUT, и добавлением к сообщению префикса "DROP INPUT"
-/ `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE` | 	включить NAT (Network Address Translate) исходящих пакетов на интерфейс eth0. Допустимо при использовании с динамически выделяемыми ip-адресами.
-/ `iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m` `tcp --dport 22 \ -j DNAT --to-destination 10.0.0.2:22` | 	перенаправление пакетов, адресованных одному хосту, на другой хост 
+| `iptables -t filter -nL` |   отобразить все цепочки правил
+| `iptables -nL` |  отобразить все цепочки правил
+| `iptables -t nat -L` | 	отобразить все цепочки правил в NAT-таблице
+| `iptables -t filter -F` | 	очистить все цепочки правил в filter-таблице
+| `iptables -F` |   очистить все цепочки правил в filter-таблице
+| `iptables -t nat -F` | 	очистить все цепочки правил в NAT-таблице
+| `iptables -t filter -X` | 	удалить все пользовательские цепочки правил в filter-таблице
+| `iptables -t filter -A INPUT -p tcp --dport telnet -j ACCEPT` | 	позволить входящее подключение telnet'ом
+| `iptables -t filter -A OUTPUT -p tcp --dport http -j DROP` | 	блокировать исходящие HTTP-соединения
+| `iptables -t filter -A FORWARD -p tcp --dport pop3 -j ACCEPT` | 	позволить "прокидывать" (forward) POP3-соединения
+| `iptables -t filter -A INPUT -j LOG --log-prefix "DROP INPUT"` | 	включить журналирование ядром пакетов, проходящих через цепочку INPUT, и добавлением к сообщению префикса "DROP INPUT"
+| `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE` | 	включить NAT (Network Address Translate) исходящих пакетов на интерфейс eth0. Допустимо при использовании с динамически выделяемыми ip-адресами.
+| `iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m` `tcp --dport 22 \ -j DNAT --to-destination 10.0.0.2:22` | 	перенаправление пакетов, адресованных одному хосту, на другой хост 
 
 [к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
