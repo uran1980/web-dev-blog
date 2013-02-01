@@ -89,6 +89,16 @@ $ vagrant up
   </a>
 </p>
 
+### Vagrantfile
+`Vagrantfile` для **Vagrant** как `Makefile` для **[Make](http://ru.wikipedia.org/wiki/Make)**. `Vagrantfile` располагается в корне каждого **Vagrant** проекта и используется для настройки поведения самого **Vagrant** и виртуальных машин созданных с помощью него. Пример содержимого этого файла приведен ниже:
+```ruby
+Vagrant::Config.run do |config|
+  # Setup the box
+  config.vm.box = "my_box"
+end
+```
+Как вы видите, содержимое файла это код, написанный на языке **[Ruby](http://ru.wikibooks.org/wiki/Ruby)**.
+
 [к началу](#%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D1%81-vagrant)
 
 
