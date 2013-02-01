@@ -12,19 +12,8 @@
 </p>
 
 ## Содержание раздела Vagrant
-TODO
-
-
-<iframe src="http://player.vimeo.com/video/42489579"
-        width="500"
-        height="275"
-        frameborder="0"
-        webkitAllowFullScreen
-        mozallowfullscreen
-        allowFullScreen></iframe>
-<p>
-  <a href="http://vimeo.com/42489579">Virtualized Development Environments in Vagrant</a> from <a href="http://vimeo.com/phpne">PHPNE</a> on <a href="http://vimeo.com">Vimeo</a>.
-</p>
+* **[Начало работы с Vagrant](https://github.com/uran1980/web-dev-blog/blob/master/Vagrant/getting-started-with-vagrant.md)**
+* <a href="http://vimeo.com/42489579">Virtualized Development Environments in Vagrant</a> from <a href="http://vimeo.com/phpne">PHPNE</a> on <a href="http://vimeo.com">Vimeo</a>.
 
 
 ## Полезные ресурсы
