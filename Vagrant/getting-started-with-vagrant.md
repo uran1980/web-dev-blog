@@ -81,6 +81,14 @@ $ vagrant up
 ## Настройка проекта
 После того как вы установили **Vagrant** на свою систему, все его управление осуществляется через команду `vagrant`. У этой команды есть множество необходимых подкомманд, например, `vagrant up` - для запуска виртуальной машины, `vagrant ssh` - для подключения по **[ssh](http://ru.wikipedia.org/wiki/SSH)**, `vagrant package`- для создания пакета текущего виртуального окружения готового к развертыанию на другом компьютере и т.д. Чтобы просмотреть все доступные команды, просто наберите в командной строке команду `vagrant`.
 
+<p align="center">
+  <a href="https://github.com/uran1980/web-dev-blog/edit/master/Vagrant/getting-started-with-vagrant.md">
+    <img  style="max-width:100%;"
+          alt="alt vagrant command"
+          src="https://raw.github.com/uran1980/web-dev-blog/master/Vagrant/images/sshot-001.png" />
+  </a>
+</p>
+
 [к началу](#%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D1%81-vagrant)
 
 
