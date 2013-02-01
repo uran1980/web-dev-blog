@@ -8,14 +8,10 @@
 <p align="center">
   <a href="https://github.com/uran1980/web-dev-blog/blob/master/Mercurial/README.md">
     <img  style="max-width:100%;"
-          alt="alt Мой Web-Dev блог..."
+          alt="alt Mercurial"
           src="https://raw.github.com/uran1980/web-dev-blog/master/Mercurial/images/mercurial.png" />
   </a>
 </p>
-
-Mercurial
-=========
-![alt Mercurial](https://raw.github.com/uran1980/web-dev-blog/master/Mercurial/images/mercurial.png)
 
 **[Mercurial](http://ru.wikipedia.org/wiki/Mercurial)** — кроссплатформенная распределённая система управления версиями, разработанная для эффективной работы с очень большими репозиториями кода.
 
