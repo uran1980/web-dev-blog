@@ -21,3 +21,7 @@
 ## Администрирование
 * **[Очень полезные команды Linux на одном листе](https://github.com/uran1980/web-dev-blog/blob/master/linux-commands.md)**
 * **[Nginx](https://github.com/uran1980/web-dev-blog/blob/master/Nginx/README.md)**
+
+
+## Облачные сервисы
+* **[Облачные сервисы](https://github.com/uran1980/web-dev-blog/blob/master/Cloud-Services/README.md)**
