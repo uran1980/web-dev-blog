@@ -1,11 +1,17 @@
+<h1 align="center">
+    <a  href="#vagrant"
+        class="anchor"
+        name="vagrant"><span class="mini-icon mini-icon-link"></span></a>
+    Vagrant
+</h1>
+
 <p align="center">
     <img  style="max-width:100%;"
           alt="alt Vagrant"
           src="https://raw.github.com/uran1980/web-dev-blog/master/Vagrant/images/vagrant_chilling.png">
 </p>
 
-Vagrant
-=======
+## Содержание раздела Vagrant
 TODO
 
 
