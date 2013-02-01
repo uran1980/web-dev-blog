@@ -1,3 +1,18 @@
+<h1 align="center">
+  <a  href="#mercurial"
+      class="anchor"
+      name="mercurial"><span class="mini-icon mini-icon-link"></span></a>
+  Mercurial
+</h1>
+
+<p align="center">
+  <a href="https://github.com/uran1980/web-dev-blog/blob/master/Mercurial/README.md">
+    <img  style="max-width:100%;"
+          alt="alt Мой Web-Dev блог..."
+          src="https://raw.github.com/uran1980/web-dev-blog/master/Mercurial/images/mercurial.png" />
+  </a>
+</p>
+
 Mercurial
 =========
 ![alt Mercurial](https://raw.github.com/uran1980/web-dev-blog/master/Mercurial/images/mercurial.png)
