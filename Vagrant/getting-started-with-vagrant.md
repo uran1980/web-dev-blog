@@ -94,5 +94,10 @@ TODO
 [к началу](#%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D1%81-vagrant)
 
 
+## Полезные ссылки
+* **[Available Vagrant Boxes](https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Boxes)** - доступные образы **Vagrant**
+* **[www.vagrantbox.es](http://www.vagrantbox.es/)** - еще образы **Vagrant**
+
+
 ## См. также
 * **[Оригинал этой статьи](http://docs.vagrantup.com/v1/docs/getting-started/rebuild.html)** (англ.)
