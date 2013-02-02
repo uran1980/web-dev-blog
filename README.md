@@ -38,4 +38,4 @@
 
 
 ## Остальное
-* **[Коды иконок доступных на GitHub'е](https://github.com/uran1980/emoji-cheat-sheet.com)** - демо смотрим **[здесь](http://www.emoji-cheat-sheet.com/)**
+* **[Коды иконок доступных на GitHub'е](https://github.com/uran1980/emoji-cheat-sheet.com)** - демо **[здесь](http://www.emoji-cheat-sheet.com/)**
