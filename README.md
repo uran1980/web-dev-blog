@@ -35,3 +35,7 @@
 
 ## Облачные сервисы
 * **[Облачные сервисы](https://github.com/uran1980/web-dev-blog/blob/master/Cloud-Services/README.md)**
+
+
+## Остальное
+* **[Коды иконок доступных на GitHub'е](https://github.com/uran1980/emoji-cheat-sheet.com)** - демо смотрим **[здесь](http://www.emoji-cheat-sheet.com/)**
