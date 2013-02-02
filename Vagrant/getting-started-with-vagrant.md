@@ -200,7 +200,38 @@ vagrant@vagrantup:~$
 Для этих целей **Vagrant** позволяет использовать на выбор одно из двух решений - это **[Chef (Chef-Solo)](http://docs.vagrantup.com/v1/docs/provisioners/chef_solo.html)** или **[Puppet](http://docs.vagrantup.com/v1/docs/provisioners/puppet.html)**. Также, при необходимости, вы можете расширять **Vagrant** и использовать **[другие средства](http://docs.vagrantup.com/v1/docs/provisioners/puppet.html)** автоматизированного развертывания приложений (но это уже не относится к теме данной статьи).
 
 ### Настройка Chef и Vagrant
-TODO
+В данной статье мы воспользуемся **[заранее приготовленными рецептами для Chef](http://files.vagrantup.com/getting_started/cookbooks.tar.gz)**, чтобы продемонстрировать развертывания виртуальной машины. Для этого отредактируем конфигурационный файл Vgarantfile:
+```rubt
+Vagrant::Config.run do |config|
+  config.vm.box = "precise32-box"
+
+  # Enable and configure the chef solo provisioner
+  config.vm.provision :chef_solo do |chef|
+    # We're going to download our cookbooks from the web
+    chef.recipe_url = "http://files.vagrantup.com/getting_started/cookbooks.tar.gz"
+
+    # Tell chef what recipe to run. In this case, the `vagrant_main` recipe
+    # does all the magic.
+    chef.add_recipe("vagrant_main")
+  end
+end
+```
+Обратите внимание, что мы используем URL `http://files.vagrantup.com/getting_started/cookbooks.tar.gz` для загрузки набора **рецептов (cookbooks)** для Chef. Вместо этого вы также можете просто скопировать набор рецептов в корневую директорию нашего Vagrant-проекта и подключить их через конфиг в Vagrantfile'е. Более подробно про это можно найти в разделе **[ChefSolo](http://docs.vagrantup.com/v1/docs/provisioners/chef_solo.html)**.
+
+### Запуск!
+После настройки провизий для виртуальной машины, просто запускаем команду `vagrant up`. **Vagarnt** запустит виртуальную машину из образа и установить необходимы софт прописанный в рецептах. Если ваша виртуальная машина уже была запущена к этому моменту и вы ее не выключали, то просто перезагрузите ее командой `vagrant reload`, чтобы изменения вступили в силу.
+
+После того как **Vagrant** завершит все необходимые действия и настройки системы, у вас будет полноценный настроенный web-сервер на виртуальной машине. Однако, пока вы еще не сможете увидеть свой web-проект на ней через браузер на вашем рабочем компьютере, т.к. мы еще не настроили **проброс портов (port forwarding)**.
+
+Чтобы убедится всеже что наш простой сайт уже работает, вы можете подключится по ssh к виртуальной машине и в командной строке ssh-терминала набрать следующее:
+```shell
+$ vagrant ssh
+...
+vagrant@vagrantup:~$ wget -qO- 127.0.0.1
+<h1>Hello from a Vagrant VM</h1>
+vagrant@vagrantup:~$
+```
+Далее мы настроим проброс портов, чтобы вы могли увидеть свой сайт через браузер на вашем компьютере.
 
 [к началу](#%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D1%81-vagrant)
 
