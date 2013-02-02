@@ -2,7 +2,7 @@
   <a  href="#vagrant"
       class="anchor"
       name="vagrant"><span class="mini-icon mini-icon-link"></span></a>
-  Vagrant
+  Vagrant - менеджер виртуальных окружений
 </h1>
 
 <p align="center">
