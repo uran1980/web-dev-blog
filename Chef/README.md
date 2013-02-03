@@ -7,7 +7,7 @@
 </p>
 
 ## Содержание раздела Chef
-TODO
+* **[Chef-Solo exemples](https://github.com/le0pard/chef-solo-example)**
 
 
 ## Полезные ресурсы
