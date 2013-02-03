@@ -6,7 +6,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/uran1980/web-dev-blog/edit/master/PostgreSQL/README.md">
+  <a href="https://github.com/uran1980/web-dev-blog/blob/master/PostgreSQL/README.md">
     <img  style="max-width:100%;"
           alt="alt PostgreSQL"
           src="https://raw.github.com/uran1980/web-dev-blog/master/PostgreSQL/images/postgre-sql-logo-300x300.png" />
