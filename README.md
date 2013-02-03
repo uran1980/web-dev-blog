@@ -22,11 +22,14 @@
 Таже все тексты этого блога доступны для общего использования. Если вам понравился мой блог и вы хотите его дополнить или нашли в нем какие-то неточности или ошибки, вы всегда можете сделать **[форк (fork)](https://help.github.com/articles/fork-a-repo)** этого блога, а затем добавить новую статью или исправить найденную ошибку и отправить мне **[пул реквест (pull request)](http://habrahabr.ru/post/125999/)**. Я с удовольствием добавлю ваши изменения в мой блог.
 
 ## Web-разработка
-* **[Стандарты кодирования](https://github.com/uran1980/web-dev-blog/blob/master/Coding-standarts/README.md)**
-* **[Ообъектно-Ориентированное программирование (ООП)](https://github.com/uran1980/web-dev-blog/blob/master/OOP%20-%20ObjectOrientedProgramming/README.md)**
-* **[JavaScript](https://github.com/uran1980/web-dev-blog/blob/master/JavaScript/README.md)**
-* **[Memcached](https://github.com/uran1980/web-dev-blog/blob/master/Memcached/README.md)**
-* **[Mercurial](https://github.com/uran1980/web-dev-blog/blob/master/Mercurial/README.md)**
+* **Языки программировани**
+  * **[Стандарты кодирования](https://github.com/uran1980/web-dev-blog/blob/master/Coding-standarts/README.md)**
+  * **[Ообъектно-Ориентированное программирование (ООП)](https://github.com/uran1980/web-dev-blog/blob/master/OOP%20-%20ObjectOrientedProgramming/README.md)**
+  * **[JavaScript](https://github.com/uran1980/web-dev-blog/blob/master/JavaScript/README.md)**
+* **Кеширование и noSQL**
+  * **[Memcached](https://github.com/uran1980/web-dev-blog/blob/master/Memcached/README.md)**
+* **Средства контроль версий**
+  * **[Mercurial](https://github.com/uran1980/web-dev-blog/blob/master/Mercurial/README.md)**
 
 ## Администрирование
 * **[Очень полезные команды Linux на одном листе](https://github.com/uran1980/web-dev-blog/blob/master/linux-commands.md)**
