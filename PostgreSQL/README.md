@@ -17,4 +17,4 @@
 TODO
 
 ## Полезные ресурсы
-* **[Работа с PostgreSQL - настройка и масштабирование](http://postgresql.leopard.in.ua/)**
+* **[Работа с PostgreSQL - настройка и масштабирование](http://postgresql.leopard.in.ua/)** - книга на русском в **PDF** и **HTML** фомате
