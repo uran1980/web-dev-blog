@@ -6,8 +6,19 @@
   </a>
 </p>
 
-## Содержание раздела Chef
-* **[Chef-Solo exemples](https://github.com/le0pard/chef-solo-example)**
+
+## Chef-Solo
+### Очень полезные туториалы для начального ознакомления
+* **[Что такое Chef-Solo](http://leopard.in.ua/2013/01/03/chef-solo-getting-started-part-1/)**
+* **[Рецепты (cookbooks) и их создание](http://leopard.in.ua/2013/01/04/chef-solo-getting-started-part-2/)**
+* **[Понятие ролей севреров](http://leopard.in.ua/2013/01/06/chef-solo-getting-started-part-3/)**
+* **[Зависимости в рецептах и ролях](http://leopard.in.ua/2013/01/11/chef-solo-getting-started-part-4/)**
+* **[Плагин Ohai для определения параметров сервера](http://leopard.in.ua/2013/01/25/chef-solo-getting-started-part-5/)**
+* **[Chef-Solo примеры](https://github.com/le0pard/chef-solo-example)**
+
+
+## Chef-Server
+* **[Что такое Chef-Severe](http://leopard.in.ua/2013/02/16/chef-server-getting-started-part-1/)**
 
 
 ## Полезные ресурсы
