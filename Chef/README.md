@@ -11,6 +11,6 @@
 
 
 ## Полезные ресурсы
-* **[https://github.com/opscode](https://github.com/opscode)** - официальный репозитарий Opscode на GitHub'е
+* **[https://github.com/opscode-cookbooks](https://github.com/opscode-cookbooks)** - официальный репозитарий рецептов для Chef
 * **[http://community.opscode.com/](http://community.opscode.com/)** - Chef комьюнити
 * **[Cooking up your dev environment with Chef (готовим свое оружение для разработки с помощью Chef)](http://www.slideshare.net/astead/cooking-up-your-dev-environment-with-chef)** - слайды
