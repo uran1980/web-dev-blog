@@ -9,12 +9,12 @@
 
 ## Chef-Solo
 ### Подробный туториал для начального ознакомления
-* **[Что такое Chef-Solo](http://leopard.in.ua/2013/01/03/chef-solo-getting-started-part-1/)**
-* **[Рецепты (cookbooks) и их создание](http://leopard.in.ua/2013/01/04/chef-solo-getting-started-part-2/)**
-* **[Понятие ролей севреров](http://leopard.in.ua/2013/01/06/chef-solo-getting-started-part-3/)**
-* **[Зависимости в рецептах и ролях](http://leopard.in.ua/2013/01/11/chef-solo-getting-started-part-4/)**
-* **[Плагин Ohai для определения параметров сервера](http://leopard.in.ua/2013/01/25/chef-solo-getting-started-part-5/)**
-* **[Chef-Solo примеры](https://github.com/le0pard/chef-solo-example)**
+* **[Что такое Chef-Solo](http://leopard.in.ua/2013/01/03/chef-solo-getting-started-part-1/)** (англ.)
+* **[Рецепты (cookbooks) и их создание](http://leopard.in.ua/2013/01/04/chef-solo-getting-started-part-2/)** (англ.)
+* **[Понятие ролей севреров](http://leopard.in.ua/2013/01/06/chef-solo-getting-started-part-3/)** (англ.)
+* **[Зависимости в рецептах и ролях](http://leopard.in.ua/2013/01/11/chef-solo-getting-started-part-4/)** (англ.)
+* **[Плагин Ohai для определения параметров сервера](http://leopard.in.ua/2013/01/25/chef-solo-getting-started-part-5/)** (англ.)
+* **[Chef-Solo примеры](https://github.com/le0pard/chef-solo-example)** (англ.)
 
 
 ## Chef-Server
