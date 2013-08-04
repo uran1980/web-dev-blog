@@ -24,6 +24,10 @@
 ## Полезные ресурсы
 * **[https://github.com/opscode-cookbooks](https://github.com/opscode-cookbooks)** - официальный репозитарий рецептов для Chef
 * **[http://community.opscode.com/](http://community.opscode.com/)** - Chef комьюнити
+
+## Слайды
 * **[Cooking up your dev environment with Chef (готовим свое оружение для разработки с помощью Chef)](http://www.slideshare.net/astead/cooking-up-your-dev-environment-with-chef)** - слайды
+
+## Еще статьи
 * **[Chef-Solo для начинающих](http://habrahabr.ru/sandbox/52663/)** -- статья на хабре
 * **[Development Environment при помощи Vagrant и Chef](http://habrahabr.ru/post/178797/)** -- статья на хабре про ипользование Chef и Vagrant
