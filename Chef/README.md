@@ -9,6 +9,7 @@
 
 ## Chef-Solo
 ### Очень полезные туториалы для начального ознакомления
+* **[Chef-Solo для начинающих](http://habrahabr.ru/sandbox/52663/)** -- статья на хабре
 * **[Что такое Chef-Solo](http://leopard.in.ua/2013/01/03/chef-solo-getting-started-part-1/)**
 * **[Рецепты (cookbooks) и их создание](http://leopard.in.ua/2013/01/04/chef-solo-getting-started-part-2/)**
 * **[Понятие ролей севреров](http://leopard.in.ua/2013/01/06/chef-solo-getting-started-part-3/)**
