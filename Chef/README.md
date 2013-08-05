@@ -18,7 +18,7 @@
 
 
 ## Chef-Server
-* **[Что такое Chef-Severe](http://leopard.in.ua/2013/02/16/chef-server-getting-started-part-1/)**
+* **[Что такое Chef-Server](http://leopard.in.ua/2013/02/16/chef-server-getting-started-part-1/)**
 
 
 ## Полезные ресурсы
