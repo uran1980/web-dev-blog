@@ -52,7 +52,7 @@
 | `date 041217002007.00`  | установить системные дату и время ММДДЧЧммГГГГ.СС (МесяцДеньЧасМинутыГод.Секунды) |
 | `clock -w`              | сохранить системное время в [BIOS](http://ru.wikipedia.org/wiki/BIOS) |
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Мониторинг и отладка
@@ -81,7 +81,7 @@
 | `tail /var/log/dmesg` | 	вывести десять последних записей из журнала загрузки ядра
 | `tail /var/log/messages` | 	вывести десять последних записей из системного журнала 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 
@@ -97,7 +97,7 @@
 | `reboot`                      | перегрузить систему |
 | `logout`                      | выйти из системы |
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Запуск и остановка сервисов (демонов)
@@ -106,7 +106,7 @@
 | `sudo service nginx start` | Запуск nginx (доступны команды start stop restart и т.д.)
 | `sudo /etc/init.d/nginx start` | Второй вариант запуска nginx
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Сеть (LAN и WiFi)
@@ -139,7 +139,7 @@
 | `iwconfig eth1` | 	показать конфигурацию беспроводного сетевого интерфейса eth1
 | `traceroute www.ya.ru` |	Трассировка маршрута до указанного хоста (www.ya.ru), аналог tracert в Windows. В некоторых дистрибутивах установлен по-умолчанию только traceroute6 и придётся доустанавливать вручную. 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### IPTABLES ([firewall](http://ru.wikipedia.org/wiki/Firewall))
@@ -159,7 +159,7 @@
 | `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE` | 	включить NAT (Network Address Translate) исходящих пакетов на интерфейс eth0. Допустимо при использовании с динамически выделяемыми ip-адресами.
 | `iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m` `tcp --dport 22 \ -j DNAT --to-destination 10.0.0.2:22` | 	перенаправление пакетов, адресованных одному хосту, на другой хост 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Пользователи и группы
@@ -177,7 +177,7 @@
 | `grpck` |	проверяет корректность системных файлов учётных записей. Проверяется файл `/etc/group`
 | `newgrp [-] group_name` |	изменяет первичную группу текущего пользователя. Если указать "`-`", ситуация будет идентичной той, в которой пользователь вышил из системы и снова вошёл. Если не указывать группу, первичная группа будет назначена из `/etc/passwd` 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Выставление/изменение полномочий на файлы
@@ -198,7 +198,7 @@
 | `chmod o+t /home/public` | 	назначить STIKY-бит директории `/home/public`. Позволяет удалять файлы только владельцам
 | `chmod o-t /home/public` | 	снять STIKY-бит с директории `/home/public` 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 
@@ -235,7 +235,7 @@
 | `ln file1 lnk1` | 	создать "жёсткую" (физическую) ссылку на файл или директорию
 | `touch -t 0712250000 fileditest` | 	модифицировать дату и время создания файла, при его отсутствии, создать файл с указанными датой и временем (YYMMDDhhmm) 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Поиск файлов
@@ -252,7 +252,7 @@
 | `whereis halt` |	показывает размещение бинарных файлов, исходных кодов и руководств, относящихся к файлу `halt`
 | `which halt` |	отображает полный путь к файлу `halt` 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Монтирование файловых систем
@@ -269,7 +269,7 @@
 | `mount -t vfat /dev/hda5 /mnt/hda5` |	монтировать файловую систему [Windows FAT32](http://ru.wikipedia.org/wiki/FAT32)
 | `mount -o bind /home/user/prg /var/ftp/user` |	"монтирует" директорию в директорию (`binding`). Доступна с версии ядра 2.4.0. Полезна, например, для предоставления содержимого пользовательской директории через [ftp](http://ru.wikipedia.org/wiki/Ftp) при работе ftp-сервера в "песочнице" (`chroot`), когда симлинки сделать невозможно.
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Дисковое пространство
@@ -280,7 +280,7 @@
 * `rpm -q -a --qf '%10{SIZE}\t%{NAME}\n' | sort -k1,1n` - показывает размер используемого дискового пространства, занимаемое файлами rpm-пакета, с сортировкой по размеру (fedora, redhat и т.п.)
 * `dpkg-query -W -f='${Installed-Size;10}\t${Package}\n' | sort -k1,1n` - показывает размер используемого дискового пространства, занимаемое файлами deb-пакета, с сортировкой по размеру (ubuntu, debian т.п.) 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Специальные атрибуты файлов
@@ -295,7 +295,7 @@
 | `hattr +u file1` |	данный атрибут указывает, что при удалении файла содержимое его будет сохранено и при необходимости пользователь сможет его восстановить
 | `sattr` |	показать атрибуты файлов 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Архивирование и сжатие файлов
@@ -322,7 +322,7 @@
 | `zip -r file1.zip file1 file2 dir1` | создать сжатый zip-архив и со включением в него нескольких файлов и/или директорий
 | `unzip file1.zip` | разжать и распаковать zip-архив 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### [RPM](http://ru.wikipedia.org/wiki/RPM) пакеты ([Fedora](http://ru.wikipedia.org/wiki/Fedora), [Red Hat](http://ru.wikipedia.org/wiki/Red_Hat) и тому подобное)
@@ -355,7 +355,7 @@
 | `rpm -ivh /usr/src/redhat/RPMS/'arch'` `/package.rpm` |	установить пакет, собранный из исходных кодов
 | `rpmbuild --rebuild package_name.src.rpm` |	собрать пакет из исходных кодов 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### [YUM](http://ru.wikipedia.org/wiki/Yum) - средство обновления пакетов ([Fedora](http://ru.wikipedia.org/wiki/Fedora), [RedHat](http://ru.wikipedia.org/wiki/Red_Hat) и тому подобное)
@@ -371,7 +371,7 @@
 | `yum clean headers` |	удалить все заголовки файлов, которые система использует для разрешения зависимостей
 | `yum clean all` |	очисть rpm-кэш, удалив закачанные пакеты и заголовки 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### [DEB](http://ru.wikipedia.org/wiki/DEB) пакеты ([Debian](http://ru.wikipedia.org/wiki/Debian), [Ubuntu](http://ru.wikipedia.org/wiki/Ubuntu) и тому подобное)
@@ -386,7 +386,7 @@
 | `dpkg --contents package.deb` |	отобразить список файлов, входящих в пакет, который ешё не установлен в систему
 | `dpkg -S /bin/ping` |	найти пакет, в который входит указанный файл. 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### [APT](http://ru.wikipedia.org/wiki/APT) - средство управление пакетами ([Debian](http://ru.wikipedia.org/wiki/Debian), [Ubuntu](http://ru.wikipedia.org/wiki/Ubuntu) и тому подобное)
@@ -402,7 +402,7 @@
 | `apt-get clean` |	удалить загруженные архивные файлы пакетов
 | `apt-get autoclean` |	удалить старые загруженные архивные файлы пакетов
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Просмотр содержимого файлов
@@ -416,7 +416,7 @@
 | `tail -2 file1` |	вывести последние две строки файла `file1` на стандартное устройство вывода. По-умолчанию выводится десять строк
 | `tail -f /var/log/messages` |	выводить содержимое файла `/var/log/messages` на стандартное устройство вывода по мере появления в нём текста. 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Манипуляции с текстом
@@ -453,7 +453,7 @@
 | `comm -2 file1 file2` |	сравнить содержимое двух файлов, не отображая строки принадлежащие файлу `file2`
 | `comm -3 file1 file2` |	сравнить содержимое двух файлов, удаляя строки встречающиеся в обоих файлах 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Преобразование наборов символов и файловых форматов
@@ -464,7 +464,7 @@
 | `recode ..HTML < page.txt > page.html` |	конвертировать содержимое тестового файла page.txt в html-файл `page.html`
 | `recode -l l more` |	вывести список доступных форматов 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Анализ файловых систем
@@ -480,7 +480,7 @@
 | `fsck.msdos /dev/hda1` | проверить/восстановить целостность файловой системы `fat` раздела `hda1`
 | `dosfsck /dev/hda1` | проверить/восстановить целостность файловой системы `fat` раздела `hda1`
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Форматирование файловых систем
@@ -493,7 +493,7 @@
 | `fdformat -n /dev/fd0` | форматирование флоппи-диска без проверки
 | `mkswap /dev/hda3` | создание swap-пространства на разделе `hda3` 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### swap-пространство 
@@ -503,7 +503,7 @@
 | `swapon /dev/hda3` | активировать swap-пространство, расположенное на разделе `hda3`
 | `swapon /dev/hda2 /dev/hdb3` | активировать swap-пространства, расположенные на разделах `hda2` и `hdb3` 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Создание резервных копий (backup)
@@ -526,7 +526,7 @@
 | `dd if=/dev/hda of=/dev/fd0 bs=512 count=1` |	создать копию **[MBR (Master Boot Record)](http://ru.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D1%87%D0%BD%D0%B0%D1%8F_%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C)** с `/dev/hda` на флоппи-диск
 | `dd if=/dev/fd0 of=/dev/hda bs=512 count=1` |	восстановить **[MBR](http://ru.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D1%87%D0%BD%D0%B0%D1%8F_%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C)** с флоппи-диска на /dev/hda 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### CDROM
@@ -543,7 +543,7 @@
 | `cd-paranoia -- "-3"` |	rip first three audio tracks from a CD to wav files
 | `cdrecord --scanbus` |	scan bus to identify the channel scsi 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Microsoft Windows networks([SAMBA](http://ru.wikipedia.org/wiki/Samba)) 
@@ -555,7 +555,7 @@
 | `smbget -Rr smb://ip_addr/share` | 	подобно wget может получить файлы с windows-машин через smb-протокол
 | `mount -t smbfs -o username=user,password=pass` ` //winclient/share /mnt/share` | 	смонтировать smb-ресурс, предоставленный на windows-машине, в локальную файловую систему 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 ### Другие полезные команды
@@ -573,7 +573,7 @@
 | `ldd /usr/bin/ssh` |	вывести список библиотек, необходимых для работы ssh
 | `alias hh='history'` |	назначить алиас hh команде history 
 
-[к началу](#---linux---)
+[к началу](#%D0%9E%D1%87%D0%B5%D0%BD%D1%8C-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-linux-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BB%D0%B8%D1%81%D1%82%D0%B5)
 
 
 **[Оригинал](http://www.f-notes.info/linux:linux_command)**
