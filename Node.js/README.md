@@ -1,6 +1,4 @@
-web-dev-blog
+Node.js
 =======
-
-Мой блог на русском
 
 TODO
