@@ -1,6 +1,4 @@
-web-dev-blog
+MariaDB
 =======
-
-Мой блог на русском
 
 TODO
