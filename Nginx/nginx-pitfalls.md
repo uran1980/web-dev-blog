@@ -285,14 +285,14 @@ location ~* \.php$ {
 ## FastCGI путь в `SCRIPT_FILENAME`
 Во многих руководствах по настройке nginx используются абсолютные пути для указания корневой директории сайта. Это частая практика в PHP блоках конфигурации nginx. Но в подключаемых конфигах для настройки парметров FastCGI `include fastcgi_params;` этого делать не стоит, для этого есть встроенная переменная `$document_root`.
 
-**ХОРОШО:**
-```nginx
-fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
-```
-
 **ПЛОХО:**
 ```nginx
 fastcgi_param  SCRIPT_FILENAME    /var/www/yoursite.com/$fastcgi_script_name;
+```
+
+**ХОРОШО:**
+```nginx
+fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
 ```
 
 Вы спросите, где задается переменная `$document_root`? Она задается директивой [`root`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#root), которая должна присутствовать в блоке [`server`](http://nginx.org/ru/docs/http/ngx_http_core_module.html#server). И если в вашем конфиге ее там нет, тогда вы наткнулись на первый подводный камень описанный нами в начале этой статьи: **[`Root` внутри блока `Location`](#root-%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B8-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0-location)**, исправляйте ваш конфиг =)
