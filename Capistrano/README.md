@@ -1,1 +1,4 @@
+Capistrano
+==========
+
 TODO
