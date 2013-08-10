@@ -1,6 +1,4 @@
-web-dev-blog
-=======
-
-Мой блог на русском
+Percona-Server
+==============
 
 TODO
