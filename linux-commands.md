@@ -168,6 +168,7 @@
 | `groupadd group_name` | создать новую группу с именем group_name
 | `groupdel group_name` |  удалить группу `group_name`
 | `groupmod -n new_group_name old_group_name` |	переименовать группу `old_group_name` в `new_group_name`
+| `sudo usermod -G vboxusers -a user` | добавление пользователя в группу
 | `useradd user1` |	создать пользователя `user1`
 | `userdel -r user1` |	удалить пользователя user1 и его домашний каталог
 | `passwd` |	сменить пароль
