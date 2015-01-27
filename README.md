@@ -24,6 +24,7 @@
 ## Web-разработка
 * **Языки программирования**
   * **[Стандарты кодирования](https://github.com/uran1980/web-dev-blog/blob/master/Coding-standarts/README.md)**
+  * **[Список YouTube-каналов для обучения веб-разработке](https://github.com/forwebdev/channels)**
   * **[Ообъектно-Ориентированное программирование (ООП)](https://github.com/uran1980/web-dev-blog/blob/master/OOP%20-%20ObjectOrientedProgramming/README.md)**
   * **[JavaScript](https://github.com/uran1980/web-dev-blog/blob/master/JavaScript/README.md)**
 * **Кеширование и noSQL**
