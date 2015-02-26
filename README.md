@@ -30,11 +30,12 @@
   * **[PHP](https://github.com/uran1980/web-dev-blog/blob/master/PHP/README.md)**
   * **[Ruby](https://github.com/uran1980/web-dev-blog/blob/master/Ruby/README.md)**
 * **Фронтенд разработка**
-  * **[CSS](https://github.com/uran1980/web-dev-blog/blob/master/Frontend/CSS/README.md)**
-  * **[SCSS](https://github.com/uran1980/web-dev-blog/blob/master/Frontend/SASS/README.md)**
+  * **[jQuery API Cheat Sheet](http://jqapi.ru/)**
   * **[Yeoman](https://github.com/uran1980/web-dev-blog/blob/master/Frontend/Yeoman/README.md)**
   * **[Grunt](https://github.com/uran1980/web-dev-blog/blob/master/Frontend/Grunt/README.md)**
   * **[Gulp](https://github.com/uran1980/web-dev-blog/blob/master/Frontend/Gulp/README.md)**
+  * **[CSS](https://github.com/uran1980/web-dev-blog/blob/master/Frontend/CSS/README.md)**
+  * **[SCSS](https://github.com/uran1980/web-dev-blog/blob/master/Frontend/SASS/README.md)**
 * **Базы данных**
   * **[MySQL](https://github.com/uran1980/web-dev-blog/blob/master/DataBases/MySQL/README.md)**
   * **[MariaDB](https://github.com/uran1980/web-dev-blog/blob/master/DataBases/MariaDB/README.md)**
