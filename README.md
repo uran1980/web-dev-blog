@@ -27,6 +27,13 @@
   * **[Список YouTube-каналов для обучения веб-разработке](https://github.com/forwebdev/channels)**
   * **[Ообъектно-Ориентированное программирование (ООП)](https://github.com/uran1980/web-dev-blog/blob/master/OOP%20-%20ObjectOrientedProgramming/README.md)**
   * **[JavaScript](https://github.com/uran1980/web-dev-blog/blob/master/JavaScript/README.md)**
+  * **[PHP](https://github.com/uran1980/web-dev-blog/blob/master/PHP/README.md)**
+  * **[Ruby](https://github.com/uran1980/web-dev-blog/blob/master/Ruby/README.md)**
+* **Базы данных**
+  * **[MySQL](https://github.com/uran1980/web-dev-blog/blob/master/DataBases/MySQL/README.md)**
+  * **[MariaDB](https://github.com/uran1980/web-dev-blog/blob/master/DataBases/MariaDB/README.md)**
+  * **[Percona Server](https://github.com/uran1980/web-dev-blog/blob/master/DataBases/Percona-Server/README.md)**
+  * **[PostgreSQL](https://github.com/uran1980/web-dev-blog/blob/master/DataBases/PostgreSQL/README.md)**
 * **Кеширование и noSQL**
   * **[Memcached](https://github.com/uran1980/web-dev-blog/blob/master/Memcached/README.md)**
 * **Средства контроль версий**
