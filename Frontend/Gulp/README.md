@@ -6,10 +6,10 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/uran1980/web-dev-blog/blob/master/JavaScript/Gulp/README.md">
+  <a href="https://github.com/uran1980/web-dev-blog/blob/master/Frontend/Gulp/README.md">
     <img  style="max-width:100%;"
           alt="Gulp"
-          src="https://raw.github.com/uran1980/web-dev-blog/master/JavaScript/Gulp/images/gulp-logo.png" />
+          src="https://raw.github.com/uran1980/web-dev-blog/master/Frontend/Gulp/images/gulp-logo.png" />
   </a>
 </p>
 

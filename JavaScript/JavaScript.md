@@ -27,6 +27,7 @@ JavaScript также известен как **ECMAScript** (описывает
 * **[http://www.javascripttoolbox.com/bestpractices](http://www.javascripttoolbox.com/bestpractices/)** - примеры хорошей практики программирования на JavaScript
 
 ## Статьи
+* **[Осторожно - глобальные переменные в JavaScript](https://github.com/uran1980/web-dev-blog/blob/master/JavaScript/Global-variables-in-JavaScript.md)**
 * **[Исследование бездны null и undefined в JavaScript](http://frontender.info/exploring-the-abyss-of-null-and-undefined-in-javascript/)**
 * **[Раскрытие тайны this в JavaScript](http://frontender.info/demystifying-this-in-javascript/)**
 * **[Как строгий режим "use strict" в JavaScript может сэкономить вам пару часов](http://frontender.info/why-use-strict-in-javascript-can-save-you-hours/)**

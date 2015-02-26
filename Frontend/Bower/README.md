@@ -6,11 +6,11 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/uran1980/web-dev-blog/blob/master/JavaScript/Bower/README.md">
+  <a href="https://github.com/uran1980/web-dev-blog/blob/master/Frontend/Bower/README.md">
     <img  style="max-width:100%;"
           alt="Bower"
           width="340px"
-          src="https://raw.github.com/uran1980/web-dev-blog/master/JavaScript/Bower/images/bower-logo.png" />
+          src="https://raw.github.com/uran1980/web-dev-blog/master/Frontend/Bower/images/bower-logo.png" />
   </a>
 </p>
 

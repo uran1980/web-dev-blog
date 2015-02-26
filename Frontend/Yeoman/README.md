@@ -6,11 +6,11 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/uran1980/web-dev-blog/blob/master/JavaScript/Yeoman/README.md">
+  <a href="https://github.com/uran1980/web-dev-blog/blob/master/Frontend/Yeoman/README.md">
     <img  style="max-width:100%;"
           alt="Yeoman"
           width="340px"
-          src="https://raw.github.com/uran1980/web-dev-blog/master/JavaScript/Bower/images/yeoman.png" />
+          src="https://raw.github.com/uran1980/web-dev-blog/master/Frontend/Yeoman/images/yeoman.png" />
   </a>
 </p>
 

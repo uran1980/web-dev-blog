@@ -6,10 +6,10 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/uran1980/web-dev-blog/blob/master/JavaScript/Grunt/README.md">
+  <a href="https://github.com/uran1980/web-dev-blog/blob/master/Frontend/Grunt/README.md">
     <img  style="max-width:100%;"
           alt="Grunt"
-          src="https://raw.github.com/uran1980/web-dev-blog/master/JavaScript/Grunt/images/grunt-logo.png" />
+          src="https://raw.github.com/uran1980/web-dev-blog/master/Frontend/Grunt/images/grunt-logo.png" />
   </a>
 </p>
 
