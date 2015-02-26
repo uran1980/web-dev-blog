@@ -26,6 +26,11 @@ JavaScript также известен как **ECMAScript** (описывает
 * **[http://www.w3schools.com/jsref/default.asp](http://www.w3schools.com/jsref/default.asp)** - референс мануал по языку на w3schools.com
 * **[http://www.javascripttoolbox.com/bestpractices](http://www.javascripttoolbox.com/bestpractices/)** - примеры хорошей практики программирования на JavaScript
 
+## Статьи
+* **[Исследование бездны null и undefined в JavaScript](http://frontender.info/exploring-the-abyss-of-null-and-undefined-in-javascript/)**
+* **[Раскрытие тайны this в JavaScript](http://frontender.info/demystifying-this-in-javascript/)**
+* **[Как строгий режим "use strict" в JavaScript может сэкономить вам пару часов](http://frontender.info/why-use-strict-in-javascript-can-save-you-hours/)**
+
 
 ## См. Также
 * **[Повторное введение в JavaScript на MozillaDevCenter](https://developer.mozilla.org/ru/%D0%9F%D0%BE%D0%B2%D1%82%D0%BE%D1%80%D0%BD%D0%BE%D0%B5_%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_JavaScript)**

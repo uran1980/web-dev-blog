@@ -2,13 +2,13 @@
   <a  href="#bower"
       class="anchor"
       name="bower"><span class="mini-icon mini-icon-link"></span></a>
-  Bower - пакетный менеджер для javascript
+  Bower - пакетный менеджер для JavaScript
 </h1>
 
 <p align="center">
   <a href="https://github.com/uran1980/web-dev-blog/blob/master/JavaScript/Bower/README.md">
     <img  style="max-width:100%;"
-          alt="alt Vagrant"
+          alt="Bower"
           width="340px"
           src="https://raw.github.com/uran1980/web-dev-blog/master/JavaScript/Bower/images/bower-logo.png" />
   </a>
