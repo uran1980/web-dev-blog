@@ -47,7 +47,7 @@
   * **[Git](https://github.com/uran1980/web-dev-blog/blob/master/Git/README.md)**
   * **[Mercurial (HG)](https://github.com/uran1980/web-dev-blog/blob/master/Mercurial/README.md)**
   * **[Subversion (SVN)](https://github.com/uran1980/web-dev-blog/blob/master/SVN/README.md)**
-* **Средства развертывания (Deploy)**
+* **Средства развертывания проектов**
   * **[Capistrano](https://github.com/uran1980/web-dev-blog/blob/master/Capistrano/README.md)**
 
 ## Администрирование
