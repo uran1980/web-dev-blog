@@ -29,7 +29,7 @@
   * **[JavaScript](https://github.com/uran1980/web-dev-blog/blob/master/JavaScript/README.md)**
   * **[PHP](https://github.com/uran1980/web-dev-blog/blob/master/PHP/README.md)**
   * **[Ruby](https://github.com/uran1980/web-dev-blog/blob/master/Ruby/README.md)**
-* ** CSS Верстка **
+* **CSS Верстка**
   * **[CSS](https://github.com/uran1980/web-dev-blog/blob/master/CSS/README.md)**
   * **[SCSS](https://github.com/uran1980/web-dev-blog/blob/master/SASS/README.md)**
 * **Базы данных**
