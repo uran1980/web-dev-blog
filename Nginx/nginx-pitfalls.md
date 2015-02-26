@@ -37,15 +37,15 @@ server {
   server_name www.domain.com;
   location / {
     root /var/www/nginx-default/;
-    [...]
+    ...
   }
   location /foo {
     root /var/www/nginx-default/;
-    [...]
+    ...
   }
   location /bar {
     root /var/www/nginx-default/;
-    [...]
+    ...
   }
 }
 ```
@@ -60,13 +60,13 @@ server {
   server_name www.domain.com;
   root /var/www/nginx-default/;
   location / {
-    [...]
+    ...
   }
   location /foo {
-    [...]
+    ...
   }
   location /bar {
-    [...]
+    ...
   }
 }
 ```
@@ -83,18 +83,18 @@ http {
     server_name www.domain.com;
     location / {
       index index.php index.htm index.html;
-      [...]
+      ...
     }
   }
   server {
     server_name domain.com;
     location / {
       index index.php index.htm index.html;
-      [...]
+      ...
     }
     location /foo {
       index index.php;
-      [...]
+      ...
     }
   }
 }
@@ -109,16 +109,16 @@ http {
   server {
     server_name www.domain.com;
     location / {
-      [...]
+      ...
     }
   }
   server {
     server_name domain.com;
     location / {
-      [...]
+      ...
     }
     location /foo {
-      [...]
+      ...
     }
   }
 }
@@ -141,7 +141,7 @@ server {
   if ($host ~* ^www\.(.+)) {
     set $raw_domain $1;
     rewrite ^/(.*)$ $raw_domain/$1 permanent;
-    [...]
+    ...
   }
 }
 ```
@@ -157,7 +157,7 @@ server {
 }
 server {
   server_name domain.com;
-  [...]
+  ...
 }
 ```
 
