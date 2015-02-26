@@ -29,6 +29,9 @@
   * **[JavaScript](https://github.com/uran1980/web-dev-blog/blob/master/JavaScript/README.md)**
   * **[PHP](https://github.com/uran1980/web-dev-blog/blob/master/PHP/README.md)**
   * **[Ruby](https://github.com/uran1980/web-dev-blog/blob/master/Ruby/README.md)**
+* ** CSS Верстка **
+  * **[CSS](https://github.com/uran1980/web-dev-blog/blob/master/CSS/README.md)**
+  * **[SCSS](https://github.com/uran1980/web-dev-blog/blob/master/SASS/README.md)**
 * **Базы данных**
   * **[MySQL](https://github.com/uran1980/web-dev-blog/blob/master/DataBases/MySQL/README.md)**
   * **[MariaDB](https://github.com/uran1980/web-dev-blog/blob/master/DataBases/MariaDB/README.md)**
@@ -37,12 +40,22 @@
 * **Кеширование и noSQL**
   * **[Memcached](https://github.com/uran1980/web-dev-blog/blob/master/Memcached/README.md)**
 * **Средства контроль версий**
-  * **[Mercurial](https://github.com/uran1980/web-dev-blog/blob/master/Mercurial/README.md)**
+  * **[Git](https://github.com/uran1980/web-dev-blog/blob/master/Git/README.md)**
+  * **[Mercurial (HG)](https://github.com/uran1980/web-dev-blog/blob/master/Mercurial/README.md)**
+  * **[Subversion (SVN)](https://github.com/uran1980/web-dev-blog/blob/master/SVN/README.md)**
+* **Средства развертывания (Deploy)**
+  * **[Capistarno](https://github.com/uran1980/web-dev-blog/blob/master/Capistarno/README.md)**
 
 ## Администрирование
-* **[Очень полезные команды Linux на одном листе](https://github.com/uran1980/web-dev-blog/blob/master/linux-commands.md)**
+* **[Полезные команды Linux на одном листе](https://github.com/uran1980/web-dev-blog/blob/master/linux-commands.md)**
 * **[Nginx](https://github.com/uran1980/web-dev-blog/blob/master/Nginx/README.md)**
 * **[Vagrant - менеджер виртуальных окружений](https://github.com/uran1980/web-dev-blog/blob/master/Vagrant/README.md)**
+* **[Chef](https://github.com/uran1980/web-dev-blog/blob/master/Chef/README.md)**
+
+## Операционные системы
+* **[FreeBSD](https://github.com/uran1980/web-dev-blog/blob/master/FreeBSD/README.md)**
+* **[Ubuntu](https://github.com/uran1980/web-dev-blog/blob/master/Linux/Ubuntu/README.md)**
+* **[Debian](https://github.com/uran1980/web-dev-blog/blob/master/Linux/Debian/README.md)**
 
 
 ## Облачные сервисы
