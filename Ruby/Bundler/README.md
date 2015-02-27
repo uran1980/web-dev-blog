@@ -1,7 +1,7 @@
 Bundler - менеджер пакетов (джемов) для Ruby
 ============================================
 
-## Начальная настройка
+**Установка Ruby**
 
 необходимо, чтобы был установлен Ruby (для Windows можно скачать от [сюда](http://rubyinstaller.org/)).
 > **ВНИМАНИЕ!!!** Для Ubuntu 12.04 надо ставить Ruby 1.9.3:
@@ -10,10 +10,10 @@ Bundler - менеджер пакетов (джемов) для Ruby
 > sudo apt-get install ruby1.9.1 ruby1.9.1-dev
 > ```
 
+
+**Установка Bundler**
+
 После успешной установки Ruby можно установить [Bandler](http://bundler.io/) с попмощью команды:
-
-
-**Установка**
 ```
 # для Linux:
 sudo gem install bundler
@@ -22,7 +22,9 @@ sudo gem install bundler
 gem install bundler
 ```
 
+
 **Настройка проекта**
+
 В корне проекта нужно создать файл с именем ```Gemfile``` например такого содеражния:
 ```ruby
 # @see http://bundler.io/
