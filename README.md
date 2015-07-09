@@ -53,6 +53,7 @@
 ## Администрирование
 * **[Полезные команды Linux на одном листе](https://github.com/uran1980/web-dev-blog/blob/master/Linux/linux-commands.md)**
 * **[Коллекция полезных сниппетов ```.htaccess```](https://github.com/phanan/htaccess)**
+* **[Коллекция полезных сниппетов ```nginx```](https://github.com/lebinh/nginx-conf)**
 * **[Nginx](https://github.com/uran1980/web-dev-blog/blob/master/Nginx/README.md)**
 * **[Vagrant - менеджер виртуальных окружений](https://github.com/uran1980/web-dev-blog/blob/master/Vagrant/README.md)**
 * **[Chef](https://github.com/uran1980/web-dev-blog/blob/master/Chef/README.md)**
