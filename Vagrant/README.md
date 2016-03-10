@@ -19,7 +19,7 @@
 
 
 ## Полезные ресурсы
-* **[www.vagrantup.com](http://www.vagrantup.com/)** - офоицальный сайт проекта
+* **[www.vagrantup.com](http://www.vagrantup.com/)** - официальный сайт проекта
 * **[Available Vagrant Boxes](https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Boxes)** - доступные образы **Vagrant**
 * **[www.vagrantbox.es](http://www.vagrantbox.es/)** - еще образы **Vagrant**
 * **[Vagrant in Zend Framework 1](http://akrabat.com/zend-framework/vagrant-in-zf1-trunk/)**
