@@ -1,9 +1,9 @@
-<h1 align="center">
+<!--<h1 align="center">
   <a  href="#docker"
       class="anchor"
       name="vagrant"><span class="mini-icon mini-icon-link"></span></a>
   Docker - открытая платформа для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы для разработчиков и системных администраторов
-</h1>
+</h1>-->
 
 <p align="center">
   <a href="https://github.com/uran1980/web-dev-blog/blob/master/Docker/README.md">
@@ -12,6 +12,8 @@
           src="https://raw.github.com/uran1980/web-dev-blog/master/Docker/images/docker.png" />
   </a>
 </p>
+
+**Docker** - открытая платформа для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы для разработчиков и системных администраторов
 
 ## Содержание раздела Docker
 * [Начало работы с Docker в **Linux**](https://docs.docker.com/linux/)
