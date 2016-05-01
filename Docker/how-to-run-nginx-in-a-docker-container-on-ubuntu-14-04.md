@@ -83,33 +83,168 @@ Output
 
 
 ##Шаг 2 - Обзор базовых операций: Run, List, Remove
-TODO
+Ознакомимся с базовыми операциями установленного клиента Docker.
+
+Вывод зпаущенных контейнеров:
+```
+docker ps -a
+```
+
+В консоли выведится список контейнеров с базовой информацией по ним:
+```
+Output
+    CONTAINER ID    IMAGE           COMMAND     CREATED         STATUS                      PORTS   NAMES
+    a3b149c3ddea    hello-world     "/hello"    3 minutes ago   Exited (0) 3 minutes ago            nostalgic_hopper
+```
+
+Если имя контенера не было задано заранее, то Docker сгенериреут произвольное имя. В данном случае это **nostalgic_hopper**. Также видно что контейнер ```hello-world``` был запущен 3 минуты назад.
+
+Теперь попробуем удалить тестовый контейнер:
+```
+docker rm nostalgic_hopper
+```
+
+На следующем шаге мы начнем использовать наш Nginx контейнер...
 
 
 ##Шаг 3 - Экпорт портов сервера
-TODO
+Рассмотрим теперь как скачать Docker-образ Nginx сервера, как его запустить и сделать доступным извне web-сервером.
+
+Чтобы сделать контейнер доступным извне, необходимо открыть его внутренние порты.
+Для начала скачаем готовый образ Nginx с официального хранилища образов для Docker:
+```
+docker pull nginx
+```
+
+Начнется загрузка официального образа Nginx с [Docker Hub](https://hub.docker.com/explore/). Docker Hub это отрытое хранилище официальных и неофициальных образов различных приложений.
+
+Запустить скаченный образ можно командой:
+```
+docker run --name docker-nginx -p 8080:80 nginx
+```
+
+* ```run``` -- команда для создания и запуска нового контейнера
+* ```--name``` -- парметр для задания имени создаваемого контенера
+* ```-p``` -- парметр указвающий проброс портов в фомате ```-p локальный_порт:внутренний_порт_контейнера```, в данном примере мы пробрасываем 80 внутрениий порт контенера на 8080 порт нашего локального сервера
+* ```nginx``` -- имя образа который необходимо запустить в качестве Docker-контейнера
+
+Это все что необходимо для запуска контейнера. Теперь откройте свой браузер и введите в адресной строке следующий адрес: **http://localhost:8080** вы увидите страницу приветсвия сервера Nginx, запущенного в контейнере Docker.
+
+Обратите внимание, что в консоли процесс запуска контейнера остался запущенным. Т.е. пока не нажать ```CTRL+C``` и не завершить работу запущенного контейнера, мы не сможем в конслои вводить другие команды.
+
+Давайте теперь удалим созданный контайнер:
+```
+docker rm docker-nginx
+```
+
+На следующем шаге мы научимся запускать контейнер в фоновом режиме (**Detached Mode**)...
 
 
 ##Шаг 4 - Запуск контейнера в фоновом режиме (Detached Mode)
-TODO
+Создадим новый контейнер и запустим его в фоновом режиме, чтобы он работал бескончено долго в фоне:
+```
+docker run --name docker-nginx -p 8080:80 -d nginx
+```
+
+Мы добавили параметр ```-d``` чтобы контейнер работал в фоновом режиме (режим **Detached Mode**).
+
+Посмотрим теперь информацию о запущенном контейнере:
+```
+docker ps
+```
+
+Теперь мы увидим что-то такое:
+```
+Output
+CONTAINER ID    IMAGE   COMMAND                  CREATED              STATUS              PORTS                         NAMES
+b91f3ce26553    nginx   "nginx -g 'daemon off"   About a minute ago   Up About a minute   0.0.0.0:80->80/tcp, 443/tcp   docker-nginx
+```
+
+Теперь мы имеем запущенный в фоне контейнер Nginx сервера доступный по адресу: **http://localhost:8080**
+
+Чтобы остановить контейнер запустите:
+```
+docker stop docker-nginx
+```
+
+Теперь, когда контейнер остановлен мы можем удалить его:
+```
+docker rm docker-nginx
+```
 
 
 ##Шаг 5 - Создаем html страницу для Nginx
-TODO
+На этом шаге давайте создади тестовую html-страничку, которую вдальнейшем будет обрабатывать сервер Nginx.
+
+Страничку будем создавать в нашей домашней директории ```/home/your_user_name/www/docker-nginx/html```
+Файл странички ```index.html``` будет содержать следующий html-код:
+```
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <title>Docker nginx Tutorial</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello Digital Ocean</h1>
+      <p>This nginx page is brought to you by Docker and Digital Ocean</p>
+    </div>
+  </body>
+</html>
+```
+
 
 
 ##Шаг 6 - Свзязываем контейнер с локальной файловой системой
-TODO
+На данном шаге соберем все вместе и проверим работу контейнера Nginx. Docker позволяет делать ссылки на директории на локальном сервере и связывать их с директориями внутри контейнера.
+
+По умолчанию Nginx сервер ищет индексную html страницу ```index.html``` по следующему пути внутри своего контейнера: ```/usr/share/nginx/html```.
+
+Чтобы связать фалй на локальном сервере с файлами внутри контейнера создадим новый контейнер со следующими параметрами:
+```
+docker run --name docker-nginx -p 8080:80 -d -v ~/www/docker-nginx/html:/usr/share/nginx/html nginx
+```
+
+* ```-v``` -- параметр который задает перелинковку файловых систем локального хоста и контейнера
+* путь слева от ```:``` это путь к файлу/каталогу на локальном сервере (```~/docker-nginx/www/html```)
+* путь справа от ```:``` это путь к файлу/каталогу внутри контейнера (```/usr/share/nginx/html```)
+
+После запуска этой команды, перейдите в браузере по адресу ```http://localhost:8080```, вы увидите вместо приветсвия Nginx html странияку созданную нами ранее на 5 шаге.
 
 
 ##Шаг 7 - Свой конфигруационный файл для Nginx
-TODO
+Давайте вернемся обратно в наш каталог на локальном сервере:
+```
+cd ~/docker-nginx
+```
+
+Чтобы посмотреть на конфигурационный файл Nginx используемый по умолчанию контейнером, даваете его скопируем в наш каталог:
+```
+docker cp docker-nginx:/etc/nginx/conf.d/default.conf ~/docker-nginx/default.conf
+```
+
+Т.к. мы хотим вдальнейшем использовать свой конфигурационный файл Nginx, давайте пересоберем контейнер:
+```
+docker stop docker-nginx
+docker rm docker-nginx
+```
+
+Теперь мы можем отредактировать скопированный ранее конфигурационный файл ```~/docker-nginx/default.conf``` и заново запустить контейнерер Nginx:
+```
+docker run --name docker-nginx -p 8080:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+```
+
+Eсли вдальнейшем Вы отредактируете конфигурационный файл то не забудьте перезагрузить веб сервер, чтобы изменения вступили в силу:
+```
+docker restart docker-nginx
+```
 
 
 ##Заключение
-TODO
+Итак, мы получили работающий Docker-контейнер с запущенным web-сервером Nginx.
 
 
 ## Ссылки
 * **[Оригинал статьи](https://www.digitalocean.com/community/tutorials/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04)**  (англ.)
+* **[Связваание контейнеров между собой](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/)**
 * **[компонеты экосистемы  Docker](https://www.digitalocean.com/community/tutorials/the-docker-ecosystem-an-introduction-to-common-components)**

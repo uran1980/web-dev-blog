@@ -21,8 +21,8 @@
 * [Начало работы с Docker в **Windows**](https://docs.docker.com/windows/)
 * [Начало работы с Docker в **Mac OS X**](https://docs.docker.com/mac/)
 * **[Как запустить Nginx внутри Docker-контейнера на Ubuntu 14.04](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04.md)**
-* **[Как установить и использовать Docker Compose на Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-14-04)** <!-- TODO перевод статьи... -->
-* **[Как установить Wordpress и PhpMyAdmin с помощью Docker Compose на Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-and-phpmyadmin-with-docker-compose-on-ubuntu-14-04)** <!-- TODO перевод статьи... -->
+* **[Как установить и использовать Docker Compose на Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-14-04)**
+* **[Как установить Wordpress и PhpMyAdmin с помощью Docker Compose на Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-and-phpmyadmin-with-docker-compose-on-ubuntu-14-04)**
 * **[TODO](https://github.com/uran1980/web-dev-blog/blob/master/Docker/TODO.md)**
 
 
