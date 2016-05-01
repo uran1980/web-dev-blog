@@ -57,6 +57,7 @@
 * **[Nginx](https://github.com/uran1980/web-dev-blog/blob/master/Nginx/README.md)**
 * **[Vagrant - менеджер виртуальных окружений](https://github.com/uran1980/web-dev-blog/blob/master/Vagrant/README.md)**
 * **[Chef](https://github.com/uran1980/web-dev-blog/blob/master/Chef/README.md)**
+* **[Docker](https://github.com/uran1980/web-dev-blog/blob/master/Docker/README.md)**
 
 ## Операционные системы
 * **[FreeBSD](https://github.com/uran1980/web-dev-blog/blob/master/FreeBSD/README.md)**
