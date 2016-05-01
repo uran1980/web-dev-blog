@@ -42,5 +42,5 @@
 
 ## Полезные ресурсы
 * **[www.docker.com](https://www.docker.com)** - официальный сайт проекта
-* **[Docker Hub](https://hub.docker.com/)** - доступные образы **Docker**
+* **[Docker Hub](https://hub.docker.com/)** - доступные контейнеры **Docker**
 * **[Статьи и обучающие материалы по Docker на DigitalOcean](https://www.digitalocean.com/community/tutorials/?q=docker)**
