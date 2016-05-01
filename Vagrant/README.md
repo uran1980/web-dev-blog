@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://github.com/uran1980/web-dev-blog/blob/master/Vagrant/README.md">
     <img  style="max-width:100%;"
-          alt="alt Vagrant"
+          alt="Vagrant"
           src="https://raw.github.com/uran1980/web-dev-blog/master/Vagrant/images/vagrant_chilling.png" />
   </a>
 </p>

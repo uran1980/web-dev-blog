@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://github.com/uran1980/web-dev-blog/blob/master/README.md">
     <img  style="max-width:100%;"
-          alt="alt Мой Web-Dev блог..."
+          alt="Мой Web-Dev блог..."
           src="https://raw.github.com/uran1980/web-dev-blog/master/images/webdev_0.png" />
   </a>
 </p>

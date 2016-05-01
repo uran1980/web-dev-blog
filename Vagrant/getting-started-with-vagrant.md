@@ -94,7 +94,7 @@ $ vagrant up
 <p align="center">
   <a href="https://github.com/uran1980/web-dev-blog/edit/master/Vagrant/getting-started-with-vagrant.md">
     <img  style="max-width:100%;"
-          alt="alt vagrant command"
+          alt="vagrant command"
           src="https://raw.github.com/uran1980/web-dev-blog/master/Vagrant/images/sshot-001.png" />
   </a>
 </p>
@@ -183,7 +183,7 @@ vagrant@vagrantup:~$
 <p align="center">
   <a href="https://github.com/uran1980/web-dev-blog/edit/master/Vagrant/getting-started-with-vagrant.md">
     <img  style="max-width:100%;"
-          alt="alt vagrant command"
+          alt="vagrant command"
           src="https://raw.github.com/uran1980/web-dev-blog/master/Vagrant/images/sshot-002.png" />
   </a>
 </p>

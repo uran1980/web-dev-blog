@@ -1,7 +1,7 @@
 <p align="center">
   <a href="http://opscode.com" target="_blank">
     <img  style="max-width:100%;"
-          alt="alt Chef"
+          alt="Chef"
           src="https://raw.github.com/uran1980/web-dev-blog/master/Chef/images/chef-2.png" />
   </a>
 </p>

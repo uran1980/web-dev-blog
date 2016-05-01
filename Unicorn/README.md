@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://github.com/blog/517-unicorn" target="_blank">
     <img  style="max-width:100%;"
-          alt="alt Unicorn!"
+          alt="Unicorn!"
           src="https://raw.github.com/uran1980/web-dev-blog/master/Unicorn/images/angry_unicorn.png" />
   </a>
 </p>
