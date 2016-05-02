@@ -16,7 +16,7 @@
 **Docker** - открытая платформа для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы для разработчиков и системных администраторов.
 
 
-## Содержание раздела Docker
+## Статьи про Docker
 * [Начало работы с Docker в **Linux**](https://docs.docker.com/linux/)
 * [Начало работы с Docker в **Windows**](https://docs.docker.com/windows/)
 * [Начало работы с Docker в **Mac OS X**](https://docs.docker.com/mac/)
@@ -24,11 +24,14 @@
 * **[Как установить и использовать Docker Compose на Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-14-04)**
 * **[Как установить Wordpress и PhpMyAdmin с помощью Docker Compose на Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-and-phpmyadmin-with-docker-compose-on-ubuntu-14-04)**
 * **[How To Work with Docker Data Volumes on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-work-with-docker-data-volumes-on-ubuntu-14-04)**
+* **[Using Nodemon+Forever in Docker](http://www.francolaiuppa.com/2015/11/14/dockerfile-for-nodejs-development-with-nodemon-and-forever/)**
+* **[Docker Containers on the Desktop](https://blog.jessfraz.com/post/docker-containers-on-the-desktop/)**
 
 
 ##Ресурсы на Github
 * **[WebDevOps Dockerfiles](https://github.com/webdevops/Dockerfile)** - наборы Dockerfile для web-разработки
 * **[A sample Docker workflow with Node.js, Redis and NGiNX](https://github.com/msanand/docker-workflow)**
+* **[Dockfiles for Docker Containers on the Desktop](https://github.com/jfrazelle/dockerfiles)**
 
 
 ## [Официальные контейнеры для Web-разработки](https://hub.docker.com/explore/)
