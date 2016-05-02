@@ -35,7 +35,6 @@
 * [MySql server](https://hub.docker.com/_/mysql/)
 * [MariaDb MySql server](https://hub.docker.com/_/mariadb/)
 * [Percona MySql server](https://hub.docker.com/_/percona/)
-* [Redis server](https://hub.docker.com/_/redis/)
 * [Memcached server](https://hub.docker.com/_/memcached/)
 * [PHP Zend Server](https://hub.docker.com/_/php-zendserver/)
 
