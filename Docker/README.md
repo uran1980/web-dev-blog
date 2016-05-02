@@ -26,6 +26,11 @@
 * **[How To Work with Docker Data Volumes on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-work-with-docker-data-volumes-on-ubuntu-14-04)**
 
 
+##Ресурсы на Github
+* **[WebDevOps Dockerfiles](https://github.com/webdevops/Dockerfile)** - наборы Dockerfile для web-разработки
+* **[A sample Docker workflow with Node.js, Redis and NGiNX](https://github.com/msanand/docker-workflow)**
+
+
 ## [Официальные контейнеры для Web-разработки](https://hub.docker.com/explore/)
 * [Nginx web server](https://hub.docker.com/_/nginx/)
 * [Apache web server](https://hub.docker.com/_/httpd/)
