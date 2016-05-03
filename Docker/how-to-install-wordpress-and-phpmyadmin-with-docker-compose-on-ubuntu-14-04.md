@@ -1,6 +1,16 @@
 Как установить Wordpress и PhpMyAdmin при помощи Docker Compose на Ubuntu 14.04/16.04
 =====================================================================================
 
+* **[TODO](TODO)**
+* **[TODO](TODO)**
+* **[TODO](TODO)**
+* **[TODO](TODO)**
+* **[TODO](TODO)**
+* **[TODO](TODO)**
+* **[TODO](TODO)**
+* **[TODO](TODO)**
+* **[TODO](TODO)**
+* **[TODO](TODO)**
 
 ##Начало
 TODO
