@@ -247,7 +247,7 @@ docker rm docker-nginx
 docker run --name docker-nginx -p 8080:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
 ```
 
-Eсли вдальнейшем Вы отредактируете конфигурационный файл то не забудьте перезагрузить веб сервер, чтобы изменения вступили в силу:
+Eсли вдальнейшем Вы отредактируете конфигурационный файл, то не забудьте перезагрузить веб сервер, чтобы изменения вступили в силу:
 ```
 docker restart docker-nginx
 ```
