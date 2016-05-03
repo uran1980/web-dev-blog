@@ -21,14 +21,17 @@
 * [Начало работы с Docker в **Windows**](https://docs.docker.com/windows/)
 * [Начало работы с Docker в **Mac OS X**](https://docs.docker.com/mac/)
 
+
 * **[Как запустить Nginx внутри Docker-контейнера на Ubuntu 14.04/16.04](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04.md)**
 * **[Как установить и использовать Docker Compose на Ubuntu 14.04/16.04](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-install-and-use-docker-compose-on-ubuntu-14-04.md)**
 * **[Как установить Wordpress и PhpMyAdmin с помощью Docker Compose на Ubuntu 14.04/16.04](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-install-wordpress-and-phpmyadmin-with-docker-compose-on-ubuntu-14-04.md)**
 * **[How To Work with Docker Data Volumes on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-work-with-docker-data-volumes-on-ubuntu-14-04)**
 
+
 * **[Using Nodemon+Forever in Docker](http://www.francolaiuppa.com/2015/11/14/dockerfile-for-nodejs-development-with-nodemon-and-forever/)**
 * **[Dockerizing a Node.js web app](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)**
 * **[A sample Docker workflow with Nginx, Node.js and Redis](http://anandmanisankar.com/posts/docker-container-nginx-node-redis-example/)**
+
 
 * **[Docker Containers on the Desktop](https://blog.jessfraz.com/post/docker-containers-on-the-desktop/)**
 * **[Погружаемся в Docker: Dockerfile и коммуникация между контейнерами](https://habrahabr.ru/company/infobox/blog/240623/)** -- статсья про Docker на habrahabr
