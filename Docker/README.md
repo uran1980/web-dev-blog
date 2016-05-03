@@ -30,12 +30,9 @@
 
 
 ##Основная Документация
-* **[```Dockerfile``` reference](https://docs.docker.com/engine/reference/builder/)**
-* **[Best practices for writing Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)**
-* **[Docker Compose](https://docs.docker.com/engine/reference/builder/)**
-* **[Compose file (```docker-compose.yml```) reference](https://docs.docker.com/compose/compose-file/)**
-* **[Compose command-line reference](https://docs.docker.com/compose/reference/)**
-* **[Overview of docker-compose CLI](https://docs.docker.com/compose/reference/overview/)**
+* **[```Dockerfile``` reference](https://docs.docker.com/engine/reference/builder/)** & **[Best practices for writing Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)**
+* **[Docker Compose](https://docs.docker.com/engine/reference/builder/)** & **[Compose file (```docker-compose.yml```) reference](https://docs.docker.com/compose/compose-file/)**
+* **[Compose command-line reference](https://docs.docker.com/compose/reference/)** & **[Overview of docker-compose CLI](https://docs.docker.com/compose/reference/overview/)**
 * **[CLI Environment Variables](https://docs.docker.com/compose/reference/envvars/)**
 
 
