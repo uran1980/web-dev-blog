@@ -21,7 +21,7 @@
 * [Начало работы с Docker в **Windows**](https://docs.docker.com/windows/)
 * [Начало работы с Docker в **Mac OS X**](https://docs.docker.com/mac/)
 * **[Как запустить Nginx внутри Docker-контейнера на Ubuntu 14.04/16.04](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04.md)**
-* **[Как установить и использовать Docker Compose на Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-14-04)**
+* **[Как установить и использовать Docker Compose на Ubuntu 14.04/16.04](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-install-and-use-docker-compose-on-ubuntu-14-04.md)**
 * **[Как установить Wordpress и PhpMyAdmin с помощью Docker Compose на Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-and-phpmyadmin-with-docker-compose-on-ubuntu-14-04)**
 * **[How To Work with Docker Data Volumes on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-work-with-docker-data-volumes-on-ubuntu-14-04)**
 * **[Using Nodemon+Forever in Docker](http://www.francolaiuppa.com/2015/11/14/dockerfile-for-nodejs-development-with-nodemon-and-forever/)**
