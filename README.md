@@ -55,8 +55,8 @@
 * **[Коллекция полезных сниппетов ```.htaccess```](https://github.com/phanan/htaccess)**
 * **[Коллекция полезных сниппетов ```nginx```](https://github.com/lebinh/nginx-conf)**
 * **[Nginx](https://github.com/uran1980/web-dev-blog/blob/master/Nginx/README.md)**
-* **[Vagrant - менеджер виртуальных окружений](https://github.com/uran1980/web-dev-blog/blob/master/Vagrant/README.md)**
-* **[Docker - открытая платформа виртуализации на уровне ОС](https://github.com/uran1980/web-dev-blog/blob/master/Docker/README.md)**
+* **[Vagrant](https://github.com/uran1980/web-dev-blog/blob/master/Vagrant/README.md)**
+* **[Docker](https://github.com/uran1980/web-dev-blog/blob/master/Docker/README.md)**
 * **[Chef](https://github.com/uran1980/web-dev-blog/blob/master/Chef/README.md)**
 
 ## Операционные системы
