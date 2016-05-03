@@ -1,5 +1,5 @@
-Запуск Nginx внутри Docker-контейнера на Ubuntu 16.04
-=====================================================
+Запуск Nginx внутри Docker-контейнера на Ubuntu 14.04/16.04
+===========================================================
 
 
 * **[Начало](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04.md#Начало)**
