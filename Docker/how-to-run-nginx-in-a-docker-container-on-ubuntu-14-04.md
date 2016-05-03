@@ -242,7 +242,7 @@ docker stop docker-nginx
 docker rm docker-nginx
 ```
 
-Теперь мы можем отредактировать скопированный ранее конфигурационный файл ```~/docker-nginx/default.conf``` и заново запустить контейнерер Nginx:
+Теперь мы можем отредактировать скопированный ранее конфигурационный файл ```~/docker-nginx/default.conf``` и заново запустить контейнер Nginx:
 ```
 docker run --name docker-nginx -p 8080:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
 ```
