@@ -27,6 +27,8 @@
 * **[Using Nodemon+Forever in Docker](http://www.francolaiuppa.com/2015/11/14/dockerfile-for-nodejs-development-with-nodemon-and-forever/)**
 * **[Docker Containers on the Desktop](https://blog.jessfraz.com/post/docker-containers-on-the-desktop/)**
 * **[Погружаемся в Docker: Dockerfile и коммуникация между контейнерами](https://habrahabr.ru/company/infobox/blog/240623/)** -- статсья про Docker на habrahabr
+* **[Dockerizing a Node.js web app](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)**
+* **[A sample Docker workflow with Nginx, Node.js and Redis](http://anandmanisankar.com/posts/docker-container-nginx-node-redis-example/)**
 
 
 ##Основная Документация
