@@ -6,7 +6,7 @@
 * **[Подготовка](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04.md#Подготовка)**
 * **[Шаг 1 - Установка Docker](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04.md#Шаг-1---Установка-docker)**
 * **[Шаг 2 - Обзор базовых операций: Run, List, Remove](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04.md#Шаг-2---Обзор-базовых-операций-run-list-remove)**
-* **[Шаг 3 - Проброс портов](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04.md#%D0%A8%D0%B0%D0%B3-3---%D0%9F%D1%80%D0%BE%D0%B1%D1%80%D0%BE%D1%81-%D0%BF%D0%BE%D1%80%D1%82%D0%BE%D0%B2)**
+* **[Шаг 3 - Проброс портов](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04.md#Шаг-3---Проброс-портов)**
 * **[Шаг 4 - Запуск контейнера в фоновом режиме (Detached Mode)](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04.md#Шаг-4---Запуск-контейнера-в-фоновом-режиме-detached-mode)**
 * **[Шаг 5 - Создаем html страницу для Nginx](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04.md#Шаг-5---Создаем-html-страницу-для-nginx)**
 * **[Шаг 6 - Свзязываем контейнер с локальной файловой системой](https://github.com/uran1980/web-dev-blog/blob/master/Docker/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04.md#Шаг-6---Свзязываем-контейнер-с-локальной-файловой-системой)**
