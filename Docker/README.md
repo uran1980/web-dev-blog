@@ -28,7 +28,8 @@
 * **[Dockerizing a Node.js web app](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)**
 * **[A sample Docker workflow with Nginx, Node.js and Redis](http://anandmanisankar.com/posts/docker-container-nginx-node-redis-example/)**
 * **[Docker Containers on the Desktop](https://blog.jessfraz.com/post/docker-containers-on-the-desktop/)**
-* **[Погружаемся в Docker: Dockerfile и коммуникация между контейнерами](https://habrahabr.ru/company/infobox/blog/240623/)** -- статсья про Docker на habrahabr
+* **[Поняв Docker](https://habrahabr.ru/post/277699/)**  -- очень подробный обзор про Docker (рус. статья на habrahabr)
+* **[Погружаемся в Docker: Dockerfile и коммуникация между контейнерами](https://habrahabr.ru/company/infobox/blog/240623/)** -- (рус. статсья на habrahabr)
 
 
 ##Основная Документация
