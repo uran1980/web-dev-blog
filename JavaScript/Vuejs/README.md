@@ -1,8 +1,8 @@
 <p align="center">
-  <a href="https://github.com/uran1980/web-dev-blog/blob/master/Vuejs/README.md">
+  <a href="https://github.com/uran1980/web-dev-blog/blob/master/JavaScript/Vuejs/README.md">
     <img  style="max-width:100%;"
           alt="Vue.js"
-          src="https://raw.github.com/uran1980/web-dev-blog/master/Vuejs/images/vue-logo.png" />
+          src="https://raw.github.com/uran1980/web-dev-blog/master/JavaScript/Vuejs/images/vue-logo.png" />
   </a>
 </p>
 
