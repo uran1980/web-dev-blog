@@ -1,10 +1,3 @@
-<!--<h1 align="center">
-  <a  href="#docker"
-      class="anchor"
-      name="vagrant"><span class="mini-icon mini-icon-link"></span></a>
-  Docker - открытая платформа для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы для разработчиков и системных администраторов
-</h1>-->
-
 <p align="center">
   <a href="https://github.com/uran1980/web-dev-blog/blob/master/Docker/README.md">
     <img  style="max-width:100%;"
@@ -32,7 +25,7 @@
 * **[Погружаемся в Docker: Dockerfile и коммуникация между контейнерами](https://habrahabr.ru/company/infobox/blog/240623/)** -- (рус. статсья на habrahabr)
 
 
-##Основная Документация
+## Основная Документация
 * **[```Dockerfile``` reference](https://docs.docker.com/engine/reference/builder/)** & **[Best practices for writing Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)**
 * **[Docker Compose](https://docs.docker.com/compose/overview/)** & **[Compose file (```docker-compose.yml```) reference](https://docs.docker.com/compose/compose-file/)**
 * **[Compose command-line reference](https://docs.docker.com/compose/reference/)** & **[Overview of docker-compose CLI](https://docs.docker.com/compose/reference/overview/)**
@@ -40,7 +33,7 @@
 * **[CLI Environment Variables](https://docs.docker.com/compose/reference/envvars/)**
 
 
-##Ресурсы на Github
+## Ресурсы на Github
 * **[WebDevOps Dockerfiles](https://github.com/webdevops/Dockerfile)** - наборы Dockerfile для web-разработки
 * **[A sample Docker workflow with Node.js, Redis and NGiNX](https://github.com/msanand/docker-workflow)**
 * **[Dockfiles for Docker Containers on the Desktop](https://github.com/jfrazelle/dockerfiles)**
