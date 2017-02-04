@@ -13,14 +13,18 @@
 * **[Руководство по Vue.js на русском](https://ru.vuejs.org/v2/guide/)**
 * **[Руководство по Vue.js на английском](https://vuejs.org/v2/guide/)**
 
-
-## Ресурсы на Github
-* **[Vue.js](https://github.com/vuejs/vue)**
-* **[Vuex](https://github.com/vuejs/vuex)**
-* **[Awesome Vue.js](https://github.com/vuejs/awesome-vue)**
+## Обучающие видео курсы
+* **[Vuejs2 step by step](https://laracasts.com/series/learn-vue-2-step-by-step)** -- бесплатный видео курс из 27 уроков на laracasts.com
+* **[Vuejs2 the Complete Guide](https://www.udemy.com/vuejs-2-the-complete-guide/)** -- платный курс из ~300 коротких видеоуроков
 
 
 ## Статьи и полезные ресурсы
 * **[Сравнение с другими фреймворками](https://ru.vuejs.org/v2/guide/comparison.html)**
 * **[Vuex - паттерн управления состоянием и библиотека для приложений на Vue.js](https://vuex.vuejs.org/ru/intro.html)** -- (рус.)
 * **[Официальный блог Vue.js](https://medium.com/the-vue-point)**
+
+
+## Ресурсы на Github
+* **[Vue.js](https://github.com/vuejs/vue)**
+* **[Vuex](https://github.com/vuejs/vuex)**
+* **[Awesome Vue.js](https://github.com/vuejs/awesome-vue)**
