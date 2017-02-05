@@ -1,6 +1,4 @@
-web-dev-blog
+Puppet
 =======
-
-Мой блог на русском
 
 TODO
